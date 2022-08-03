@@ -4,9 +4,21 @@ import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-gray-50 container mx-auto">
-      Home page
+    <div className="bg-gray-50 shadow-lg p-4 my-8 container mx-auto text-center">
+      <h1 className='text-8xl font-bold my-4'>קול ברזל</h1>
+      <h2 className='text-3xl my-4 leading-relaxed'>A Handbook of Synagogue Music<br />For Male Voice Choir</h2>
+      <h3 className='text-xl my-4'>Arranged and Edited by<br/>STUART IZON</h3>
+      <ul className='my-8'>
+        <li>שבת – Sabbath</li>
+        <li>הלל – Hallel</li>
+        <li>רגלים – Festivals</li>
+        <li>נוראים – Days of Awe</li>
+        <li>זמירות – Songs</li>
+        <li>סליחות – Repentance</li>
+      </ul>
+      <div className='w-1/2 mx-auto'>
       <Contents />
+      </div>
     </div>
   )
 }
