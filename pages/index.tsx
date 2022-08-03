@@ -1,13 +1,12 @@
 import type { NextPage } from 'next'
+import { Contents } from '../components/contents/Contents'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 container mx-auto">
       Home page
-      <div>
-        <Link href="/206a"><a>206a L'cha Adonai</a></Link>...... Louis Lewandowski
-      </div>
+      <Contents />
     </div>
   )
 }
