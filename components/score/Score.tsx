@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import { Document, Page } from 'react-pdf';
 import { useElementSize } from 'usehooks-ts';
 import { pdfjs } from 'react-pdf';
+import { useRouter } from "next/router";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const Score = ({ file }: Props) => {
+    const router = useRouter();
     const [ref, { width }] = useElementSize();
     const [numPages, setNumPages] = useState<number>(0);
     const onLoadSuccess = ({ numPages }: { numPages: number }) => setNumPages(numPages);
+    const onLoadError = (error: Error) => {
+        router.push("/404");
+    };
 
     return (
         <div ref={ref}>
-            <Document file={{ url: file }} onLoadSuccess={onLoadSuccess}>
+            <Document file={{ url: file }} onLoadSuccess={onLoadSuccess} onLoadError={onLoadError}>
                 {
                     Array.from(
                         new Array(numPages),

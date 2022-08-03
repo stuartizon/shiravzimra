@@ -8,6 +8,12 @@ const Home: NextPage = () => {
       <h1 className='text-8xl font-bold my-4'>קול ברזל</h1>
       <h2 className='text-3xl my-4 leading-relaxed'>A Handbook of Synagogue Music<br />For Male Voice Choir</h2>
       <h3 className='text-xl my-4'>Arranged and Edited by<br/>STUART IZON</h3>
+      <ul className='my-8 inline-block text-left'>
+        <li>➤ <a href="#shabbatevening">Shabbat Evening</a></li>
+        <li>➤ Shabbat Day</li>
+        <li>➤ Hallel</li>
+      </ul>
+        
       <ul className='my-8'>
         <li>שבת – Sabbath</li>
         <li>הלל – Hallel</li>

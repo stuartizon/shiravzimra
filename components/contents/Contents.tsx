@@ -4,7 +4,7 @@ import Link from "next/link";
 export const Entry: FC<Props> = ({ id, name, author }) => (
     <li>
         <Link href={id}>
-            <a className="font-semibold text-gray-800 hover:text-blue-400 flex">
+            <a className="font-semibold text-gray-800 hover:text-blue-400 flex gap-1">
                 <span className="flex-shrink-0">{id} {name}</span>
 
                 <span className="flex-grow overflow-hidden ">{".".repeat(500)}</span>
@@ -17,7 +17,7 @@ export const Entry: FC<Props> = ({ id, name, author }) => (
 export const Contents: FC<{}> = () => {
     return (
         <div>
-            <h1 className="text-left font-bold text-xl my-2">Shabbat Evening</h1>
+            <h1 id="shabbatevening" className="text-left font-bold text-xl my-2">Shabbat Evening</h1>
             <ul>
                 <Entry id="1a" name="Y'did Nefesh" author="Pursa" />
                 <Entry id="1b" name="Y'did Nefesh" author="Yitzchok Alster" />

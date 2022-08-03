@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 html {
-  @apply bg-neutral-100;
+  /* @apply bg-neutral-100; */
   /* background-color: apply('bg-gray-700'); */
 }
