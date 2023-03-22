@@ -1,39 +1,47 @@
 import type { NextPage } from 'next'
-import { Contents } from '../components/contents/Contents'
-import Link from 'next/link'
-import Hero from '../components/hero/Hero'
+import { SwiperSlide } from 'swiper/react'
+import Cover from '../components/cover/Cover'
+import { HashNavigation } from 'swiper'
+import { ContentsSection } from '../components/contents/Contents'
+import SwiperWithControls from '../components/swiperWithControls/SwiperWithControls'
+import { allSections } from '../data'
 
-const Home: NextPage = () => {
+import 'swiper/css'
+
+const Index: NextPage = () => {
   return (
     <>
-      <Hero>
-        <h1 className='text-8xl font-bold my-4'>קול ברזל</h1>
-        <h2 className='text-3xl my-4 leading-relaxed'>A Handbook of Synagogue Music<br />For Male Voice Choir</h2>
-        <h3 className='text-xl my-4'>Arranged and Edited by<br />STUART IZON</h3>
-        <ul className='my-8 inline-block text-left'>
-          <li>➤ <a href="#shabbatevening">Shabbat Evening</a></li>
-          <li>➤ Shabbat Day</li>
-          <li>➤ Hallel</li>
-        </ul>
-      </Hero>
-      {/* <div className="shadow-lg p-4 mx-auto text-center"> */}
-        {/* <h1 className='text-8xl text-blue-400 font-bold my-4'>קול ברזל</h1> */}
-{/*         
-
-        <ul className='my-8'>
-          <li>שבת – Sabbath</li>
-          <li>הלל – Hallel</li>
-          <li>רגלים – Festivals</li>
-          <li>נוראים – Days of Awe</li>
-          <li>זמירות – Songs</li>
-          <li>סליחות – Repentance</li>
-        </ul> */}
-        <div className='w-1/2 mx-auto'>
-          <Contents />
-        </div>
+      {/* <Nav /> */}
+      {/* <div className='text-white text-6xl text-center'>Shira v'Zimra</div> */}
+      {/* <div className='text-white text-2xl text-center mt-8'> */}
+      {/* A book of Jewish music for the synagogue and the home, */}
       {/* </div> */}
+      {/* <div className='text-white text-2xl text-center mb-8'> */}
+      {/* arranged for male voice choir */}
+      {/* </div> */}
+      {/* <div className='my-5' /> */}
+
+      <div className='mt-10 mb-16'>
+        <SwiperWithControls
+          modules={[HashNavigation]}
+          hashNavigation={{ replaceState: true, watchState: true }}
+          // Move the className and style attributes inside the SwiperWithControls class I think, cos its
+          // not obvious they apply to the classes on the Swiper, not on this class
+          className='bg-white shadow-lg shadow-black'
+          style={{ width: 720, minHeight: 1018 }}
+        >
+          <SwiperSlide data-hash=''>
+            <Cover />
+          </SwiperSlide>
+          {allSections.map(section => (
+            <SwiperSlide data-hash={section.id}>
+              <ContentsSection section={section} />
+            </SwiperSlide>
+          ))}
+        </SwiperWithControls>
+      </div>
     </>
   )
 }
 
-export default Home
+export default Index

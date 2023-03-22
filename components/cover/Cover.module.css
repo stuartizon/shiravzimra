@@ -1,0 +1,4 @@
+.cover {
+  /* background-image: url(Cover.png); */
+  @apply w-full h-full bg-contain bg-no-repeat bg-center flex flex-col items-center justify-center;
+}

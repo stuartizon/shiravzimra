@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  /* @apply bg-neutral-100; */
-  /* background-color: apply('bg-gray-700'); */
+a {
+  @apply font-bold text-green-800 hover:opacity-80 transition duration-300;
+}
+
+body {
+  @apply w-screen
+}
+
+.content {
+  background-color: #0E413B;
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  @apply flex flex-col min-h-screen;
 }

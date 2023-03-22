@@ -1,0 +1,9 @@
+.button {
+  @apply p-1;
+  filter: invert(100%);
+  @apply transition duration-300 ;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
