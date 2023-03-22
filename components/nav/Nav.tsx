@@ -8,7 +8,7 @@ import {
 } from '../../data'
 import { kabbalatShabbat } from '../../data/kabbalatShabbat'
 
-export default () => {
+const Nav = () => {
   return (
     <nav className='w-screen p-5 top-0 font-semibold overflow-hidden'>
       <div className='container mx-auto'>
@@ -37,6 +37,8 @@ const NavItem = ({ name, href, className }: NavItemProps) => (
     </a>
   </li>
 )
+
+export default Nav
 
 interface NavItemProps {
   name: string

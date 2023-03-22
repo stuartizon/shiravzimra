@@ -12,7 +12,7 @@ import styles from './Cover.module.css'
 const Cover: React.FC<{}> = () => {
   return (
     <div className={styles.cover}>
-      <h1 className='text-5xl font-bold my-4 '>Shira v'Zimra</h1>
+      <h1 className='text-5xl font-bold my-4 '>Shira v&apos;Zimra</h1>
       {/* <h2 className='text-3xl my-4 leading-relaxed'>A Handbook of Synagogue Music<br />For Male Voice Choir</h2> */}
 
       <div className='text-xl text-center mt-8'>

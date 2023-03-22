@@ -40,12 +40,24 @@ const Score = ({ id, file, name, author, spotifyUrl, youtubeUrl }: Props) => {
           <img src={download.src} className={styles.button} width={40} />
         </a>
         {youtubeUrl && (
-          <a href={youtubeUrl} target='_blank' title='YouTube' className='mr-2'>
+          <a
+            href={youtubeUrl}
+            target='_blank'
+            title='YouTube'
+            className='mr-2'
+            rel='noreferrer'
+          >
             <img src={youtube.src} width={40} className={styles.button} />
           </a>
         )}
         {spotifyUrl && (
-          <a href={spotifyUrl} target='_blank' title='Spotify' className='flex'>
+          <a
+            href={spotifyUrl}
+            target='_blank'
+            title='Spotify'
+            className='flex'
+            rel='noreferrer'
+          >
             <img src={spotify.src} className={styles.button} width={30} />
           </a>
         )}

@@ -34,7 +34,7 @@ const Index: NextPage = () => {
             <Cover />
           </SwiperSlide>
           {allSections.map(section => (
-            <SwiperSlide data-hash={section.id}>
+            <SwiperSlide data-hash={section.id} key={section.id}>
               <ContentsSection section={section} />
             </SwiperSlide>
           ))}

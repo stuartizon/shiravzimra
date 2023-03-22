@@ -8,10 +8,15 @@ const Footer = () => {
       <a
         href='https://open.spotify.com/artist/5hR3LHEtnd6eJmdSWdiegA'
         target='_blank'
+        rel='noreferrer'
       >
         <Spotify width={40} />
       </a>
-      <a href='https://www.youtube.com/@stuartizon' target='_blank'>
+      <a
+        href='https://www.youtube.com/@stuartizon'
+        target='_blank'
+        rel='noreferrer'
+      >
         <YouTube width={40} />
       </a>
     </div>

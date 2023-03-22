@@ -23,7 +23,7 @@ export const ContentsSection: FC<ContentsSectionProps> = ({ section }) => {
       <h1 className='text-xl font-bold my-2'>{section.name}</h1>
       <ul className='mx-4'>
         {section.pieces.map(piece => (
-          <Entry {...piece} />
+          <Entry {...piece} key={piece.id} />
         ))}
       </ul>
     </div>
