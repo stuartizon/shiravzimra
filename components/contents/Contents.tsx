@@ -1,17 +1,16 @@
 import React, { FC } from 'react'
-import Link from 'next/link'
 import { Section } from '../../data/types'
 
 export const Entry: FC<EntryProps> = ({ id, name, author }) => (
   <li>
-    <Link href={`/${id}`} className='flex gap-1'>
+    <a href={`/${id}`} className='flex gap-1'>
       <span className='flex-shrink-0'>
         {id} {name}
       </span>
 
       <span className='flex-grow overflow-hidden '>{'.'.repeat(500)}</span>
       <span className='flex-shrink-0'>{author}</span>
-    </Link>
+    </a>
   </li>
 )
 
