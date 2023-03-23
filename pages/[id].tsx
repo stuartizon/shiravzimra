@@ -6,7 +6,6 @@ import { allPieces, allPiecesMap } from '../data'
 const Home: NextPage<Props> = ({
   name,
   description,
-  author,
   spotifyUrl,
   youtubeUrl
 }) => {
@@ -19,7 +18,6 @@ const Home: NextPage<Props> = ({
         id={id as string}
         file={`/${id}.pdf`}
         name={name}
-        author={author}
         spotifyUrl={spotifyUrl}
         youtubeUrl={youtubeUrl}
       />
@@ -43,7 +41,6 @@ export const getStaticProps: GetStaticProps<Props> = context => {
     props: {
       name: thisPiece?.name ?? null,
       description: thisPiece?.description ?? null,
-      author: thisPiece?.author ?? null,
       spotifyUrl: thisPiece?.spotifyUrl ?? null,
       youtubeUrl: thisPiece?.youtubeUrl ?? null
     }
@@ -66,7 +63,6 @@ export const getStaticPaths: GetStaticPaths = () => {
 interface Props {
   name: string | null
   description: string | null
-  author: string | null
   spotifyUrl: string | null
   youtubeUrl: string | null
 }

@@ -15,7 +15,7 @@ import youtube from './youtube.svg'
 import 'swiper/css'
 import styles from './Score.module.css'
 
-const Score = ({ id, file, name, author, spotifyUrl, youtubeUrl }: Props) => {
+const Score = ({ id, file, name, spotifyUrl, youtubeUrl }: Props) => {
   const router = useRouter()
   //   const [ref, { width }] = useElementSize()
 
@@ -35,11 +35,7 @@ const Score = ({ id, file, name, author, spotifyUrl, youtubeUrl }: Props) => {
       >
         {numPages > 0 && (
           <>
-            <a
-              href={file}
-              download={`${id} ${name} ${author}`}
-              title='Download PDF'
-            >
+            <a href={file} download={`${id} ${name}`} title='Download PDF'>
               <img src={download.src} className={styles.button} width={40} />
             </a>
             {youtubeUrl && (
@@ -119,7 +115,6 @@ interface Props {
   id: string
   file: string
   name: string | null
-  author: string | null
   spotifyUrl: string | null
   youtubeUrl: string | null
 }

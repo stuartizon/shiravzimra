@@ -14,7 +14,7 @@ export const shabbatMussaf: Section = {
     {
       id: '94a',
       name: 'Adon Olam',
-      author: 'Trad',
+      author: 'Trad.',
       youtubeUrl: 'https://youtu.be/8EUG0m4RuEk',
       spotifyUrl:
         'https://open.spotify.com/track/7xoy2KChzfB3mIluGNPe8z?si=c7f07ece955f40a6'
