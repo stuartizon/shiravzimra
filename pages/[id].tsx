@@ -15,7 +15,6 @@ const Home: NextPage<Props> = ({
 
   return (
     <>
-      {/* <Nav /> */}
       <Score
         id={id as string}
         file={`/${id}.pdf`}
@@ -24,8 +23,10 @@ const Home: NextPage<Props> = ({
         spotifyUrl={spotifyUrl}
         youtubeUrl={youtubeUrl}
       />
-      {/* &nbsp; */}
-      <div className='text-white my-8 mx-auto whitespace-pre-line' style={{ width: 640 }}>
+      <div
+        className='text-white my-8 mx-auto whitespace-pre-line'
+        style={{ width: 640 }}
+      >
         {description}
       </div>
     </>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Document, Page } from 'react-pdf'
+
 import { pdfjs } from 'react-pdf'
 import { useRouter } from 'next/router'
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
+pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 import 'react-pdf/dist/esm/Page/TextLayer.css'
 import { SwiperSlide } from 'swiper/react'
@@ -22,58 +23,69 @@ const Score = ({ id, file, name, author, spotifyUrl, youtubeUrl }: Props) => {
   const onLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages)
   }
-  const onLoadError = (error: Error) => {
-    console.log('React PDF', error)
-  }
+  // const onLoadError = (error: Error) => {
+  // console.log('React PDF', error)
+  // }
 
   return (
     <div style={{ minHeight: 1018 }}>
       <div
         className='m-auto flex justify-start relative z-10 mb-2'
-        style={{ width: 720 }}
+        style={{ width: 720, height: 40 }}
       >
-        <a
-          href={file}
-          download={`${id} ${name} ${author}`}
-          title='Download PDF'
-        >
-          <img src={download.src} className={styles.button} width={40} />
-        </a>
-        {youtubeUrl && (
-          <a
-            href={youtubeUrl}
-            target='_blank'
-            title='YouTube'
-            className='mr-2'
-            rel='noreferrer'
-          >
-            <img src={youtube.src} width={40} className={styles.button} />
-          </a>
-        )}
-        {spotifyUrl && (
-          <a
-            href={spotifyUrl}
-            target='_blank'
-            title='Spotify'
-            className='flex'
-            rel='noreferrer'
-          >
-            <img src={spotify.src} className={styles.button} width={30} />
-          </a>
+        {numPages > 0 && (
+          <>
+            <a
+              href={file}
+              download={`${id} ${name} ${author}`}
+              title='Download PDF'
+            >
+              <img src={download.src} className={styles.button} width={40} />
+            </a>
+            {youtubeUrl && (
+              <a
+                href={youtubeUrl}
+                target='_blank'
+                title='YouTube'
+                className='mr-2'
+                rel='noreferrer'
+              >
+                <img src={youtube.src} width={40} className={styles.button} />
+              </a>
+            )}
+            {spotifyUrl && (
+              <a
+                href={spotifyUrl}
+                target='_blank'
+                title='Spotify'
+                className='flex'
+                rel='noreferrer'
+              >
+                <img src={spotify.src} className={styles.button} width={30} />
+              </a>
+            )}
+          </>
         )}
       </div>
       <Document
         file={{ url: file }}
         loading={
           <div
-            className='bg-white m-auto flex flex-col justify-center text-center'
+            className='bg-white m-auto flex flex-col justify-center text-center shadow-xl shadow-black'
             style={{ width: 720, minHeight: 1018 }}
           >
             Loading...
           </div>
         }
+        error={
+          <div
+            className='bg-white m-auto flex flex-col justify-center text-center shadow-xl shadow-black'
+            style={{ width: 720, minHeight: 1018 }}
+          >
+            This score cannot be loaded
+          </div>
+        }
         onLoadSuccess={onLoadSuccess}
-        onLoadError={onLoadError}
       >
         <SwiperWithControls
           className='bg-white shadow-lg shadow-black m-auto'
