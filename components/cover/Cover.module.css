@@ -1,4 +1,10 @@
-.cover {
-  /* background-image: url(Cover.png); */
-  @apply w-full h-full bg-contain bg-no-repeat bg-center flex flex-col items-center justify-center;
+.cover {  
+  border-image-source: url(Cover.svg);
+  border-image-slice: 154;
+  border-image-repeat: round;
+  border-image-width: 120px;
+  border-width: 20px;
+  border-style: solid;
+  height: 1018px;
+  @apply w-full flex flex-col items-center ;
 }
