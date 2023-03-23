@@ -67,7 +67,9 @@ export const shabbatMussaf: Section = {
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/8EUG0m4RuEk',
       spotifyUrl:
-        'https://open.spotify.com/track/7xoy2KChzfB3mIluGNPe8z?si=c7f07ece955f40a6'
+        'https://open.spotify.com/track/7xoy2KChzfB3mIluGNPe8z?si=c7f07ece955f40a6',
+      description: `This Adon Olam is one of the most universally known melodies in the liturgy. It first appears in Eliezer Gerovitch's magnum opus "Shirei T’fila", and is thus often attributed to him. However, Gerovitch labelled it "Alte Weise" (old tune) so presumably it was already traditional in Russia during his lifetime, possibly to other words.\n
+        Gerovitch's composition is subtly different from how it is often sung nowadays. Moreover, his setting is not strophic: this familiar melody is only used for the first two verses. He includes a cantor's solo for V'hu Echad and two other tunes for the remaining verses.`
     },
     {
       id: '94d',
