@@ -32,13 +32,11 @@ export const shabbatTorah: Section = {
       id: '55a',
       name: "L'cha Adonai",
       author: 'Louis Lewandowski',
+      youtubeUrl: 'https://youtu.be/gUYTtCwmMIU',
       description: `As we carry the Torah to the Bimah we sing this verse from Chronicles 29:
-        "Yours, Lord, is the greatness, the power, the glory, the victory, and the majesty, for all that is in heaven and on earth is Yours. Yours is the kingdom, Lord, and you are exalted over all." 
-        
-        Many traditions also continue with lines from Psalm 99. Here is one of several melodies that Louis Lewandowski wrote for L'cha Adonai. I have heard several congregations sing a slightly altered version of the tune – but Lewandowski's melody implies a secondary dominant and a brief journey to the relative minor.
-        
+        "Yours, Lord, is the greatness, the power, the glory, the victory, and the majesty, for all that is in heaven and on earth is Yours. Yours is the kingdom, Lord, and you are exalted over all." \n
+        Many traditions also continue with lines from Psalm 99. Here is one of several melodies that Louis Lewandowski wrote for L'cha Adonai. I have heard several congregations sing a slightly altered version of the tune – but Lewandowski's melody implies a secondary dominant and a brief journey to the relative minor. \n
         There is also somewhat of a modern tradition to skip a beat going from the word "Rosh" straight into "Rom'mu". This is neither correct nor incorrect, as Lewandowski's original composition does not include the words from Psalm 99.`
-      //   spotifyUrl:
     }
   ]
 }
