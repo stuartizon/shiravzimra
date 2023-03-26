@@ -22,7 +22,7 @@ const Cover: React.FC<{}> = () => {
 
       {/* <h3 className='text-xl mt-4'>Arranged and Edited by</h3> */}
       <h3 className='text-xl mb-4'>STUART IZON</h3>
-      <ul className='my-8 inline-block text-left'>
+      <ul className='my-8 inline-block text-left' style={{fontFamily: 'Noto Sans'}}>
         <li>
           <a href={`#${kabbalatShabbat.id}`}>Shabbat</a>
         </li>

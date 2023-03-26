@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&family=Tiro+Devanagari+Hindi&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,11 +9,12 @@ a {
 }
 
 body {
-  @apply w-screen
+  @apply w-screen;
+  font-family: 'Tiro Devanagari Hindi', serif;
 }
 
 .content {
-  background-color: #0E413B;
+  background-color: #0e413b;
   background-image: url(background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;

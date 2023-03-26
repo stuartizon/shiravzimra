@@ -12,11 +12,14 @@ const Nav = () => {
   return (
     <nav className='w-screen p-5 top-0 font-semibold overflow-hidden'>
       <div className='container mx-auto'>
-        <ul className='list-none flex flex-row'>
+        <ul
+          className='list-none flex flex-row'
+          style={{ fontFamily: 'Noto Sans' }}
+        >
           <NavItem
             name="Shira v'Zimra"
             href='/#'
-            className='flex-grow text-2xl'
+            className='flex-grow text-3xl'
           />
           <NavItem name='Shabbat' href={`/#${kabbalatShabbat.id}`} />
           <NavItem name='Festivals' href={`/#${festivalsMaariv.id}`} />

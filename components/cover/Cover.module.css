@@ -1,4 +1,4 @@
-.cover {  
+.cover {
   border-image-source: url(Cover.svg);
   border-image-slice: 154;
   border-image-repeat: round;
@@ -6,5 +6,5 @@
   border-width: 20px;
   border-style: solid;
   height: 1018px;
-  @apply w-full flex flex-col items-center ;
+  @apply w-full flex flex-col items-center;
 }
