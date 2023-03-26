@@ -14,6 +14,17 @@ export const kabbalatShabbat: Section = {
         This beautiful lesser-known melody was composed by Abie Rotenberg in the 1990s.`
     },
     {
+      id: '7a',
+      name: "Moshe V'aharon",
+      author: 'Shlomo Carlebach',
+      youtubeUrl: 'https://youtu.be/ne_irPK-Eoc',
+      description: `These words come from the end of Psalm 99, one of the paragraphs we say during the initial section of Kabbalat Shabbat on Friday night. \n
+        "When they called to God, He answered them.
+        Through a pillar of cloud, He spoke to them.
+        They obeyed His decrees and the law He gave them." \n
+        This is often touted as one of Shlomo Carlebach's most powerful and uplifting compositions. It takes his general Kabbalat Shabbat theme which he has used for the previous four psalms, and transposes it from the major tonality to the Ahava Rabba mode (Phrygian dominant) making the melody feel familiar yet somehow more profound, as the Shabbat draws closer. Continuing, the melody incorporates exhilarating octave leaps at the words "Exalt the Lord our God and bow at His holy mountain".`
+    },
+    {
       id: '8a',
       name: "Havu Ladonai",
       author: 'Michele Bolaffi',
