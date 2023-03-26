@@ -20,9 +20,9 @@ const Cover: FC = () => {
         style={{ fontFamily: 'Noto Sans' }}
       >
         {allGroups.map(group => (
-          <div className='my-6'>
+          <div className='my-6' key={group.id}>
             {group.sections.map(section => (
-              <li>
+              <li key={section.id}>
                 <a href={`#${section.id}`}>{section.name}</a>
               </li>
             ))}

@@ -15,6 +15,7 @@ export interface Piece {
   }
 
   export interface Group {
+    id: string
     name: string
     sections: Section[]
   }

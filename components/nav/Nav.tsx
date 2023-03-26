@@ -18,6 +18,7 @@ const Nav: FC = () => {
           {allGroups.map(group => (
             <NavItem
               name={group.name}
+              key={group.id}
               href={`/#${group.sections[0]?.id || ''}`}
             />
           ))}

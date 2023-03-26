@@ -31,6 +31,7 @@ export {
 
 export const allGroups: Group[] = [
   {
+    id: 'shabbat',
     name: 'Shabbat',
     sections: [
       kabbalatShabbat,
@@ -41,22 +42,27 @@ export const allGroups: Group[] = [
     ]
   },
   {
+    id: 'festivals',
     name: 'Festivals',
     sections: [hallel, festivalMaariv, festivalTorah, festivalMussaf]
   },
   {
+    id: 'rh',
     name: 'Rosh Hashana',
     sections: [rhMaariv]
   },
   {
+    id: 'yk',
     name: 'Yom Kippur',
     sections: [kolNidrei]
   },
   {
+    id: 'misc',
     name: 'Miscellaneous',
     sections: [chanukah]
   },
   {
+    id: 'songs',
     name: 'Songs',
     sections: [birkatHamazon]
   }
