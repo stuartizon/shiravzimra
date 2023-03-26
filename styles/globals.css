@@ -15,7 +15,7 @@ body {
 
 .content {
   background-color: #0e413b;
-  background-image: url(background.jpg);
+  background-image: url(/images/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

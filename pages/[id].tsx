@@ -16,7 +16,7 @@ const Home: NextPage<Props> = ({
     <>
       <Score
         id={id as string}
-        file={`/${id}.pdf`}
+        file={`/scores/${id}.pdf`}
         name={name}
         spotifyUrl={spotifyUrl}
         youtubeUrl={youtubeUrl}
