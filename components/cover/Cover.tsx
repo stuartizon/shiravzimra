@@ -1,15 +1,8 @@
-import * as React from 'react'
-import {
-  birkatHamazon,
-  chanukah,
-  hallel,
-  kolNidrei,
-  rhMaariv
-} from '../../data'
-import { kabbalatShabbat } from '../../data/kabbalatShabbat'
+import { FC } from 'react'
+import { allGroups } from '../../data'
 import styles from './Cover.module.css'
 
-const Cover: React.FC<{}> = () => {
+const Cover: FC = () => {
   return (
     <div className={styles.cover}>
       <h1 className='text-5xl font-bold mt-36 mb-4 '>Shira v&apos;Zimra</h1>
@@ -22,33 +15,22 @@ const Cover: React.FC<{}> = () => {
 
       {/* <h3 className='text-xl mt-4'>Arranged and Edited by</h3> */}
       <h3 className='text-xl mb-4'>STUART IZON</h3>
-      <ul className='my-8 inline-block text-left' style={{fontFamily: 'Noto Sans'}}>
-        <li>
-          <a href={`#${kabbalatShabbat.id}`}>Shabbat</a>
-        </li>
-        <li>
-          <a href={`#${hallel.id}`}>Festivals</a>
-        </li>
-        <li>
-          <a href={`#${rhMaariv.id}`}>Rosh Hashana</a>
-        </li>
-        <li>
-          <a href={`#${kolNidrei.id}`}>Yom Kippur</a>
-        </li>
-        <li>
-          <a href={`#${chanukah.id}`}>Misc</a>
-        </li>
-        <li>
-          <a href={`#${birkatHamazon.id}`}>Songs</a>
-        </li>
+      <ul
+        className='my-2 inline-block text-left'
+        style={{ fontFamily: 'Noto Sans' }}
+      >
+        {allGroups.map(group => (
+          <div className='my-6'>
+            {group.sections.map(section => (
+              <li>
+                <a href={`#${section.id}`}>{section.name}</a>
+              </li>
+            ))}
+          </div>
+        ))}
       </ul>
     </div>
   )
 }
-
-// interface Props {
-//     id: string;
-//     children: React.ReactNode;
-// }
 
 export default Cover

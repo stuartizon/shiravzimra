@@ -13,3 +13,8 @@ export interface Piece {
     name: string
     pieces: Piece[]
   }
+
+  export interface Group {
+    name: string
+    sections: Section[]
+  }

@@ -1,14 +1,7 @@
-import * as React from 'react'
-import {
-  birkatHamazon,
-  chanukah,
-  hallel,
-  kolNidrei,
-  rhMaariv
-} from '../../data'
-import { kabbalatShabbat } from '../../data/kabbalatShabbat'
+import { FC } from 'react'
+import { allGroups } from '../../data'
 
-const Nav = () => {
+const Nav: FC = () => {
   return (
     <nav className='w-screen p-5 top-0 font-semibold overflow-hidden'>
       <div className='container mx-auto'>
@@ -21,19 +14,20 @@ const Nav = () => {
             href='/#'
             className='flex-grow text-3xl'
           />
-          <NavItem name='Shabbat' href={`/#${kabbalatShabbat.id}`} />
-          <NavItem name='Festivals' href={`/#${hallel.id}`} />
-          <NavItem name='Rosh Hashana' href={`/#${rhMaariv.id}`} />
-          <NavItem name='Yom Kippur' href={`/#${kolNidrei.id}`} />
-          <NavItem name='Misc' href={`/#${chanukah.id}`} />
-          <NavItem name='Songs' href={`/#${birkatHamazon.id}`} />
+
+          {allGroups.map(group => (
+            <NavItem
+              name={group.name}
+              href={`/#${group.sections[0]?.id || ''}`}
+            />
+          ))}
         </ul>
       </div>
     </nav>
   )
 }
 
-const NavItem = ({ name, href, className }: NavItemProps) => (
+const NavItem: FC<NavItemProps> = ({ name, href, className }) => (
   <li className={`inline mx-2 mt-auto ${className}`}>
     <a href={href} className='text-white transition duration-100'>
       {name}
