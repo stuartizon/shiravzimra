@@ -5,7 +5,7 @@ export const hallel: Section = {
   name: 'Hallel',
   pieces: [
     {
-      id: '126a',
+      id: '111a',
       name: "Od'cha",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/F--utuT9dpM',
@@ -13,7 +13,7 @@ export const hallel: Section = {
         Despite this being a general Hallel tune, not specifically for Pesach, I've always thought that the rising shape of the final line has some similarity to the end of Adir Hu.`
     },
     {
-        id: '127c',
+        id: '112c',
         name: "Ana Adonai (for Sukkot)",
         author: 'Trad.',
         youtubeUrl: 'https://youtu.be/qOlD70BGG80',

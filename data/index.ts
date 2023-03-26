@@ -1,6 +1,6 @@
 import { birkatHamazon } from './birkatHamazon'
 import { chanukah } from './chanukah'
-import { festivalsMaariv } from './festivalsMaariv'
+import { festivalMaariv } from './festivalsMaariv'
 import { festivalTorah } from './festivalTorah'
 import { hallel } from './hallel'
 import { kabbalatShabbat } from './kabbalatShabbat'
@@ -18,8 +18,8 @@ export {
   shabbatShacharit,
   shabbatTorah,
   shabbatMussaf,
-  festivalsMaariv,
   hallel,
+  festivalMaariv,
   festivalTorah,
   rhMaariv,
   kolNidrei,
@@ -33,8 +33,8 @@ export const allSections: Section[] = [
   shabbatShacharit,
   shabbatTorah,
   shabbatMussaf,
-  festivalsMaariv,
   hallel,
+  festivalMaariv,
   festivalTorah,
   rhMaariv,
   kolNidrei,
@@ -47,8 +47,8 @@ export const allPieces: Piece[] = kabbalatShabbat.pieces
   .concat(shabbatShacharit.pieces)
   .concat(shabbatTorah.pieces)
   .concat(shabbatMussaf.pieces)
-  .concat(festivalsMaariv.pieces)
   .concat(hallel.pieces)
+  .concat(festivalMaariv.pieces)
   .concat(festivalTorah.pieces)
   .concat(rhMaariv.pieces)
   .concat(kolNidrei.pieces)

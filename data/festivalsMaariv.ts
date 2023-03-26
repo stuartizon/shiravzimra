@@ -1,11 +1,19 @@
 import { Section } from './types'
 
-export const festivalsMaariv: Section = {
-  id: 'festivalsMaariv',
-  name: "Festivals Ma'ariv",
+export const festivalMaariv: Section = {
+  id: 'festivalMaariv',
+  name: "Festival Ma'ariv",
   pieces: [
     {
-      id: '109a',
+      id: '120b',
+      name: 'Mi Chamocha (for Shavuot)',
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/zA0I9BgDUzY',
+      description: `This is what was historically considered to THE traditional Shavuot melody. Originally written for Akdamut, it seems to be old enough to have been in use across all of Ashkenaz. You can find evidence of this theme in the works of Lewandowski, Sulzer, Baer, Mombach and many others. So it is something of a surprise that this melody is not more widely known today, especially when you consider that there are so few tunes in general for Shavuot, compared with any other festival. \n
+        Although it has largely been supplanted in most congregations by an antiphonal chant for Akdamut itself, its first part is traditionally used on Shavuot for Mi Chamocha in Ma'ariv (as per this recording), Hodu and Ana in Hallel, Shir Hama'alot, Adon Olam and Yechadshehu for Rosh Chodesh Sivan.`
+    },
+    {
+      id: '123a',
       name: 'Kaddish',
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/qVcdtJMU4u4',

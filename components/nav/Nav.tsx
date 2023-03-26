@@ -2,7 +2,7 @@ import * as React from 'react'
 import {
   birkatHamazon,
   chanukah,
-  festivalsMaariv,
+  hallel,
   kolNidrei,
   rhMaariv
 } from '../../data'
@@ -22,7 +22,7 @@ const Nav = () => {
             className='flex-grow text-3xl'
           />
           <NavItem name='Shabbat' href={`/#${kabbalatShabbat.id}`} />
-          <NavItem name='Festivals' href={`/#${festivalsMaariv.id}`} />
+          <NavItem name='Festivals' href={`/#${hallel.id}`} />
           <NavItem name='Rosh Hashana' href={`/#${rhMaariv.id}`} />
           <NavItem name='Yom Kippur' href={`/#${kolNidrei.id}`} />
           <NavItem name='Misc' href={`/#${chanukah.id}`} />

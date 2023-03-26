@@ -2,7 +2,7 @@ import * as React from 'react'
 import {
   birkatHamazon,
   chanukah,
-  festivalsMaariv,
+  hallel,
   kolNidrei,
   rhMaariv
 } from '../../data'
@@ -27,7 +27,7 @@ const Cover: React.FC<{}> = () => {
           <a href={`#${kabbalatShabbat.id}`}>Shabbat</a>
         </li>
         <li>
-          <a href={`#${festivalsMaariv.id}`}>Festivals</a>
+          <a href={`#${hallel.id}`}>Festivals</a>
         </li>
         <li>
           <a href={`#${rhMaariv.id}`}>Rosh Hashana</a>
