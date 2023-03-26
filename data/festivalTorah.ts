@@ -2,8 +2,16 @@ import { Section } from './types'
 
 export const festivalTorah: Section = {
   id: 'festivalTorah',
-  name: "Festival Torah Service",
+  name: 'Festival Torah Service',
   pieces: [
+    {
+      id: '138a',
+      name: "Kaddish",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/QVqZ1efNj0M',
+      description: `This old traditional melody is specifically intended for the Kaddish following the Torah reading on Festivals. Although it is still very pervasive in UK congregations, the lack of familiarity with the melody (due to its infrequency) often leads to it being butchered by even the most enthusiastic of Ba'alei Tefila! This beautiful tune is virtually unknown outside the UK. \n
+        Similarly to Hatikva, Leoni's Yigdal and Blumenthal's Eitz Chaim, the opening line traces the ascending minor scale. The last line is very similar to the beginning of When You Believe from The Prince of Egypt, providing another reason for singing this on Pesach.`
+    },
     {
       id: '139',
       name: "Y'tziv Pitgam",
