@@ -12,6 +12,16 @@ export const kabbalatShabbat: Section = {
       description: `Rabbi Sacks called Y'did Nefesh "one of the boldest expressions of love in Jewish literature, reminiscent in mood of the Song of Songs". First published by the kabbalist and poet Elazar Azikri in 1601, although generally believed to have been written by him, it has been found possibly in a manuscript as early as 1438. Azikri's diary contains the following epigraph for Y'did Nefesh: "A poem about unity and the desire of love".\n
         Each verse of Y'did Nefesh articulates a different relationship with the divine, first as a male servant, then as a female servant, then as God’s child, and finally as God's lover. The first letters of each stanza make up the four letter ineffable name of God. Y'did Nefesh is often sung at Kabbalat Shabbat, as well as on Shabbat afternoon at Seuda Sh'lishit. Emulating a lover who has been separated from his beloved, we excitedly sing it on Friday afternoon, and repeat it more wistfully as Shabbat draws to a close.\n
         This beautiful lesser-known melody was composed by Abie Rotenberg in the 1990s.`
-    }
+    },
+    {
+      id: '8a',
+      name: "Havu Ladonai",
+      author: 'Michele Bolaffi',
+      youtubeUrl: 'https://youtu.be/_dGF9QkaqsE',
+      description: `Psalm 29 describes the arrival of God during a storm. We read this Psalm in its entirety during Kabbalat Shabbat, and when returning the Torah to the Ark on Shabbat morning. The final verse is also used in isolation on many other occasions (e.g. during Birkat Hamazon):\n
+        "The Lord will give strength to His people, the Lord will bless His people with peace." \n
+        Michele Bolaffi's composition for Psalm 29 is undoubtably his most famous work. Bolaffi was born in Livorno in 1769. His tenure as musical director of the Synagogue of Livorno can be considered a turning point in the development of choral and instrumental liturgical music. Following the example of the central European synagogues, the early 18th century marked a period of renewal in Italian synagogal music, incorporating contemporary Italian classical musical elements and introducing polyphony into the existing traditional service. \n
+        Bolaffi's melody for Mizmor L'David has become popular among many Sephardi and Ashkenazi communities around the world, though the tune has become somewhat corrupted, and it has lost its harmonic setting along the way.`
+    },
   ]
 }
