@@ -21,10 +21,7 @@ const Home: NextPage<Props> = ({
         spotifyUrl={spotifyUrl}
         youtubeUrl={youtubeUrl}
       />
-      <div
-        className='text-white my-8 mx-auto whitespace-pre-line'
-        style={{ width: 640 }}
-      >
+      <div className='text-white w-page max-w-full px-10 my-8 mx-auto whitespace-pre-line'>
         {description}
       </div>
     </>

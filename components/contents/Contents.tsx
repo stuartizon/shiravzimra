@@ -16,7 +16,9 @@ export const Entry: FC<EntryProps> = ({ id, name, author }) => (
 
 export const ContentsSection: FC<ContentsSectionProps> = ({ section }) => {
   return (
-    <div className='p-16' style={{ minHeight: 1018 }}>
+    <div className='p-16'
+     style={{ minHeight: 1018 }}
+     >
       <h1 className='text-2xl font-bold my-2'>{section.name}</h1>
       <ul className='mx-4'>
         {section.pieces.map(piece => (

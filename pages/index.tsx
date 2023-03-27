@@ -27,8 +27,7 @@ const Index: NextPage = () => {
           hashNavigation={{ replaceState: true, watchState: true }}
           // Move the className and style attributes inside the SwiperWithControls class I think, cos its
           // not obvious they apply to the classes on the Swiper, not on this class
-          className='bg-white shadow-lg shadow-black'
-          style={{ width: 720, minHeight: 1018 }}
+          // style={{ minHeight: 1018 }}
         >
           <SwiperSlide data-hash=''>
             <Cover />
