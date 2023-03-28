@@ -21,7 +21,7 @@ const Index: NextPage = () => {
       {/* </div> */}
       {/* <div className='my-5' /> */}
 
-      <div className='mt-10 mb-16'>
+      <div className='md:mt-10 mb-16'>
         <SwiperWithControls
           modules={[HashNavigation]}
           hashNavigation={{ replaceState: true, watchState: true }}

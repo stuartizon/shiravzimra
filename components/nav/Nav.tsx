@@ -12,7 +12,7 @@ const Nav: FC = () => {
           <NavItem
             name="Shira v'Zimra"
             href='/#'
-            className='flex-grow text-3xl'
+            className='flex-grow text-3xl text-center md:text-left'
           />
 
           {allGroups.map(group => (
@@ -20,6 +20,7 @@ const Nav: FC = () => {
               name={group.name}
               key={group.id}
               href={`/#${group.sections[0]?.id || ''}`}
+              className="hidden md:inline"
             />
           ))}
         </ul>
@@ -29,7 +30,7 @@ const Nav: FC = () => {
 }
 
 const NavItem: FC<NavItemProps> = ({ name, href, className }) => (
-  <li className={`inline mx-2 mt-auto ${className}`}>
+  <li className={`mx-2 mt-auto ${className}`}>
     <a href={href} className='text-white transition duration-100'>
       {name}
     </a>
