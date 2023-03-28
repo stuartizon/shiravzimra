@@ -15,14 +15,11 @@ const Cover: FC = () => {
 
       {/* <h3 className='text-xl mt-4'>Arranged and Edited by</h3> */}
       <h3 className='text-xl mb-4'>STUART IZON</h3>
-      <ul
-        className='my-2 inline-block text-left'
-        style={{ fontFamily: 'Noto Sans' }}
-      >
+      <ul className='list-none' style={{ fontFamily: 'Noto Sans' }}>
         {allGroups.map(group => (
-          <div className='my-6' key={group.id}>
+          <div className='my-4' key={group.id}>
             {group.sections.map(section => (
-              <li key={section.id}>
+              <li className={styles.item} key={section.id}>
                 <a href={`#${section.id}`}>{section.name}</a>
               </li>
             ))}

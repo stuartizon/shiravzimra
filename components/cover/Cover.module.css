@@ -8,3 +8,7 @@
   height: 1018px;
   @apply w-full flex flex-col items-center;
 }
+
+.item ::before {
+  content: '➢ '
+}
