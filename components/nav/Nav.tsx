@@ -30,7 +30,7 @@ const Nav: FC = () => {
 }
 
 const NavItem: FC<NavItemProps> = ({ name, href, className }) => (
-  <li className={`mx-2 mt-auto ${className}`}>
+  <li className={`mx-2 mt-auto flex-shrink-0 ${className}`}>
     <a href={href} className='text-white transition duration-100'>
       {name}
     </a>
