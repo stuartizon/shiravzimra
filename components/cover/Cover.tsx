@@ -20,7 +20,7 @@ const Cover: FC = () => {
           <div className='my-4' key={group.id}>
             {group.sections.map(section => (
               <li className={styles.item} key={section.id}>
-                <a href={`#${section.id}`}>{section.name}</a>
+                <a href={`#${section.id}`} tabIndex={-1}>{section.name}</a>
               </li>
             ))}
           </div>

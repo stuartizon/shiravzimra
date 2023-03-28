@@ -14,7 +14,7 @@ const Author = ({ author }: { author: string }) => {
 
 export const Entry: FC<EntryProps> = ({ id, name, author }) => (
   <li>
-    <a href={`/${id}`} className='flex gap-1'>
+    <a href={`/${id}`} className='flex gap-1' tabIndex={-1}>
       <span className='flex-shrink-0'>
         <span className='inline'>{id}</span> {name}
       </span>
