@@ -13,7 +13,7 @@ export const festivalTorah: Section = {
         Similarly to Hatikva, Leoni's Yigdal and Blumenthal's Eitz Chaim, the opening line traces the ascending minor scale. The last line is very similar to the beginning of When You Believe from The Prince of Egypt, providing another reason for singing this on Pesach.`
     },
     {
-      id: '139',
+      id: '139a',
       name: "Y'tziv Pitgam",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/oehY6wnO6lU',
