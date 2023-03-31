@@ -5,6 +5,13 @@ export const festivalTorah: Section = {
   name: 'Festival Torah Service',
   pieces: [
     {
+      id: '132a',
+      name: "Vay'hi Binsoa",
+      author: 'Louis Lewandowski',
+      youtubeUrl: 'https://youtu.be/yy60kG_xNxc',
+      description: `Lewandowski originally wrote these two regal and dramatic melodies for parts of Ata Horeita which we say on Simchat Torah evening. With the frenetic energy that Simchat Torah now evokes in many of our synagogues, Lewandowski's beautiful stately service seems rather anachronistic. This lesser known melody is therefore now more often used when taking out the Torah during the morning service on Festivals, or on other special occasions.`
+    },
+    {
       id: '138a',
       name: "Kaddish",
       author: 'Trad.',
