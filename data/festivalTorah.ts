@@ -12,6 +12,13 @@ export const festivalTorah: Section = {
       description: `Lewandowski originally wrote these two regal and dramatic melodies for parts of Ata Horeita which we say on Simchat Torah evening. With the frenetic energy that Simchat Torah now evokes in many of our synagogues, Lewandowski's beautiful stately service seems rather anachronistic. This lesser known melody is therefore now more often used when taking out the Torah during the morning service on Festivals, or on other special occasions.`
     },
     {
+      id: '135a',
+      name: "Sh'ma Yisrael",
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/6u8xiz6erYo',
+      description: `Whilst Sulzer's melody is typically used by most congregations for Sh'ma Yisrael on Shabbat, it is customary to switch to a different melody on Festivals. Julius Mombach's melody is traditionally used in many UK synagogues on Yom Tov, though this is certainly less prevalent than it used to be. This is typically followed by Mombach's L'cha Adonai which utilises the same theme. (A few communities use these as their regular Shabbat melodies.)`
+    },
+    {
       id: '138a',
       name: "Kaddish",
       author: 'Trad.',
