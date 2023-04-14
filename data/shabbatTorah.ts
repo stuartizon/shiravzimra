@@ -39,6 +39,17 @@ export const shabbatTorah: Section = {
         There is also somewhat of a modern tradition to skip a beat going from the word "Rosh" straight into "Rom'mu". This is neither correct nor incorrect, as Lewandowski's original composition does not include the words from Psalm 99.`
     },
     {
+      id: '65c',
+      name: "Y'chad'sheihu (for Iyar)",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/3GPAVkGeqeg',
+      description: `While the classic synagogue composers have other melodies for Rosh Chodesh Iyar, it is appropriate in the 21st century for us to reference the modern state of Israel, as Iyar contains Yom Hazikaron, Yom Ha'atzma'ut and Yom Yerushalayim. \n
+        The words to Hatikva were written by the 19th century poet Naftali Herz Imber, and the final two lines were modified by Yehuda Leib Metman Hacohen in 1905. The initial part of the melody is based on the ascending minor scale, which is also present in Leoni's Yigdal, Blumenthal's Eitz Chayim, and the Spanish/Portuguese melody for Lech Leshalom Geshem. \n
+        Despite the very obvious similarity to this Spanish/Portuguese melody, Hatikva was actually set to music by Samuel Cohen by utilising a Moldavian folk melody. However the theme is much older still. The earliest version we know of is La Mantovana, a 16th century song by Giuseppe Cenci. \n
+        After becoming extremely popular, La Mantovana was adapted into many other songs including: a Flemish song, a Scottish song, a Ukrainian song, a Romanian song and the Moldavian song used by Cohen. In the classical music world it became Il Scolaro by Gasparo Zanetti, An Italian Rant by John Playford, Variations by Giovanna Baviera, Rhapsodie Bretonne by Camille Saint-Saëns, and Csikos Post by Hermann Necke. \n
+        Perhaps the most famous use (besides Hatikva) is by the Czech composer, Bedřich Smetana in his epic symphonic poem Vltava.`
+    },
+    {
       id: '65k',
       name: "Y'chad'sheihu (for Sh'vat)",
       author: 'Menashe Ravina',
