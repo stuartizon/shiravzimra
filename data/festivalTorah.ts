@@ -19,7 +19,7 @@ export const festivalTorah: Section = {
       description: `Whilst Sulzer's melody is typically used by most congregations for Sh'ma Yisrael on Shabbat, it is customary to switch to a different melody on Festivals. Julius Mombach's melody is traditionally used in many UK synagogues on Yom Tov, though this is certainly less prevalent than it used to be. This is typically followed by Mombach's L'cha Adonai which utilises the same theme. (A few communities use these as their regular Shabbat melodies.)`
     },
     {
-      id: '138a',
+      id: '139a',
       name: "Kaddish",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/QVqZ1efNj0M',
@@ -27,7 +27,7 @@ export const festivalTorah: Section = {
         Similarly to Hatikva, Leoni's Yigdal and Blumenthal's Eitz Chaim, the opening line traces the ascending minor scale. The last line is very similar to the beginning of When You Believe from The Prince of Egypt, providing another reason for singing this on Pesach.`
     },
     {
-      id: '139a',
+      id: '140',
       name: "Y'tziv Pitgam",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/oehY6wnO6lU',
