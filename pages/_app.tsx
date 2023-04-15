@@ -2,14 +2,15 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Nav from '../components/nav/Nav'
 import Footer from '../components/footer/Footer'
+import Content from '../components/content/Content'
 
-function App ({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <div className='content'>
-      <Nav/>
+    <Content>
+      <Nav />
       <Component {...pageProps} />
-      <Footer/>
-    </div>
+      <Footer />
+    </Content>
   )
 }
 

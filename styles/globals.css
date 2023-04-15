@@ -12,12 +12,3 @@ body {
   @apply w-screen;
   font-family: 'Tiro Devanagari Hindi', serif;
 }
-
-.content {
-  background-color: #0e413b;
-  background-image: url(/images/background.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  @apply flex flex-col min-h-screen;
-}
