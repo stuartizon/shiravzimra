@@ -19,8 +19,16 @@ export const festivalTorah: Section = {
       description: `Whilst Sulzer's melody is typically used by most congregations for Sh'ma Yisrael on Shabbat, it is customary to switch to a different melody on Festivals. Julius Mombach's melody is traditionally used in many UK synagogues on Yom Tov, though this is certainly less prevalent than it used to be. This is typically followed by Mombach's L'cha Adonai which utilises the same theme. (A few communities use these as their regular Shabbat melodies.)`
     },
     {
+      id: '137',
+      name: 'Az Yashir Moshe',
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/ghWckjC-1zA',
+      description: `The Song at the Sea is the first of three songs found in Chumash. Both Ashkenazic and Sephardic communities apply a festive tune or cadence to the text of the Shira. Typically the Ashkenazi version is a free-form recitative, where the Sephardi custom is more of a metrical tune. Features of this ancient misinai melody are also present in "Chazak chazak v'nitzchazek" (at the conclusion of a book of the Torah), "Vayhi erev vayhi boker..." (for each of the days in the Simchat Torah reading), and "Ashamnu" (from the Yom Kippur liturgy). Macy Nulman suggested these texts all relate to moments of victory, when a stage or period is completed and a new point is reached. \n
+        The "Shira melody" is perhaps most associated with the Spanish/Portuguese community. They also have almost identical melodies for Baruch Haba (in the Hallel and wedding services) and for Bendigamos, a Spanish addendum to Birkat Hamazon. Whilst the melody isn't sung during the Torah reading of the Shira itself, it is used at other times where the Shira is recited e.g. in P'sukei D'zimra. However, something was lost in translation when the English Ashkenazi communities appropriated this melody in the 17th century. In Minhag Anglia, this melody replaces the regular Torah notes during the actual Torah reading.`
+    },
+    {
       id: '139a',
-      name: "Kaddish",
+      name: 'Kaddish',
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/QVqZ1efNj0M',
       description: `This old traditional melody is specifically intended for the Kaddish following the Torah reading on Festivals. Although it is still very pervasive in UK congregations, the lack of familiarity with the melody (due to its infrequency) often leads to it being butchered by even the most enthusiastic of Ba'alei Tefila! This beautiful tune is virtually unknown outside the UK. \n
