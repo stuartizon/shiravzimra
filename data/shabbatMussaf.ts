@@ -78,6 +78,15 @@ export const shabbatMussaf: Section = {
       youtubeUrl: 'https://youtu.be/Lq85Frff_TE',
       description:
         "This classic setting of Adon Olam is by Simon Waley, pianist, composer and prominent member of the West London Synagogue. There is something deeply resonant in its alternation between major and minor. Waley's melody was readily adopted by the Spanish and Portuguese community and Ashkenazi orthodox communities in the UK, though it inexplicably has struggled to gain a foothold further afield."
+    },
+    {
+      id: '95a',
+      name: 'Esa Einai',
+      author: 'Charles Garland Verrinder',
+      youtubeUrl: 'https://youtu.be/_f2hh0Ptkoc',
+      description: `"I lift my eyes to the mountains; from where will my help come?
+        My help comes from the Lord, maker of heaven and earth." \n
+        This classic setting of Psalm 121 is by Charles Garland Verrinder, organist of the West London Synagogue during the late 19th century. Though Verrinder was a practicing Anglican, he composed a number of pieces for the synagogue, Esa Einai being his most famous. I don't believe it was written for any particular occasion, but it is a favourite at Remembrance Day services and has inevitably developed a strong association.`
     }
   ]
 }
