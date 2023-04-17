@@ -2,6 +2,7 @@ import type { GetStaticProps, GetStaticPaths, NextPage } from 'next'
 import Score from '../components/score/Score'
 import { useRouter } from 'next/router'
 import { allPieces, allPiecesMap } from '../data'
+import Head from 'next/head'
 
 const Home: NextPage<Props> = ({
   name,
@@ -14,6 +15,9 @@ const Home: NextPage<Props> = ({
 
   return (
     <>
+    <Head>
+      <title>{name}</title>
+    </Head>
       <Score
         id={id as string}
         file={`/scores/${id}.pdf`}

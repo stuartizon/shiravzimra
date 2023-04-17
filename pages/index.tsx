@@ -7,6 +7,7 @@ import SwiperWithControls from '../components/swiperWithControls/SwiperWithContr
 import { allSections } from '../data'
 
 import 'swiper/css'
+import Head from 'next/head'
 
 const Index: NextPage = () => {
   return (
@@ -20,6 +21,10 @@ const Index: NextPage = () => {
       {/* arranged for male voice choir */}
       {/* </div> */}
       {/* <div className='my-5' /> */}
+
+      <Head>
+        <title>Shira v&apos;Zimra</title>
+      </Head>
 
       <div className='md:mt-10 mb-16'>
         <SwiperWithControls
