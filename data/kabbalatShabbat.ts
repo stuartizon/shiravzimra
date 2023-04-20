@@ -26,7 +26,7 @@ export const kabbalatShabbat: Section = {
     },
     {
       id: '8a',
-      name: "Havu Ladonai",
+      name: 'Havu Ladonai',
       author: 'Michele Bolaffi',
       youtubeUrl: 'https://youtu.be/_dGF9QkaqsE',
       description: `Psalm 29 describes the arrival of God during a storm. We read this Psalm in its entirety during Kabbalat Shabbat, and when returning the Torah to the Ark on Shabbat morning. The final verse is also used in isolation on many other occasions (e.g. during Birkat Hamazon):\n
@@ -34,5 +34,13 @@ export const kabbalatShabbat: Section = {
         Michele Bolaffi's composition for Psalm 29 is undoubtably his most famous work. Bolaffi was born in Livorno in 1769. His tenure as musical director of the Synagogue of Livorno can be considered a turning point in the development of choral and instrumental liturgical music. Following the example of the central European synagogues, the early 18th century marked a period of renewal in Italian synagogal music, incorporating contemporary Italian classical musical elements and introducing polyphony into the existing traditional service. \n
         Bolaffi's melody for Mizmor L'David has become popular among many Sephardi and Ashkenazi communities around the world, though the tune has become somewhat corrupted, and it has lost its harmonic setting along the way.`
     },
+    {
+      id: '10f',
+      name: "L'cha Dodi (for S'fira)",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/mFphX_4mnOI',
+      description: `In many communities, there is a well-known practice of changing the tune for L'cha Dodi on the Shabbat preceding Tisha b'Av. But there is an equally old (though less widespread) custom to change the melody on the Shabbatot during the Omer. \n
+        This simple but charming air was once common across many European communities. Some have tenuously described it as resembling "Se Vuol Ballare" by Mozart.`
+    }
   ]
 }
