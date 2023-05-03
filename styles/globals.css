@@ -9,6 +9,5 @@ a {
 }
 
 body {
-  @apply w-screen;
-  font-family: 'Tiro Devanagari Hindi', serif;
+  @apply w-screen font-sans;
 }

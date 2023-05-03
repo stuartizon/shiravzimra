@@ -9,16 +9,15 @@ const Nav: FC = () => {
           <NavItem
             name="Shira v'Zimra"
             href='/#'
-            className='flex-grow text-3xl text-center md:text-left'
-          />
+            className='flex-grow text-3xl text-center md:text-left font-serif'
+            />
 
           {allGroups.map(group => (
             <NavItem
               name={group.name}
               key={group.id}
               href={`/#${group.sections[0]?.id || ''}`}
-              className='hidden md:inline'
-              style={{ fontFamily: 'Noto Sans' }}
+              className='hidden md:inline text-lg'
             />
           ))}
         </ul>

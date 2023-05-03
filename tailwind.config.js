@@ -5,6 +5,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    fontFamily: {
+      sans: ['Noto Sans', 'sans-serif'],
+      serif: ['Tiro Devanagari Hindi', 'serif'],
+    },
     extend: {
       spacing: {
         page: '45rem'
