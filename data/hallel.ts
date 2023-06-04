@@ -13,6 +13,14 @@ export const hallel: Section = {
         "How can I repay the Lord for all His goodness to me? I will lift the cup of salvation and call on the name of the Lord."`
     },
     {
+      id: '109b',
+      name: "Hodu Ladonai (for Shavuot)",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/OBwjZ3OnAV8',
+      description: `This setting is a combination of two distinct melodies. The first line is a traditional Hodu tune for Shavuot, dating back to at least the early 19th century.\n
+        Since it can feel monotonous to repeat the same theme 8 times in a row, this arrangement (emulating several others) alternates between this Hodu tune and the traditional Shavuot melody leitmotif, which is also used for Mi Chamocha in Ma'ariv, Adon Olam and Yechadshehu for Rosh Chodesh Sivan.`
+    },
+    {
       id: '111a',
       name: "Od'cha",
       author: 'Trad.',
