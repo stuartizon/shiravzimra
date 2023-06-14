@@ -22,6 +22,15 @@ export const shabbatMaariv: Section = {
         The Arizal and his followers instituted the practice of adding "Hin'ni Muchan Umzuman" before many different mitzvot. This well-known, traditional melody is used each time, with the text changing to suit the mitzvah. As an example, the version preceding Friday night Kiddush can be found in Israel Goldfarb's "Sabbath in the Home", and a quick peruse online will yield versions for introducing Birkat Hamazon, for each of the four cups on Seder night and many others.\n
         For whatever reason, some of these liturgical additions have found more popularity than others, and none more so than Sefirat Haomer, to the point that for many, this melody seems to now be inextricably linked to the Sefira. This is somewhat ironic, as according to most commentators, the mitzvah of counting the Omer is only considered to be a mitzvah d'orayta while the Temple stands, and some have suggested that saying the words "I am prepared to fulfil the mitzvah as is written in the Torah" over a mitzvah d'rabbanan constitutes a contravention of ba'al tosif.\n
         In any event, this catchy melody has become an established minhag in many communities the world over.`
+    },
+    {
+      id: '27a',
+      name: "Bayom Hahu",
+      author: 'Haim Wasserzug',
+      youtubeUrl: 'https://youtu.be/4Wa6bqofgxw',
+      description: `"Then the Lord shall be King over all the earth: on that day the Lord shall be One and His name One."\n
+        This familiar phrase from the end of Aleinu appears at the end of all daily services. The second paragraph of Aleinu describes in detail how the world will operate, and how our relationship with God will be in the Messianic age. Its original context was during the Malchuyot section of Rosh Hashana Mussaf, and the custom of concluding all services with Aleinu developed during the middle ages.\n
+        Many melodies have been composed to this very brief text for Shabbat and Festival services. This tune by Wasserzug, like many others, ends on a strong cadence to round off the service. Wasserzug's melody is superior to the prevalent tune in America, which bears an uncanny resemblance to the nursery rhyme "The Farmer in the Dell" and repeats the word "ush'mo" three times, which some avoid for its potential Christian implication.`
     }
   ]
 }
