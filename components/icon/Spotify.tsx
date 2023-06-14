@@ -1,4 +1,4 @@
-import spotify from './Spotify.svg'
+import spotify from './spotify2.svg'
 import styles from './Icon.module.css'
 
 export const Spotify = ({ width }: { width: number }) => {
