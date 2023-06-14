@@ -25,19 +25,19 @@ const Score = ({ id, file, name, spotifyUrl, youtubeUrl, appleUrl, amazonUrl }: 
         {numPages > 0 && (
           <>
             <a href={file} download={`${id} ${name}`} title='Download PDF'>
-              <Download width={40}/>
+              <Download width={32}/>
             </a>
             {youtubeUrl && (
-              <Link href={youtubeUrl} title='YouTube'><YouTube width={40}/></Link>
+              <Link href={youtubeUrl} title='YouTube'><YouTube width={32}/></Link>
             )}
             {spotifyUrl && (
-              <Link href={spotifyUrl} title='Spotify'><Spotify width={40}/></Link>
+              <Link href={spotifyUrl} title='Spotify'><Spotify width={32}/></Link>
             )}
             {appleUrl && (
-              <Link href={appleUrl} title='Apple Music'><Apple width={40}/></Link>
+              <Link href={appleUrl} title='Apple Music'><Apple width={32}/></Link>
             )}
             {amazonUrl && (
-              <Link href={amazonUrl} title='Amazon Music'><Amazon width={40}/></Link>
+              <Link href={amazonUrl} title='Amazon Music'><Amazon width={32}/></Link>
             )}
           </>
         )}
