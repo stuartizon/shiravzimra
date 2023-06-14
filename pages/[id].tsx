@@ -8,7 +8,9 @@ const Home: NextPage<Props> = ({
   name,
   description,
   spotifyUrl,
-  youtubeUrl
+  youtubeUrl,
+  appleUrl,
+  amazonUrl
 }) => {
   const router = useRouter()
   const { id } = router.query
@@ -24,6 +26,8 @@ const Home: NextPage<Props> = ({
         name={name}
         spotifyUrl={spotifyUrl}
         youtubeUrl={youtubeUrl}
+        appleUrl={appleUrl}
+        amazonUrl={amazonUrl}
       />
       <div className='text-white w-page max-w-full px-10 my-8 mx-auto whitespace-pre-line'>
         {description}
@@ -43,7 +47,9 @@ export const getStaticProps: GetStaticProps<Props> = context => {
       name: thisPiece?.name ?? null,
       description: thisPiece?.description ?? null,
       spotifyUrl: thisPiece?.spotifyUrl ?? null,
-      youtubeUrl: thisPiece?.youtubeUrl ?? null
+      youtubeUrl: thisPiece?.youtubeUrl ?? null,
+      appleUrl: thisPiece?.appleUrl ?? null,
+      amazonUrl: thisPiece?.amazonUrl ?? null
     }
   }
 }
@@ -66,4 +72,6 @@ interface Props {
   description: string | null
   spotifyUrl: string | null
   youtubeUrl: string | null
+  appleUrl: string | null
+  amazonUrl: string | null
 }

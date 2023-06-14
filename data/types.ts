@@ -4,6 +4,7 @@ export interface Piece {
     author: string
     description?: string
     amazonUrl?: string
+    appleUrl?: string
     spotifyUrl?: string
     youtubeUrl?: string
   }

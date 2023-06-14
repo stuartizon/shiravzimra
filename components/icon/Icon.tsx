@@ -1,5 +1,6 @@
 import amazon from './amazon.svg'
 import apple from './apple.svg'
+import download from './download.svg'
 import spotify from './spotify.svg'
 import youtube from './youtube.svg'
 import styles from './Icon.module.css'
@@ -10,6 +11,10 @@ export const Amazon = ({ width }: { width: number }) => {
 
 export const Apple = ({ width }: { width: number }) => {
   return <img src={apple.src} className={styles.icon} width={width} />
+}
+
+export const Download = ({ width }: { width: number }) => {
+  return <img src={download.src} className={styles.icon} width={width} />
 }
 
 export const Spotify = ({ width }: { width: number }) => {

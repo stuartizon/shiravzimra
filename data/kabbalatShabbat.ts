@@ -29,6 +29,9 @@ export const kabbalatShabbat: Section = {
       name: 'Havu Ladonai',
       author: 'Michele Bolaffi',
       youtubeUrl: 'https://youtu.be/_dGF9QkaqsE',
+      spotifyUrl: 'https://open.spotify.com/album/5jqCegMcKnCpuOBwcozGIh',
+      appleUrl: 'https://music.apple.com/us/album/havu-ladonai-single/1686335854',
+      amazonUrl: 'https://music.amazon.com/albums/B0C4952VZX',
       description: `Psalm 29 describes the arrival of God during a storm. We read this Psalm in its entirety during Kabbalat Shabbat, and when returning the Torah to the Ark on Shabbat morning. The final verse is also used in isolation on many other occasions (e.g. during Birkat Hamazon):\n
         "The Lord will give strength to His people, the Lord will bless His people with peace." \n
         Michele Bolaffi's composition for Psalm 29 is undoubtably his most famous work. Bolaffi was born in Livorno in 1769. His tenure as musical director of the Synagogue of Livorno can be considered a turning point in the development of choral and instrumental liturgical music. Following the example of the central European synagogues, the early 18th century marked a period of renewal in Italian synagogal music, incorporating contemporary Italian classical musical elements and introducing polyphony into the existing traditional service. \n

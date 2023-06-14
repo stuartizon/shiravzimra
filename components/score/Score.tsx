@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { AnchorHTMLAttributes, useState } from 'react'
 import { Document, Page } from 'react-pdf'
 
 import { pdfjs } from 'react-pdf'
@@ -7,15 +7,11 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 import 'react-pdf/dist/esm/Page/TextLayer.css'
 import { SwiperSlide } from 'swiper/react'
 import SwiperWithControls from '../swiperWithControls/SwiperWithControls'
-
-import spotify from './spotify.svg'
-import download from './download.svg'
-import youtube from './youtube.svg'
-import styles from './Score.module.css'
 import { useElementSize } from 'usehooks-ts'
 import 'swiper/css'
+import { Amazon, Apple, Download, Spotify, YouTube } from '../icon/Icon'
 
-const Score = ({ id, file, name, spotifyUrl, youtubeUrl }: Props) => {
+const Score = ({ id, file, name, spotifyUrl, youtubeUrl, appleUrl, amazonUrl }: Props) => {
   const [numPages, setNumPages] = useState<number>(0)
   const onLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages)
@@ -29,29 +25,19 @@ const Score = ({ id, file, name, spotifyUrl, youtubeUrl }: Props) => {
         {numPages > 0 && (
           <>
             <a href={file} download={`${id} ${name}`} title='Download PDF'>
-              <img src={download.src} width={40} className={styles.button} />
+              <Download width={40}/>
             </a>
             {youtubeUrl && (
-              <a
-                href={youtubeUrl}
-                target='_blank'
-                title='YouTube'
-                className='mr-2'
-                rel='noreferrer'
-              >
-                <img src={youtube.src} width={40} className={styles.button} />
-              </a>
+              <Link href={youtubeUrl} title='YouTube'><YouTube width={40}/></Link>
             )}
             {spotifyUrl && (
-              <a
-                href={spotifyUrl}
-                target='_blank'
-                title='Spotify'
-                className='flex'
-                rel='noreferrer'
-              >
-                <img src={spotify.src} className={styles.button} width={30} />
-              </a>
+              <Link href={spotifyUrl} title='Spotify'><Spotify width={40}/></Link>
+            )}
+            {appleUrl && (
+              <Link href={appleUrl} title='Apple Music'><Apple width={40}/></Link>
+            )}
+            {amazonUrl && (
+              <Link href={amazonUrl} title='Amazon Music'><Amazon width={40}/></Link>
             )}
           </>
         )}
@@ -81,6 +67,9 @@ const Score = ({ id, file, name, spotifyUrl, youtubeUrl }: Props) => {
     </div>
   )
 }
+
+const Link = (props: AnchorHTMLAttributes<HTMLAnchorElement>) =>
+  <a {...props} target='_blank' rel="noreferrer"/>
 
 const Pages = ({ numPages }: { numPages: number }) => {
   const [ref, { width }] = useElementSize()
@@ -117,6 +106,8 @@ interface Props {
   id: string
   file: string
   name: string | null
+  amazonUrl: string | null
+  appleUrl: string | null
   spotifyUrl: string | null
   youtubeUrl: string | null
 }
