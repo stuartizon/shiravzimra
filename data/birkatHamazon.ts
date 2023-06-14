@@ -9,6 +9,9 @@ export const birkatHamazon: Section = {
       name: 'Harachaman',
       author: 'Haim Kirsch',
       youtubeUrl: 'https://youtu.be/prdcIC5IDcg',
+      spotifyUrl: 'https://open.spotify.com/album/3MfhoIL0sntZb00FsYoSUr',
+      appleUrl: 'https://music.apple.com/us/album/harachaman-hu-yishlach-lanu-single/1686247301',
+      amazonUrl: 'https://music.amazon.com/albums/B0C487FFPS',
       description: `"May the Merciful One send us Elijah the prophet, who is remembered for good, and who will announce to us good tidings, salvation, and consolation."\n
         This section of Birkat Hamazon is almost universally sung to this popular tune by Haim Kirsch, the Israeli composer, conductor and music educator. Like many orally transmitted melodies, it has become distorted over time, and is rarely sung with the correct pronunciation in the original way Kirsch wrote it.`
     }
