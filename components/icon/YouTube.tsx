@@ -1,4 +1,4 @@
-import spotify from './youtube2.svg'
+import spotify from './youtube.svg'
 import styles from './Icon.module.css'
 
 export const YouTube = ({ width }: { width: number }) => {
