@@ -1,6 +1,0 @@
-import spotify from './youtube.svg'
-import styles from './Icon.module.css'
-
-export const YouTube = ({ width }: { width: number }) => {
-  return <img src={spotify.src} className={styles.icon} width={width} />
-}

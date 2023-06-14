@@ -1,5 +1,4 @@
 .icon {
-  filter: invert(100%);
   @apply p-1 transition duration-300 ;
 }
 
