@@ -18,6 +18,9 @@ export const kabbalatShabbat: Section = {
       name: "Moshe V'aharon",
       author: 'Shlomo Carlebach',
       youtubeUrl: 'https://youtu.be/ne_irPK-Eoc',
+      spotifyUrl: 'https://open.spotify.com/album/4qV2t2PCVK9H3gwy9ydApf?si=MwG6rJ4nQLeyNxifGCRjDA',
+      appleUrl: 'https://music.apple.com/us/album/moshe-vaharon-single/1686319394',
+      amazonUrl: 'https://music.amazon.com/albums/B0C493QZLX',
       description: `These words come from the end of Psalm 99, one of the paragraphs we say during the initial section of Kabbalat Shabbat on Friday night. \n
         "When they called to God, He answered them.
         Through a pillar of cloud, He spoke to them.
@@ -42,6 +45,9 @@ export const kabbalatShabbat: Section = {
       name: "L'cha Dodi (for S'fira)",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/mFphX_4mnOI',
+      spotifyUrl: 'https://open.spotify.com/album/4vHIxMOtsYzhINZYyuCG2O',
+      appleUrl: 'https://music.apple.com/us/album/lcha-dodi-for-sfira-single/1686218649',
+      amazonUrl: 'https://music.amazon.com/albums/B0C475YQ5V',
       description: `In many communities, there is a well-known practice of changing the tune for L'cha Dodi on the Shabbat preceding Tisha b'Av. But there is an equally old (though less widespread) custom to change the melody on the Shabbatot during the Omer. \n
         This simple but charming air was once common across many European communities. Some have tenuously described it as resembling "Se Vuol Ballare" by Mozart.`
     }
