@@ -9,6 +9,9 @@ export const shabbatTorah: Section = {
       name: "Sh'ma Yisrael",
       author: 'Salomon Sulzer',
       youtubeUrl: 'https://youtu.be/UWdqP0KDqJ0',
+      spotifyUrl: 'https://open.spotify.com/album/3UKzUA007YzMuOOe4mp9NU',
+      appleUrl: 'https://music.apple.com/us/album/shma-yisrael-single/1686334448',
+      amazonUrl: 'https://music.amazon.com/albums/B0C497MBLH',
       description: `On taking out the Torah on Shabbat morning, we recite Sh'ma Yisrael and Echad Eloheinu. Instantly you know the melody I'm referring to... but maybe it's never even occurred to you that most congregations sing Sh'ma and Echad to at least two different tunes. \n
         Ostensibly the first part of the tune [A] is Sulzer – it sounds suspiciously similar to his Ki Mitzion. According to Joshua Jacobson, "Congregations apparently enjoyed singing Sulzer’s Ki Mitzion melody so much that they applied it to the subsequent texts of the Torah service, Baruch Shenatan Torah and Sh'ma Yisrael." This can already be seen by the mid 19th century in both Alois Kaiser and Marcus Hast's scores. However, Sulzer himself DID utilise this melody for Echad Eloheinu, which ironically most congregations today do not do, instead using the second melody...\n
         The second melody we use today [B] appears as Sulzer's congregational response for Echad. However a variant of this melody also appears in Mombach's score – whilst it's possible he copied Sulzer, I'd suggest this is likely a much earlier melody of unknown authorship. The Blue Book follows the same pattern but instead designates this melody as Traditional.\n
@@ -33,6 +36,9 @@ export const shabbatTorah: Section = {
       name: "L'cha Adonai",
       author: 'Louis Lewandowski',
       youtubeUrl: 'https://youtu.be/gUYTtCwmMIU',
+      spotifyUrl: 'https://open.spotify.com/album/65jmFQIeTsVhRQxmxfVNl7',
+      appleUrl: 'https://music.apple.com/us/album/lcha-adonai-single/1686335685',
+      amazonUrl: 'https://music.amazon.com/albums/B0C496RFWC',
       description: `As we carry the Torah to the Bimah we sing this verse from Chronicles 29:
         "Yours, Lord, is the greatness, the power, the glory, the victory, and the majesty, for all that is in heaven and on earth is Yours. Yours is the kingdom, Lord, and you are exalted over all." \n
         Many traditions also continue with lines from Psalm 99. Here is one of several melodies that Louis Lewandowski wrote for L'cha Adonai. I have heard several congregations sing a slightly altered version of the tune – but Lewandowski's melody implies a secondary dominant and a brief journey to the relative minor. \n
@@ -43,6 +49,9 @@ export const shabbatTorah: Section = {
       name: "Y'chad'sheihu (for Iyar)",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/3GPAVkGeqeg',
+      spotifyUrl: 'https://open.spotify.com/album/0dDf5A5fkClgNKFsLwa9jk',
+      appleUrl: 'https://music.apple.com/us/album/ychadsheihu-for-iyar-single/1686430812',
+      amazonUrl: 'https://music.amazon.com/albums/B0C4BJPYC3',
       description: `While the classic synagogue composers have other melodies for Rosh Chodesh Iyar, it is appropriate in the 21st century for us to reference the modern state of Israel, as Iyar contains Yom Hazikaron, Yom Ha'atzma'ut and Yom Yerushalayim. \n
         The words to Hatikva were written by the 19th century poet Naftali Herz Imber, and the final two lines were modified by Yehuda Leib Metman Hacohen in 1905. The initial part of the melody is based on the ascending minor scale, which is also present in Leoni's Yigdal, Blumenthal's Eitz Chayim, and the Spanish/Portuguese melody for Lech Leshalom Geshem. \n
         Despite the very obvious similarity to this Spanish/Portuguese melody, Hatikva was actually set to music by Samuel Cohen by utilising a Moldavian folk melody. However the theme is much older still. The earliest version we know of is La Mantovana, a 16th century song by Giuseppe Cenci. \n
@@ -54,6 +63,9 @@ export const shabbatTorah: Section = {
       name: "Y'chad'sheihu (for Sh'vat)",
       author: 'Menashe Ravina',
       youtubeUrl: 'https://youtu.be/tsaRVnyI28U',
+      spotifyUrl: 'https://open.spotify.com/album/2Yc1T99Q1am6AK9QwWcCIl',
+      appleUrl: 'https://music.apple.com/us/album/ychadsheihu-for-shvat-single/1686261438',
+      amazonUrl: 'https://music.amazon.com/albums/B0C48CSH1Z',
       description: `In the oeuvres of the classic synagogue composers, there are no truly distinctive melodies for the month of Sh'vat. However as Tu Bish'vat has gained more emphasis over time, it behooves us to utilise what has become a seasonal leitmotif. Whilst the day was historically associated purely with the cut-off for calculating the age of fruit bearing trees, in the 17th century, Lurianic kabbalists formulated the concept of a Tu Bish'vat seder. The wider popularity of this ritual, together with the general celebration of Tu Bish'vat as an ecological awareness day is a more recent development.\n
         This well-known melody is from the song Hashkeidiya Porachat, the blossoming almond tree, composed by Menashe Ravina (born in Ukraine, he emigrated to Palestine in the early 20th century) to a text written by Israel Dushman. `
     }
