@@ -45,6 +45,15 @@ export const shabbatTorah: Section = {
         There is also somewhat of a modern tradition to skip a beat going from the word "Rosh" straight into "Rom'mu". This is neither correct nor incorrect, as Lewandowski's original composition does not include the words from Psalm 99.`
     },
     {
+      id: '63a',
+      name: "Y'hi Ratzon",
+      author: 'Samuel Alman',
+      youtubeUrl: 'https://youtu.be/7gVeRBiI4-o',
+      description: `On the last Shabbat of each Jewish month we recite Birkat HaChodesh over the coming new month. The initial paragraph, Y'hi Ratzon is based on words which the Babylonian sage, Rav, included at the end of his daily Amida, as described in Berachot 16b. (This Gemara discusses various personal prayers which scholars included in their Amida, many of which have found their way into other parts of the liturgy.) Though not originally connected to Birkat HaChodesh, this prayer mentions the word "life" 11 times, corresponding to the number of times this ceremony is performed (in a non-leap year).\n
+        There is some disagreement as to whether this reading is purely protocol to tell everyone when Rosh Chodesh is, or if it reenacts the Mishnaic ritual whereby the Sanhedrin announced the new month. It is for this reason that many have the custom to stand as the witnesses did when they testified to having seen the new moon. Birkat HaChodesh is considered a serious moment of the prayer service, and accordingly the melodies used for Y'hi Ratzon are typically earnest.\n
+        One of the finest compositions is by Samuel Alman. As befits a heartfelt supplication, the melody is in the Ahava Rabba mode, unlike the following prayers Mi She'asa Nissim and Y'chad'sheihu which have a lighter tone. Whilst it can be sung unaccompanied, it does require the choral responses to truly achieve Alman's vision.`
+    },
+    {
       id: '65c',
       name: "Y'chad'sheihu (for Iyar)",
       author: 'Trad.',
