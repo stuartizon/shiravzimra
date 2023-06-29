@@ -42,6 +42,14 @@ export const shabbatMussaf: Section = {
         Confusingly, it is often combined with other melodies. In North America it is common to switch to Malavsky's tune at Hashiveinu, and in Australia, many congregations oddly switch to the Lewandowski. But here is the complete melody as written by Blumenthal (with the obligatory tierce de picardie at the end).`
     },
     {
+      id: '71d',
+      name: 'Hashiveinu',
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/oNm6gdKqA84',
+      description: `Exactly where this traditional melody derives from is not entirely clear. Intriguingly, it appears in Emanuel Aguilar's 1857 book of ancient Spanish/Portuguese melodies for the motzei shabbat song B'motzaei Yom M'nucha. The words do fit the melody a little better, so it is possible that this is the original form, though it could conceivably be an Ashkenazi import.\n
+        In any event, it is now typically used for the end of Uv'nucho Yomar, when we return the Sefer Torah to the ark on Shabbat morning. Whilst it is a distinct tune to itself, North American congregations invariably attach it to the end of Nissan Blumenthal's Eitz Chayim. This is most likely due to the popularity of Samuel Malavsky's album “Sabbath with the Malavsky Family”, which contains a version of Blumenthal's Eitz Chayim ending with this Hashiveinu.`
+    },
+    {
       id: '71e',
       name: 'Eitz Chayim',
       author: 'Samuel Naumbourg',
