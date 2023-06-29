@@ -5,6 +5,14 @@ export const shabbatMussaf: Section = {
   name: 'Shabbat Mussaf',
   pieces: [
     {
+      id: '67a',
+      name: 'Ashrei',
+      author: 'Salomon Sulzer',
+      youtubeUrl: 'https://youtu.be/suNplHSUmwA',
+      description: `Following an exhortation in Brachot 4b, we read the prayer of Ashrei at least three times a day. Though mostly composed of Psalm 145, its first two lines are from Psalm 84 and Psalm 144, both beginning with the word "Ashrei".\n
+        Salomon Sulzer is generally regarded as the father of chazzanut. Though we don't sing many of his compositions any more, he influenced many other composers, and his impact on the structure and style of synagogue music persists. This short declamatory introduction to Ashrei (before we return the Torah to the Ark) is one of many incidental pieces written by Sulzer, though the choral response is really an innovation by David M Davis (at the turn of the 20th century).`
+    },
+    {
       id: '68a',
       name: "Va'anachnu",
       author: 'Felix Mendelssohn',
