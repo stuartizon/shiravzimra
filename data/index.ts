@@ -11,6 +11,7 @@ import { shabbatMaariv } from './shabbatMaariv'
 import { shabbatMussaf } from './shabbatMussaf'
 import { shabbatShacharit } from './shabbatShacharit'
 import { shabbatTorah } from './shabbatTorah'
+import { zmirotNight } from './zmirotNight'
 import { Group, Piece, Section } from './types'
 
 export {
@@ -26,7 +27,8 @@ export {
   rhMaariv,
   kolNidrei,
   chanukah,
-  birkatHamazon
+  birkatHamazon,
+  zmirotNight
 }
 
 export const allGroups: Group[] = [
@@ -64,7 +66,7 @@ export const allGroups: Group[] = [
   {
     id: 'songs',
     name: 'Songs',
-    sections: [birkatHamazon]
+    sections: [birkatHamazon, zmirotNight]
   }
 ]
 
