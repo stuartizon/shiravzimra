@@ -50,6 +50,16 @@ export const kabbalatShabbat: Section = {
       amazonUrl: 'https://music.amazon.com/albums/B0C475YQ5V',
       description: `In many communities, there is a well-known practice of changing the tune for L'cha Dodi on the Shabbat preceding Tisha b'Av. But there is an equally old (though less widespread) custom to change the melody on the Shabbatot during the Omer. \n
         This simple but charming air was once common across many European communities. Some have tenuously described it as resembling "Se Vuol Ballare" by Mozart.`
+    },
+    {
+      id: '10g',
+      name: "L'cha Dodi (for Ben HaMetzarim)",
+      author: 'Israel Meyer Japhet',
+      youtubeUrl: 'https://youtu.be/2ulDrwGUeHM',
+      description: `There is a generally well-known practice of changing the tune for L'cha Dodi on the Shabbat preceding Tisha b'Av to the melody for Eli Tzion. However, the real historical practice is a little more complicated:\n
+        Many of the classic synagogue composers wrote L'cha Dodi melodies for the three weeks, not exclusively on the Eli Tzion theme, but incorporating it somewhere either as a refrain or for just one of the verses. However, each of these compositions is individual, there is no one universal melody across Nusach Ashkenaz. These compositions were also typically composed for the whole three week period, not just for Shabbat Chazon.\n
+        Japhet's score is an exception – in addition to his L'cha Dodi for Shabbat Chazon, he wrote this separate melody (which does not include Eli Tzion) for the other two Shabbatot. This recording contains only the first part of his melody, which is reprised for the final verse, Boi V'shalom. The middle section has a different tune, which I have not recorded here.\n
+        As I have mentioned previously, some commentators disagreed with the practice of using a sad tune for L'cha Dodi, since public mourning is generally forbidden on Shabbat. Some congregations get around this by ensuring that Kabbalat Shabbat is said before sunset (easier in the Northern hemisphere at this time of year). Others will use the Eli Tzion melody for only one, or a few of the verses. Perhaps this is partly the reason why some communities only change the tune for Shabbat Chazon.`
     }
   ]
 }
