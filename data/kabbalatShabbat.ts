@@ -56,6 +56,9 @@ export const kabbalatShabbat: Section = {
       name: "L'cha Dodi (for Ben HaMetzarim)",
       author: 'Israel Meyer Japhet',
       youtubeUrl: 'https://youtu.be/2ulDrwGUeHM',
+      spotifyUrl: 'https://open.spotify.com/album/4g9MvykyOwNkra6iuV9ocl',
+      appleUrl: 'https://music.apple.com/us/album/lcha-dodi-for-ben-hametzarim-single/1696020424',
+      amazonUrl: 'https://music.amazon.com/albums/B0CB788FCZ',
       description: `There is a generally well-known practice of changing the tune for L'cha Dodi on the Shabbat preceding Tisha b'Av to the melody for Eli Tzion. However, the real historical practice is a little more complicated:\n
         Many of the classic synagogue composers wrote L'cha Dodi melodies for the three weeks, not exclusively on the Eli Tzion theme, but incorporating it somewhere either as a refrain or for just one of the verses. However, each of these compositions is individual, there is no one universal melody across Nusach Ashkenaz. These melodies were also typically composed for the whole three week period, not just for Shabbat Chazon.\n
         Japhet's score is an exception – in addition to his L'cha Dodi for Shabbat Chazon, he wrote this separate melody (which does not include Eli Tzion) for the other two Shabbatot. This arrangement contains only the first part of his melody, which is reprised for the final verse, Boi V'shalom.\n
