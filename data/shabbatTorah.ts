@@ -45,6 +45,14 @@ export const shabbatTorah: Section = {
         There is also somewhat of a modern tradition to skip a beat going from the word "Rosh" straight into "Rom'mu". This is neither correct nor incorrect, as Lewandowski's original composition does not include the words from Psalm 99.`
     },
     {
+      id: '57b',
+      name: "V'zot Hatorah",
+      author: 'Jacob Beimel',
+      youtubeUrl: 'https://youtu.be/rvWU6fYbv5Y',
+      description: `At the conclusion of the reading of the Law, an honouree raises the Torah aloft, displaying the portion which has just been read, and the congregation loudly declares: "This is the Torah that Moses placed before the children of Israel at the Lord's commandment, by the hand of Moses."\n
+        This popular melody is often attributed to Idelsohn but was actually composed by Jacob Beimel, chazzan at the Jewish Center during the early 20th century.`
+    },
+    {
       id: '63a',
       name: "Y'hi Ratzon",
       author: 'Samuel Alman',
