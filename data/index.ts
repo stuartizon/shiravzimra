@@ -11,6 +11,7 @@ import { shabbatMaariv } from './shabbatMaariv'
 import { shabbatMussaf } from './shabbatMussaf'
 import { shabbatShacharit } from './shabbatShacharit'
 import { shabbatTorah } from './shabbatTorah'
+import { tishaBav } from './tishaBav'
 import { zmirotNight } from './zmirotNight'
 import { Group, Piece, Section } from './types'
 
@@ -27,6 +28,7 @@ export {
   rhMaariv,
   kolNidrei,
   chanukah,
+  tishaBav,
   birkatHamazon,
   zmirotNight
 }
@@ -61,7 +63,7 @@ export const allGroups: Group[] = [
   {
     id: 'misc',
     name: 'Miscellaneous',
-    sections: [chanukah]
+    sections: [chanukah, tishaBav]
   },
   {
     id: 'songs',
