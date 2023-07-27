@@ -3,6 +3,8 @@ import { Section } from './types'
 export const shabbatMaariv: Section = {
   id: 'shabbatMaariv',
   name: "Shabbat Ma'ariv",
+  shortName: "Ma'ariv",
+  hebrewName: 'מעריב',
   pieces: [
     {
       id: '20a',

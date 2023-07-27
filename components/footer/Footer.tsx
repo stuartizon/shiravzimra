@@ -3,7 +3,7 @@ import { Amazon, Apple, Spotify, YouTube } from '../icon/Icon'
 
 const Footer = () => {
   return (
-    <div className='py-10 flex justify-center space-x-5 bg-stone-900'>
+    <div className='flex justify-center items-center space-x-5 bg-stone-900 h-16 md:h-32'>
       {/* Facebook Email */}
       <FooterLink href='https://www.youtube.com/@stuartizon' title='YouTube'>
         <YouTube width={40} />

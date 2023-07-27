@@ -3,6 +3,8 @@ import { Section } from './types'
 export const festivalMaariv: Section = {
   id: 'festivalMaariv',
   name: "Festival Ma'ariv",
+  shortName: "Ma'ariv",
+  hebrewName: 'מעריב',
   pieces: [
     {
       id: '120b',

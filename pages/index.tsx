@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { SwiperSlide } from 'swiper/react'
-import Cover from '../components/cover/Cover'
+import { Cover } from '../components/cover/Cover'
 import { HashNavigation } from 'swiper'
 import { ContentsSection } from '../components/contents/Contents'
 import SwiperWithControls from '../components/swiperWithControls/SwiperWithControls'
@@ -8,6 +8,7 @@ import { allSections } from '../data'
 
 import 'swiper/css'
 import Head from 'next/head'
+import { TableOfContents } from '../components/table-of-contents/TableOfContents'
 
 const Index: NextPage = () => {
   return (
@@ -26,16 +27,20 @@ const Index: NextPage = () => {
         <title>Shira v&apos;Zimra</title>
       </Head>
 
-      <div className='md:mt-10 mb-16'>
+      <div className='md:mt-10 md:mb-16 mb-2'>
         <SwiperWithControls
           modules={[HashNavigation]}
           hashNavigation={{ replaceState: true, watchState: true }}
+          className='page'
           // Move the className and style attributes inside the SwiperWithControls class I think, cos its
           // not obvious they apply to the classes on the Swiper, not on this class
           // style={{ minHeight: 1018 }}
         >
           <SwiperSlide data-hash=''>
             <Cover />
+          </SwiperSlide>
+          <SwiperSlide data-hash='contents'>
+            <TableOfContents />
           </SwiperSlide>
           {allSections.map(section => (
             <SwiperSlide data-hash={section.id} key={section.id}>

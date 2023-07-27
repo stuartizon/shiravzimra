@@ -1,32 +1,19 @@
 import { FC } from 'react'
-import { allGroups } from '../../data'
 import styles from './Cover.module.css'
 
-const Cover: FC = () => {
+export const Cover: FC = () => {
   return (
     <div className={styles.cover}>
-      <h1 className='text-5xl font-bold mt-36 mb-4 hidden md:inline font-serif'>Shira v&apos;Zimra</h1>
-      <div className='text-xl text-center mt-8 font-serif'>
-        A book of Jewish music for the synagogue and the home,
-      </div>
+      <h1 className='text-5xl font-bold md:mb-6 mb-2 font-serif'>Shira v&apos;Zimra</h1>
+      <div className='text-4xl font-bold md:mb-10 mb-6 font-serif'>שירה וזמרה</div>
       <div className='text-xl text-center mb-4 font-serif'>
+        A book of Jewish music for the<br/>
+        synagogue and the home,<br/>
         arranged for male voice choir by
       </div>
-
-      <h3 className='text-xl mb-4 font-serif'>STUART IZON</h3>
-      <ul className='list-none'>
-        {allGroups.map(group => (
-          <div className='my-4' key={group.id}>
-            {group.sections.map(section => (
-              <li className={styles.item} key={section.id}>
-                <a href={`#${section.id}`} tabIndex={-1}>{section.name}</a>
-              </li>
-            ))}
-          </div>
-        ))}
-      </ul>
+      <div className='text-2xl mb-14 font-serif'>STUART IZON</div>
+      <div className='font-serif md:invisible'>Swipe to get started</div>
+      <img src="/images/swipe.svg" className={styles.swipe} width={64}/>
     </div>
   )
 }
-
-export default Cover

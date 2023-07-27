@@ -4,12 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
-  @apply font-bold text-green-800 hover:opacity-80 transition duration-300;
-}
+@layer base {
+  a {
+    @apply font-bold text-green-800 hover:opacity-80 transition duration-300;
+  }
 
-body {
-  @apply w-screen font-sans;
+  body {
+    @apply w-screen font-sans;
+  }
 }
 
 .main {
@@ -19,4 +21,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   @apply flex flex-col min-h-screen;
+}
+
+.page {
+  @apply w-[98vw] h-[150vw] md:w-[45rem] md:h-[68rem];
 }

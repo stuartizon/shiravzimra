@@ -11,7 +11,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
       </Head>
       <Nav />
-      <Component {...pageProps} />
+      <div className='flex-1'>
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </div>
   )

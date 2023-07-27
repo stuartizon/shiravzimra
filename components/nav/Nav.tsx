@@ -3,7 +3,7 @@ import { allGroups } from '../../data'
 
 const Nav: FC = () => {
   return (
-    <nav className='w-screen p-5 top-0 font-semibold overflow-hidden'>
+    <nav className='w-screen p-5 top-0 font-semibold overflow-hidden h-16'>
       <div className='container mx-auto'>
         <ul className='list-none flex flex-row'>
           <NavItem

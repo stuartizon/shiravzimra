@@ -3,6 +3,8 @@ import { Section } from './types'
 export const zmirotNight: Section = {
   id: 'zmirotNight',
   name: "Friday Night Z'mirot",
+  shortName: "Friday Night Z'mirot",
+  hebrewName: 'זמירות ליל שבת',
   pieces: [
     {
       id: '512d',

@@ -3,12 +3,12 @@
   border-image-slice: 154;
   border-image-repeat: round;
   border-image-width: 120px;
-  border-width: 20px;
   border-style: solid;
-  height: 1018px;
-  @apply w-full flex flex-col items-center;
+  
+  @apply w-full h-full flex flex-col items-center justify-center;
 }
 
-.item ::before {
-  content: '➢ '
+.swipe {
+  filter: opacity(30%);
+  @apply md:invisible;
 }

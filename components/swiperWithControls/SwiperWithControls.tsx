@@ -1,6 +1,7 @@
 import { forwardRef, useState } from 'react'
 import { Swiper as SwiperClass } from 'swiper/types'
 import { Swiper, SwiperProps } from 'swiper/react'
+import { Sheet } from '../sheet/Sheet'
 import ButtonNext from './ButtonNext'
 import ButtonPrev from './ButtonPrev'
 
@@ -30,14 +31,15 @@ const SwiperWithControls = forwardRef<HTMLDivElement, SwiperProps>(
       <div className='mx-auto'>
         <div className='flex gap-x-2 justify-center'>
           <ButtonPrev isBeginning={isBeginning} onPrevious={onPrevious} />
-          <div className='' ref={ref}>
-            <Swiper
-              {...props}
-              onSwiper={onSwiper}
-              onSlideChange={onSlideChange}
-              className='bg-white w-screen md:w-page shadow-lg shadow-black'
-            />
-          </div>
+          <Sheet>
+            <div className='' ref={ref}>
+              <Swiper
+                {...props}
+                onSwiper={onSwiper}
+                onSlideChange={onSlideChange}
+              />
+            </div>
+          </Sheet>
           <ButtonNext isEnd={isEnd} onNext={onNext} />
         </div>
       </div>

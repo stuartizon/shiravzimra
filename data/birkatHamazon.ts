@@ -3,6 +3,8 @@ import { Section } from './types'
 export const birkatHamazon: Section = {
   id: 'birkatHamazon',
   name: 'Birkat Hamazon',
+  shortName: 'Birkat Hamazon',
+  hebrewName: 'ברכת המזון',
   pieces: [
     {
       id: '508',

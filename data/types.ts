@@ -12,11 +12,14 @@ export interface Piece {
   export interface Section {
     id: string
     name: string
+    shortName: string
+    hebrewName: string
     pieces: Piece[]
   }
 
   export interface Group {
     id: string
     name: string
+    hebrewName: string
     sections: Section[]
   }
