@@ -13,7 +13,7 @@ export const TableOfContents: FC = () => {
       </ul> */}
 
       {allGroups.map((group, index) => (
-        <div className='uppercase text-center mt-2 md:mt-6'>
+        <div key={group.id} className='uppercase text-center mt-2 md:mt-6'>
           Part {index + 1}: {group.name} &ndash; {group.hebrewName}
           <ul className='font-sans normal-case text-left text-sm md:text-base'>
             {group.sections.map(section => (
