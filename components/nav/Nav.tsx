@@ -31,11 +31,11 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
           {allGroups.map(group => (
             <>
             <li className='mt-3'>
-              <a className='text-white' href={`#${group.sections[0].id}`} onClick={onClickMenu}>{group.name}</a>
+              <a className='text-white' href={`/#${group.sections[0].id}`} onClick={onClickMenu}>{group.name}</a>
             </li>
             <ul className='ml-4'>
               {group.sections.map(section => (
-                <li key={section.id}><a className='text-white' href={`#${section.id}`} onClick={onClickMenu}>{section.name}</a></li>
+                <li key={section.id}><a className='text-white' href={`/#${section.id}`} onClick={onClickMenu}>{section.name}</a></li>
               ))}
             </ul>
             </>
