@@ -27,7 +27,7 @@ const Index: NextPage = () => {
         <title>Shira v&apos;Zimra</title>
       </Head>
 
-      <div className='md:mt-10 md:mb-16 mb-2'>
+      <div className='md:mt-10 md:mb-16 mb-2 mt-2'>
         <SwiperWithControls
           modules={[HashNavigation]}
           hashNavigation={{ replaceState: true, watchState: true }}

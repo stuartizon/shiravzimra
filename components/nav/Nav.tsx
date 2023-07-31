@@ -1,16 +1,17 @@
 import { CSSProperties, FC } from 'react'
 import { allGroups } from '../../data'
+import styles from './Nav.module.css';
 
-const Nav: FC = () => {
+const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
   return (
-    <nav className='w-screen p-5 top-0 font-semibold overflow-hidden h-16'>
-      <div className='container mx-auto'>
-        <ul className='list-none flex flex-row'>
+    <nav className='w-screen top-0 font-semibold h-16 relative'>
+      <div className='container mx-auto h-full'>
+        <ul className='list-none flex flex-row h-full'>
           <NavItem
             name="Shira v'Zimra"
             href='/#'
             className='flex-grow text-3xl text-center md:text-left font-serif'
-            />
+          />
 
           {allGroups.map(group => (
             <NavItem
@@ -22,19 +23,43 @@ const Nav: FC = () => {
           ))}
         </ul>
       </div>
+      <div className={`${styles.burger} ${showMobileMenu ? styles.enabled : styles.disabled}`} onClick={onClickMenu}>
+        <img src='/images/burger.svg' className='invert' width={42} />
+      </div>
+      <div className={`${styles.menu} ${showMobileMenu ? 'visible' : 'invisible'}`}>
+        <ul>
+          {allGroups.map(group => (
+            <>
+            <li className='mt-3'>
+              <a className='text-white' href={`#${group.sections[0].id}`} onClick={onClickMenu}>{group.name}</a>
+            </li>
+            <ul className='ml-4'>
+              {group.sections.map(section => (
+                <li key={section.id}><a className='text-white' href={`#${section.id}`} onClick={onClickMenu}>{section.name}</a></li>
+              ))}
+            </ul>
+            </>
+          ))}
+        </ul>
+      </div>
     </nav>
   )
 }
 
 const NavItem: FC<NavItemProps> = ({ name, href, className, style }) => (
-  <li className={`mx-2 mt-auto flex-shrink-0 ${className}`}>
-    <a href={href} className='text-white transition duration-100' style={style}>
+  <li className={`mx-2 my-auto flex-shrink-0 ${className}`}>
+    <a href={href} className='text-white transition duration-100 align-sub' style={style}>
       {name}
     </a>
   </li>
 )
 
 export default Nav
+
+interface NavProps {
+  showMobileMenu: boolean
+  onClickMenu: () => void
+}
 
 interface NavItemProps {
   name: string

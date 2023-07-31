@@ -1,0 +1,11 @@
+.burger {
+  @apply absolute right-0 top-0 w-16 h-16 flex justify-center md:hidden cursor-pointer;
+}
+
+.enabled {
+  @apply bg-zinc-500;
+}
+
+.menu {
+  @apply bg-zinc-500 absolute w-screen z-10 p-8 pt-4;
+}
