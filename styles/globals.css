@@ -25,5 +25,5 @@
 }
 
 .page {
-  @apply w-[98vw] h-[150vw] md:w-[45rem] md:h-[68rem];
+  @apply w-[98vw] h-[154vw] md:w-[45rem] md:h-[70rem];
 }

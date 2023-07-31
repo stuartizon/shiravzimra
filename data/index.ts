@@ -41,7 +41,7 @@ export const allGroups: Group[] = [
     sections: [
       kabbalatShabbat,
       shabbatMaariv,
-      // shabbatShacharit,
+      shabbatShacharit,
       shabbatTorah,
       shabbatMussaf
     ]
