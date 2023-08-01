@@ -1,6 +1,7 @@
 import { CSSProperties, FC } from 'react'
 import { allGroups } from '../../data'
 import styles from './Nav.module.css';
+import { Group } from '../../data/types';
 
 const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
   return (
@@ -14,12 +15,7 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
           />
 
           {allGroups.map(group => (
-            <NavItem
-              name={group.name}
-              key={group.id}
-              href={`/#${group.sections[0]?.id || ''}`}
-              className='hidden md:inline text-lg'
-            />
+            <DesktopMenuLink key={group.id} {...group} />
           ))}
         </ul>
       </div>
@@ -45,6 +41,19 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
     </nav>
   )
 }
+
+const DesktopMenuLink: FC<Group> = ({name, sections}) => (
+    <li className={styles.desktopMenuLink}>
+      <a href={`/#${sections[0]?.id || ''}`} className='text-white align-sub'>{name}</a>
+      <div className={styles.desktopMenuDropdown}>
+        <ul>
+          {sections.map(section => (
+            <li key={section.id}><a className='text-white text-base' href={`/#${section.id}`}>{section.name}</a></li>
+          ))}
+        </ul>
+      </div>
+    </li>
+)
 
 const NavItem: FC<NavItemProps> = ({ name, href, className, style }) => (
   <li className={`mx-2 my-auto flex-shrink-0 ${className}`}>

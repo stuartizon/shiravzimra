@@ -9,3 +9,20 @@
 .menu {
   @apply bg-zinc-500 absolute w-screen z-10 p-8 pt-4;
 }
+
+.desktopMenuLink {
+  @apply mx-2 my-auto flex-shrink-0 hidden md:inline text-lg;
+}
+
+.desktopMenuDropdown {
+  @apply invisible opacity-0 absolute z-10 transition duration-100 whitespace-nowrap;
+}
+
+.desktopMenuDropdown ul {
+  @apply shadow-md shadow-black -mx-4 mt-2 px-4 py-2;
+  background-color: #135A4E;
+}
+
+.desktopMenuLink:hover .desktopMenuDropdown {
+  @apply visible opacity-100;
+}
