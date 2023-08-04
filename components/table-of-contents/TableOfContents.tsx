@@ -13,9 +13,9 @@ export const TableOfContents: FC = () => {
       </ul> */}
 
       {allGroups.map((group, index) => (
-        <div key={group.id} className='uppercase text-center mt-2 md:mt-6'>
+        <div key={group.id} className='uppercase text-center mt-2 md:mt-6 text-sm md:text-lg'>
           Part {index + 1}: {group.name} &ndash; {group.hebrewName}
-          <ul className='font-sans normal-case text-left text-sm md:text-base'>
+          <ul className='font-sans normal-case text-left text-xs md:text-base'>
             {group.sections.map(section => (
               <Entry key={section.id} id={section.id} text={section.shortName} textRight={section.hebrewName} />
             ))}
