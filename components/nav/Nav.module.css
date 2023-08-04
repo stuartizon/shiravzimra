@@ -18,6 +18,10 @@
   @apply invisible opacity-0 absolute z-10 transition duration-100 whitespace-nowrap;
 }
 
+.desktopMenuLink:last-child .desktopMenuDropdown {
+  @apply absolute right-8;
+}
+
 .desktopMenuDropdown ul {
   @apply shadow-md shadow-black -mx-4 mt-2 px-4 py-2;
   background-color: #135A4E;
