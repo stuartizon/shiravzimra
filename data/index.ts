@@ -12,8 +12,9 @@ import { shabbatMussaf } from './shabbatMussaf'
 import { shabbatShacharit } from './shabbatShacharit'
 import { shabbatTorah } from './shabbatTorah'
 import { tishaBav } from './tishaBav'
-import { zmirotNight } from './zmirotNight'
 import { Group, Piece, Section } from './types'
+import { zmirotDay } from './zmirotDay'
+import { zmirotNight } from './zmirotNight'
 
 export {
   kabbalatShabbat,
@@ -74,7 +75,7 @@ export const allGroups: Group[] = [
     id: 'songs',
     name: 'Songs',
     hebrewName: 'שירים',
-    sections: [birkatHamazon, zmirotNight]
+    sections: [birkatHamazon, zmirotNight, zmirotDay]
   }
 ]
 
