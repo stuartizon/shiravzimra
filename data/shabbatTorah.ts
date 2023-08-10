@@ -7,6 +7,24 @@ export const shabbatTorah: Section = {
   hebrewName: 'קריאת התורה',
   pieces: [
     {
+      id: '50a',
+      name: 'Ein Kamocha',
+      author: 'Salomon Sulzer',
+      youtubeUrl: 'https://youtu.be/FaI4tx-2T44',
+      description: `Ein Kamocha is a fusion of several verses from Psalms, ingeniously compiled to impart the message that God is eternal, and so too are the words of the Torah which we read thereafter.\n
+        By far the most common melody for Ein Kamocha is by Salomon Sulzer – most Ashkenazi synagogues sing some variant of this. Sulzer's setting is a dialogue between chazzan and choir, beginning with a dramatic fanfare and remaining in a major key throughout. There is some beautiful word painting at "rebuild the walls" and "high and exalted".\n
+        In the UK, it is universally sung on Shabbat, despite its inexplicable omission from the Blue Book. Most of Sulzer's compositions are for chazzan and choir, and though Ein Kamocha is sung in many synagogues without a choir, typically the final two lines are abbreviated, which is a great pity as the original ending is a glorious apotheosis. In North America there is an established practice to sing only the first paragraph, and then switch to Dunajewsky's melody for Av Harachamim.`
+    },
+    {
+      id: '51a',
+      name: 'Av Harachamim',
+      author: 'Salomon Sulzer',
+      youtubeUrl: 'https://youtu.be/FaI4tx-2T44',
+      description: `Ein Kamocha is a fusion of several verses from Psalms, ingeniously compiled to impart the message that God is eternal, and so too are the words of the Torah which we read thereafter.\n
+        By far the most common melody for Ein Kamocha is by Salomon Sulzer – most Ashkenazi synagogues sing some variant of this. Sulzer's setting is a dialogue between chazzan and choir, beginning with a dramatic fanfare and remaining in a major key throughout. There is some beautiful word painting at "rebuild the walls" and "high and exalted".\n
+        In the UK, it is universally sung on Shabbat, despite its inexplicable omission from the Blue Book. Most of Sulzer's compositions are for chazzan and choir, and though Ein Kamocha is sung in many synagogues without a choir, typically the final two lines are abbreviated, which is a great pity as the original ending is a glorious apotheosis. In North America there is an established practice to sing only the first paragraph, and then switch to Dunajewsky's melody for Av Harachamim.`
+    },
+    {
       id: '54a',
       name: "Sh'ma Yisrael",
       author: 'Salomon Sulzer',
