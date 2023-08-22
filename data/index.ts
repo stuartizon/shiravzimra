@@ -13,6 +13,7 @@ import { shabbatShacharit } from './shabbatShacharit'
 import { shabbatTorah } from './shabbatTorah'
 import { tishaBav } from './tishaBav'
 import { Group, Piece, Section } from './types'
+import { ykMaariv } from './ykMaariv'
 import { zmirotDay } from './zmirotDay'
 import { zmirotNight } from './zmirotNight'
 
@@ -28,6 +29,7 @@ export {
   festivalMussaf,
   rhMaariv,
   kolNidrei,
+  ykMaariv,
   chanukah,
   tishaBav,
   birkatHamazon,
@@ -63,7 +65,7 @@ export const allGroups: Group[] = [
     id: 'yk',
     name: 'Yom Kippur',
     hebrewName: 'יום כפור',
-    sections: [kolNidrei]
+    sections: [ykMaariv]
   },
   {
     id: 'misc',

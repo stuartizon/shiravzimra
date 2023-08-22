@@ -48,7 +48,7 @@ const DesktopMenuLink: FC<Group> = ({name, sections}) => (
       <div className={styles.desktopMenuDropdown}>
         <ul>
           {sections.map(section => (
-            <li key={section.id}><a className='text-white text-base' href={`/#${section.id}`}>{section.name}</a></li>
+            <li key={section.id}><a className='text-white text-base' href={`/#${section.id}`}>{section.shortName}</a></li>
           ))}
         </ul>
       </div>
