@@ -7,6 +7,7 @@ import { hallel } from './hallel'
 import { kabbalatShabbat } from './kabbalatShabbat'
 import { kolNidrei } from './kolNidrei'
 import { rhMaariv } from './rhMaariv'
+import { rhMussaf } from './rhMussaf'
 import { shabbatMaariv } from './shabbatMaariv'
 import { shabbatMussaf } from './shabbatMussaf'
 import { shabbatShacharit } from './shabbatShacharit'
@@ -28,6 +29,7 @@ export {
   festivalTorah,
   festivalMussaf,
   rhMaariv,
+  rhMussaf,
   kolNidrei,
   ykMaariv,
   chanukah,
@@ -59,7 +61,7 @@ export const allGroups: Group[] = [
     id: 'rh',
     name: 'Rosh Hashana',
     hebrewName: 'ראש השנה',
-    sections: [rhMaariv]
+    sections: [rhMussaf]
   },
   {
     id: 'yk',
