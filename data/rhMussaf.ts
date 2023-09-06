@@ -7,6 +7,21 @@ export const rhMussaf: Section = {
   hebrewName: 'מוסף',
   pieces: [
     {
+      id: '257a',
+      name: "Horeim",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/VYmae7Gwrh4',
+      spotifyUrl: 'https://open.spotify.com/album/2ODqIAGdLt2MLWq507U3rC',
+      appleUrl: 'https://music.apple.com/us/album/horeim-single/1686502051',
+      amazonUrl: 'https://music.amazon.co.uk/albums/B0C4CN5GT6',
+      description: `After Aleinu in the Rosh Hashana Musaf repetition, the Chazzan intones the prayer Heyei im Pipiyot. As he is about to quote the all important verses of Kingship, Remembrance and Shofar blasts which are the themes for the day, the repetition inserts this introductory supplication that God should grant the Chazzanim the wisdom to say the prayers correctly with understanding and sincerity. (This is later followed by Ochila, a more personal plea for God's assistance.)\n
+        "Teach them what to say,
+        Enlighten them how to speak,
+        Respond to their requests,
+        Inform them how to glorify..."\n
+        This sombre melody is ancient and of unknown authorship. Its seriousness contrasts with some of the surrounding more joyous sections of the service, and reminds me somewhat of the theme for Eli Tzion, also in a minor key and in 3/4 time. This tune is sadly not very well known anymore, yet there are few other melodies written specifically for this section.`
+    },
+    {
       id: '258a',
       name: "Ochila La'el",
       author: 'Hillel Paley',
