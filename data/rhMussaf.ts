@@ -31,6 +31,14 @@ export const rhMussaf: Section = {
         There is an old Nusach for this prayer, but it has become customary in many communities in our time to use this recent melody by Rabbi Hillel Paley, and thereby transform Ochila into a more communal request.`
     },
     {
+      id: '262a',
+      name: "Hayom Harat Olam",
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/UnaCy3PVhfQ',
+      description: `Rosh Hashana is often referred to as the birthday of the world, but this doesn't accurately describe our relationship with the day, and the expression "Happy New Year" is perhaps better reserved for January 1st. Whilst there is indeed joy, Rosh Hashana is simultaneous a day of solemnity, when every living thing is judged. This is the tone of Hayom Harat Olam, a short piyut which we recite immediately following the three sets of shofar blasts during the Musaf Amida. This poem is very old and of unknown authorship, first appearing in Rav Amram's Siddur (from 9th century Iraq).\n
+        Julius Mombach's melody reflects the austere and serious mood of these words, and is the most prevalent tune used in Nusach Anglia today.`
+    },
+    {
       id: '266a',
       name: 'Halleluyah',
       author: 'David Montague Davis',
