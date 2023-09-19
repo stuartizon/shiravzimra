@@ -67,7 +67,7 @@ export const allGroups: Group[] = [
     id: 'yk',
     name: 'Yom Kippur',
     hebrewName: 'יום כפור',
-    sections: [ykMaariv]
+    sections: [kolNidrei, ykMaariv]
   },
   {
     id: 'misc',
