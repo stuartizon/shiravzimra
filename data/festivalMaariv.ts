@@ -15,6 +15,13 @@ export const festivalMaariv: Section = {
         Although it has largely been supplanted in most congregations by an antiphonal chant for Akdamut itself, its first part is traditionally used on Shavuot for Mi Chamocha in Ma'ariv (as per this recording), Hodu and Ana in Hallel, Shir Hama'alot, Adon Olam and Yechadshehu for Rosh Chodesh Sivan.`
     },
     {
+      id: '120c',
+      name: 'Mi Chamocha (for Sukkot)',
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/qnGg8lvO5VM',
+      description: `This traditional Sukkot theme is known as the Lulawschütteln nigun. Its main use is in Hallel, as a slow melody to facilitate shaking the arba minim, but it is also used as a seasonal leitmotif for Mi Chamocha in Ma'ariv (as per this recording), Adon Olam and Shir Hama'alot.`
+    },
+    {
       id: '123a',
       name: 'Kaddish',
       author: 'Trad.',
