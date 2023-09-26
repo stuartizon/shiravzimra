@@ -12,14 +12,14 @@ export const festivalMaariv: Section = {
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/zA0I9BgDUzY',
       description: `This is what was historically considered to THE traditional Shavuot melody. Originally written for Akdamut, it seems to be old enough to have been in use across all of Ashkenaz. You can find evidence of this theme in the works of Lewandowski, Sulzer, Baer, Mombach and many others. So it is something of a surprise that this melody is not more widely known today, especially when you consider that there are so few tunes in general for Shavuot, compared with any other festival. \n
-        Although it has largely been supplanted in most congregations by an antiphonal chant for Akdamut itself, its first part is traditionally used on Shavuot for Mi Chamocha in Ma'ariv (as per this recording), Hodu and Ana in Hallel, Shir Hama'alot, Adon Olam and Yechadshehu for Rosh Chodesh Sivan.`
+        Although it has largely been supplanted in most congregations by an antiphonal chant for Akdamut itself, its first part is traditionally used on Shavuot for Mi Chamocha in Ma'ariv (as per this arrangement), Hodu and Ana in Hallel, Shir Hama'alot, Adon Olam and Yechadshehu for Rosh Chodesh Sivan.`
     },
     {
       id: '120c',
       name: 'Mi Chamocha (for Sukkot)',
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/qnGg8lvO5VM',
-      description: `This traditional Sukkot theme is known as the Lulawschütteln nigun. Its main use is in Hallel, as a slow melody to facilitate shaking the arba minim, but it is also used as a seasonal leitmotif for Mi Chamocha in Ma'ariv (as per this recording), Adon Olam and Shir Hama'alot.`
+      description: `This traditional Sukkot theme is known as the Lulawschütteln nigun. Its main use is in Hallel, as a slow melody to facilitate shaking the arba minim, but it is also used as a seasonal leitmotif for Mi Chamocha in Ma'ariv (as per this arrangement), Adon Olam and Shir Hama'alot.`
     },
     {
       id: '123a',
