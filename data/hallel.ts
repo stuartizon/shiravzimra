@@ -29,6 +29,11 @@ export const hallel: Section = {
         Since it can feel monotonous to repeat the same theme 8 times in a row, this arrangement (emulating several others) alternates between this Hodu tune and the traditional Shavuot melody leitmotif, which is also used for Mi Chamocha in Ma'ariv, Adon Olam and Yechadshehu for Rosh Chodesh Sivan.`
     },
     {
+      id: '109c',
+      name: "Hodu Ladonai (for Sukkot)",
+      author: 'Trad.'
+    },
+    {
       id: '111a',
       name: "Od'cha",
       author: 'Trad.',
