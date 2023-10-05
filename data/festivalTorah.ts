@@ -17,6 +17,14 @@ export const festivalTorah: Section = {
       description: `Lewandowski originally wrote these two regal and dramatic melodies for parts of Ata Horeita which we say on Simchat Torah evening. With the frenetic energy that Simchat Torah now evokes in many of our synagogues, Lewandowski's beautiful stately service seems rather anachronistic. This lesser known melody is therefore now more often used when taking out the Torah during the morning service on Festivals, or on other special occasions.`
     },
     {
+      id: '134a',
+      name: "Va'ani T'filati",
+      author: 'Samuel Naumbourg',
+      youtubeUrl: 'https://youtu.be/dChkJwqiET0',
+      description: `On weekday Yom Tov prior to taking out the Torah, we make a request that our prayers be successful at this propitious time. This is customarily recited three times.\n
+        Naumbourg scored his melody for a unison choir in octaves, with harmony only on the second iteration. This composition was later included in an abridged form in Zamru Lo, and today many congregations which utilise this melody typically do so by repeating the first phrase three times.`
+    },
+    {
       id: '135a',
       name: "Sh'ma Yisrael",
       author: 'Julius Mombach',
