@@ -73,6 +73,13 @@ export const shabbatTorah: Section = {
         This popular melody is often attributed to Idelsohn but was actually composed by Jacob Beimel, chazzan at the Jewish Center during the early 20th century.`
     },
     {
+      id: '61a',
+      name: "Mi Sheberach for Tzahal",
+      author: 'Dubi Seltzer',
+      youtubeUrl: 'https://youtu.be/GyjZNnVYP0Q',
+      description: `Although this melody has become very well known with these words from the Mi Sheberach, Dubi Seltzer originally wrote it for the song Eretz Tzvi which memorialises Mivtza Yonatan, the operation to rescue hostages from Entebbe airport in Uganda.`
+    },
+    {
       id: '63a',
       name: "Y'hi Ratzon",
       author: 'Samuel Alman',
