@@ -29,7 +29,7 @@ const Home: NextPage<Props> = ({
         appleUrl={appleUrl}
         amazonUrl={amazonUrl}
       />
-      <div className='text-white w-page max-w-full px-10 my-8 mx-auto whitespace-pre-line'>
+      <div className='text-white w-page max-w-full px-6 my-8 mx-auto whitespace-pre-line'>
         {description}
       </div>
     </>
