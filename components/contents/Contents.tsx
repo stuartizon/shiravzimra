@@ -27,7 +27,7 @@ export const Entry: FC<EntryProps> = ({ id, name, author }) => (
 
 export const ContentsSection: FC<ContentsSectionProps> = ({ section }) => {
   return (
-    <div className='font-serif mt-8 mx-8 md:mt-32 md:mx-24'>
+    <div className='font-serif mt-8 mx-6 md:mt-32 md:mx-24'>
       <h1 className='text-2xl text-center font-bold uppercase mb-3 md:mb-6'>{section.name}</h1>
       <ul className='font-sans normal-case text-left text-xs md:text-base'>
         {section.pieces.map(piece => (
