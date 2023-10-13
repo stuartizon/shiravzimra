@@ -15,15 +15,6 @@
   }
 }
 
-.main {
-  background-color: #0e413b;
-  background-image: url('/images/background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  @apply flex flex-col min-h-screen;
-}
-
 .page {
   @apply w-[98vw] h-[154vw] md:w-[45rem] md:h-[70rem];
 }
