@@ -7,6 +7,15 @@ export const zmirotDay: Section = {
   hebrewName: 'זמירות ליום שבת',
   pieces: [
     {
+      id: '529d',
+      name: 'Yom Shabbaton',
+      author: 'Yigal Calek',
+      youtubeUrl: 'https://youtu.be/1Z48JD1kWXw',
+      description: `"On [Shabbat] the dove found rest, and there too shall rest the weary."\n
+        Composed by the most prolific of poets, Yehuda Halevi, in 12th Century Spain, Yom Shabbaton is a five stanza poem, whose first letters spell out the author's name, Yehuda. Its repeated refrain describes Noah's dove, which found rest on the dry land seven days after being sent. Since there is no explicit connection between Shabbat and the dove in the biblical text, some interpret this line allegorically – the dove is the Jewish people, who find rest on Shabbat from their travails throughout the Diaspora.\n
+        This lesser-known melody is by the illustrious Yigal Calek. It has long been a favourite of mine – its introspective soaring line seems to me to fit the words far better than the faster tunes (or those in the major).`
+    },
+    {
       id: '531a',
       name: 'Shimru Shabtotai',
       author: 'Eliezer Diamond',
