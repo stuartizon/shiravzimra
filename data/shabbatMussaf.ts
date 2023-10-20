@@ -111,6 +111,19 @@ export const shabbatMussaf: Section = {
         "This classic setting of Adon Olam is by Simon Waley, pianist, composer and prominent member of the West London Synagogue. There is something deeply resonant in its alternation between major and minor. Waley's melody was readily adopted by the Spanish and Portuguese community and Ashkenazi orthodox communities in the UK, though it inexplicably has struggled to gain a foothold further afield."
     },
     {
+      id: '94f',
+      name: 'Adon Olam',
+      author: 'Ran Eliran',
+      youtubeUrl: 'https://youtu.be/A6sPQjwU9Jg',
+      description:
+        `This popular melody was composed by Ran Eliran on the road to Sharm-el-Sheikh during the 6-day war in June 1967. Sharm-el-Sheikh had been captured by Israel during the Sinai war of 1956, but returned to Egypt in 1957. After the city was recaptured in 1967, it was kept under Israeli control until 1982 when it was rereturned to Egypt as part of the Israel-Egypt peace treaty.\n
+        The original lyrics reflect a heartfelt return to the city:
+        "You're Sharm-el-Sheikh, we've returned to you once again. You are in our hearts, always in our hearts"\n
+        and the final verse professes an ever-present desire for peace:
+        "The evening sets, bringing another dream, bringing on the water a hope for peace".\n
+        This tune is often adapted for the hymn Adon Olam, particularly as a kumzitz or melave malka song.`
+    },
+    {
       id: '95a',
       name: 'Esa Einai',
       author: 'Charles Garland Verrinder',
