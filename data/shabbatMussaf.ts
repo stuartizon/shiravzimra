@@ -70,6 +70,20 @@ export const shabbatMussaf: Section = {
         Wohlberg wrote M'chalkel specifically for junior congregations, and stated in private conversation that he composed it purely as a device for teaching the prayer to children. He later wrote other melodies for M'chalkel which he considered more appropriate for adults. Nevertheless this has become so popular that it has come to be regarded as the standard nusach in America.`
     },
     {
+      id: '78k',
+      name: "Hu Eloheinu",
+      author: 'Chanina Krachevsky',
+      youtubeUrl: 'https://youtu.be/I9e7v838PCE',
+      description: `In the early 20th century, Yaakov Fichman penned the enchanting poem “Agada” (a Legend) based on his great love for the land of Israel. The composer Chanina Krachevsky later wrote this lyrical melody to the words, propelling them to further heights.\n
+        “On the banks of the Kineret, there is a beautiful palace.
+        A garden is planted there – not a single tree moves.
+        Who lives there? Only a boy, like a bird in the heart of a forest.
+        He studies Torah there from the mouth of Eliyahu the Prophet.
+        Not a wave makes a sound. All the flyings birds
+        Stand by to listen and soak up God's Torah.”\n
+        Here is Hu Eloheinu from the Mussaf K'dusha set to this legendary melody.`
+    },
+    {
       id: '92a',
       name: 'Ein Keloheinu',
       author: 'Julius Freudenthal',
