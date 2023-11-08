@@ -4,6 +4,7 @@ import Main from '../components/main/Main'
 import Nav from '../components/nav/Nav'
 import Footer from '../components/footer/Footer'
 import Head from 'next/head'
+import Script from 'next/script'
 import { useState } from 'react'
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -14,6 +15,15 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
       </Head>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-9TFRCWQ7E8" async={true} />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9TFRCWQ7E8');
+        `}
+      </Script>
       <Nav
         showMobileMenu={mobileMenu}
         onClickMenu={() => setMobileMenu(!mobileMenu)}
