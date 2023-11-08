@@ -25,6 +25,11 @@ const Index: NextPage = () => {
 
       <Head>
         <title>Shira v&apos;Zimra</title>
+        <meta
+          name='description'
+          content='A book of Jewish music for the synagogue and the home, arranged for male voice choir by Stuart Izon'
+        />
+        <meta name='author' content='Stuart Izon' />
       </Head>
 
       <div className='md:mt-10 md:mb-16 mb-2 mt-2'>
