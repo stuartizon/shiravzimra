@@ -34,3 +34,4 @@ yarn-error.log*
 
 # build files
 public/pdf.worker.min.js
+public/sitemap.xml
