@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://shiravzimra.com',
+  siteUrl: 'https://www.shiravzimra.com',
   generateIndexSitemap: false
 }
