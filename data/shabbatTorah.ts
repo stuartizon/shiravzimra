@@ -103,6 +103,13 @@ export const shabbatTorah: Section = {
         Perhaps the most famous use (besides Hatikva) is by the Czech composer, Bedřich Smetana in his epic symphonic poem Vltava.`
     },
     {
+      id: '65i',
+      name: "Y'chad'sheihu (for Kislev)",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/jLP-e6pJHek',
+      description: `As we bless the new month of Kislev, it is traditional to use the Maoz Tzur theme for the paragraph of Y'chad'sheihu. This melody is of non Jewish origin, used by Martin Luther in the 16th century for a hymn, but both are possibly based on an earlier German folk song. This version uses the altered second line created by Julius Mombach.`
+    },
+    {
       id: '65k',
       name: "Y'chad'sheihu (for Sh'vat)",
       author: 'Menashe Ravina',
