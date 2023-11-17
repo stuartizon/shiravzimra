@@ -1,5 +1,6 @@
 import { birkatHamazon } from './birkatHamazon'
 import { chanukah } from './chanukah'
+import { chuppah } from './chuppah'
 import { festivalMaariv } from './festivalMaariv'
 import { festivalMussaf } from './festivalMussaf'
 import { festivalTorah } from './festivalTorah'
@@ -73,7 +74,7 @@ export const allGroups: Group[] = [
     id: 'misc',
     name: 'Miscellaneous',
     hebrewName: 'שונות',
-    sections: [chanukah, tishaBav]
+    sections: [chanukah, tishaBav, chuppah]
   },
   {
     id: 'songs',
