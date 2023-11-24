@@ -61,6 +61,13 @@ export const shabbatMussaf: Section = {
       description: `This sweet and gentle melody is unusual in that the main theme is in the bass. Naumbourg, who was chief chazzan in Paris in the mid 19th century, dedicated this piece to his friend, the composer Gioachino Rossini.`
     },
     {
+      id: '71i',
+      name: 'Ki Lekach Tov',
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/kippuurfXLE',
+      description: `This charming composition by Mombach is perhaps one of his least well known, and also one of the least well known melodies for this paragraph. This is a pity as it is an easily-singable setting, which remains in a major key throughout, and plainly conveys the meaning of the words.`
+    },
+    {
       id: '74a',
       name: "M'chalkel",
       author: 'Max Wohlberg',
