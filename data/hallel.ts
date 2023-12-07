@@ -11,7 +11,7 @@ export const hallel: Section = {
       name: "B'tzeit Yisrael",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/tTOU4fzzLb4',
-      description: `This traditional melody is by far the most commonly used tune in the UK – I imagine that many congregants would struggle to name another – yet it is completely unknown in other parts of the world. Intriguingly given this background, it is not found in the Blue Book and no original source for it has emerged, which may mean it is more modern than the traditional melodies for other parts of Hallel.`
+      description: `This traditional melody is by far the most commonly used tune in the UK – I imagine that many congregants would struggle to name another – yet it is completely unknown in other parts of the world. Intriguingly given this background, it is not found in the Blue Book and no original source for it has emerged, which may mean it is more modern than other traditional melodies for surrounding parts of Hallel.`
     },
     {
       id: '107c',
