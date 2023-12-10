@@ -145,6 +145,20 @@ export const shabbatMussaf: Section = {
         This tune is often adapted for the hymn Adon Olam, particularly as a kumzitz or melave malka song.`
     },
     {
+      id: '94z',
+      name: 'Adon Olam',
+      author: 'Andrew Lloyd Webber',
+      youtubeUrl: 'https://youtu.be/KYT1mAnqbrM',
+      description:
+        `Shabbat Chanukah always falls out on either Parshat Vayeshev or Miketz, which detail the story of Joseph. This is more than mere coincidence, as there are many connections between the stories of Chanukah and Joseph.\n
+          At the end of Vayeshev, Joseph has been wrongly convicted for a crime and thrown into jail. It is at this point in Andrew Lloyd Webber's musical when Joseph laments Close Every Door To Me. In Tim Rice's original lyrics, the song ends with this message of hope: \n
+          "Close every door to me, keep those I love from me
+          Children of Israel are never alone
+          For we know we shall find our own peace of mind
+          For we have been promised a land of our own" \n
+          This ever-present dream to be our own people in our own land fills much of the stories of Genesis, and the following four books. Though the tale of Joseph is not the prototypical example of Zionism in Tanach, Chanukah IS that story of the Israelites recovering their temple, their national sovereignty and their land.`
+    },
+    {
       id: '95a',
       name: 'Esa Einai',
       author: 'Charles Garland Verrinder',
