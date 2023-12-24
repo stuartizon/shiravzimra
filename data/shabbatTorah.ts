@@ -25,6 +25,13 @@ export const shabbatTorah: Section = {
         In the UK, it is universally sung on Shabbat, despite its inexplicable omission from the Blue Book. Most of Sulzer's compositions are for chazzan and choir, and though Ein Kamocha is sung in many synagogues without a choir, typically the final two lines are abbreviated, which is a great pity as the original ending is a glorious apotheosis. In North America there is an established practice to sing only the first paragraph, and then switch to Dunajewsky's melody for Av Harachamim.`
     },
     {
+      id: '52b',
+      name: "Vay'hi Binsoa",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/mGm22rCCnIA',
+      description: `This old traditional Dukes Place melody is less well known nowadays, except for its last line which is typically pasted on to Sulzer's melody in Commonwealth countries.`
+    },
+    {
       id: '54a',
       name: "Sh'ma Yisrael",
       author: 'Salomon Sulzer',
