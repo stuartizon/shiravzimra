@@ -72,6 +72,13 @@ export const shabbatTorah: Section = {
         There is also somewhat of a modern tradition to skip a beat going from the word "Rosh" straight into "Rom'mu". This is neither correct nor incorrect, as Lewandowski's original composition does not include the words from Psalm 99.`
     },
     {
+      id: '55c',
+      name: "L'cha Adonai",
+      author: 'Gershon Ephros',
+      youtubeUrl: 'https://youtu.be/5TxojgLWN-Y',
+      description: `This melody by Gershon Ephros for the first part of L'cha Adonai, when we carry the Torah to the Bimah, is popular mostly among non-orthodox congregations in the US. In the version which appears in his cantorial anthology, Ephros scores a canon and some very unusual major 7th chords for the choir, which I have not included in this arrangement.`
+    },
+    {
       id: '57b',
       name: "V'zot Hatorah",
       author: 'Jacob Beimel',
