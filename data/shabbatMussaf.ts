@@ -103,12 +103,18 @@ export const shabbatMussaf: Section = {
         Many recordings have a variant melody over the words "mi ch'malkeinu/baruch malkeinu". It's worth noting that not only is this divergent from the tune as written by Freudenthal, but it is also impossible to sing alongside the original line given the incompatible harmony.`
     },
     {
+      id: '92b',
+      name: 'Ein Keloheinu',
+      author: 'Abraham Saqui',
+      youtubeUrl: 'https://youtu.be/O-CecWbEBgA',
+      description: `This setting is one of several that Abraham Saqui composed for Ein Keloheinu, taken from his magnum opus, Songs of Israel. Saqui also included alternative English lyrics for many of his melodies.`
+    },
+    {
       id: '92f',
       name: 'Ein Keloheinu',
       author: 'George Frideric Handel',
       youtubeUrl: 'https://youtu.be/63t2LGsFrQo',
-      description: `Ein Keloheinu (There is none like our God) is a prayer added to the end of the Shabbat morning service so that everybody can say at least 100 blessings a day, even on days when the Amida is shorter. \n
-        On Shabbat Chanukah, it is customary in many communities to use Handel's melody for "See, the Conquering Hero Comes" from his oratorio Judas Maccabaeus (which depicts the victory of the Maccabees over the Seleucid Empire).`
+      description: `On Shabbat Chanukah, it is customary in many communities to use Handel's melody for "See, the Conquering Hero Comes" from his oratorio Judas Maccabaeus (which depicts the victory of the Maccabees over the Seleucid Empire).`
     },
     {
       id: '94a',
