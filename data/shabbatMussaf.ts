@@ -77,6 +77,13 @@ export const shabbatMussaf: Section = {
         Wohlberg wrote M'chalkel specifically for junior congregations, and stated in private conversation that he composed it purely as a device for teaching the prayer to children. He later wrote other melodies for M'chalkel which he considered more appropriate for adults. Nevertheless this has become so popular that it has come to be regarded as the standard nusach in America.`
     },
     {
+      id: '75a',
+      name: "K'dusha",
+      author: 'Yosef Tzvi Kahan',
+      youtubeUrl: 'https://youtu.be/Z4dZsPyw9RU',
+      description: `Though today K'dusha is often sung to popular tunes, there are traditional compositions written specifically for the words of this prayer. One of the most well known is this piece by Yosef Tzvi Kahan, who was chazzan at the Great Synagogue in Vilna towards the end of the 19th century. Unfortunately, Kahan died during his prime after a sudden illness. It is unclear whether he wrote any other compositions, or indeed if he completed the music for the last two stanzas of this K'dusha.`
+    },
+    {
       id: '78k',
       name: "Hu Eloheinu",
       author: 'Chanina Krachevsky',
