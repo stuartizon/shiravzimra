@@ -5,6 +5,7 @@ import { festivalMaariv } from './festivalMaariv'
 import { festivalMussaf } from './festivalMussaf'
 import { festivalTorah } from './festivalTorah'
 import { hallel } from './hallel'
+import { havdala } from './havdala'
 import { kabbalatShabbat } from './kabbalatShabbat'
 import { kolNidrei } from './kolNidrei'
 import { rhMaariv } from './rhMaariv'
@@ -26,6 +27,7 @@ export {
   shabbatTorah,
   shabbatMussaf,
   hallel,
+  havdala,
   festivalMaariv,
   festivalTorah,
   festivalMussaf,
@@ -80,7 +82,7 @@ export const allGroups: Group[] = [
     id: 'songs',
     name: 'Songs',
     hebrewName: 'שירים',
-    sections: [birkatHamazon, zmirotNight, zmirotDay]
+    sections: [birkatHamazon, zmirotNight, zmirotDay, havdala]
   }
 ]
 
