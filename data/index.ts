@@ -8,6 +8,7 @@ import { hallel } from './hallel'
 import { havdala } from './havdala'
 import { kabbalatShabbat } from './kabbalatShabbat'
 import { kolNidrei } from './kolNidrei'
+import { purim } from './purim'
 import { rhMaariv } from './rhMaariv'
 import { rhMussaf } from './rhMussaf'
 import { shabbatMaariv } from './shabbatMaariv'
@@ -36,6 +37,7 @@ export {
   kolNidrei,
   ykMaariv,
   chanukah,
+  purim,
   tishaBav,
   birkatHamazon,
   zmirotNight
@@ -76,7 +78,7 @@ export const allGroups: Group[] = [
     id: 'misc',
     name: 'Miscellaneous',
     hebrewName: 'שונות',
-    sections: [chanukah, tishaBav, chuppah]
+    sections: [chanukah, purim, tishaBav, chuppah]
   },
   {
     id: 'songs',
