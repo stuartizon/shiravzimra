@@ -8,6 +8,7 @@ import { hallel } from './hallel'
 import { havdala } from './havdala'
 import { kabbalatShabbat } from './kabbalatShabbat'
 import { kolNidrei } from './kolNidrei'
+import { pesachSeder } from './pesachSeder'
 import { purim } from './purim'
 import { rhMaariv } from './rhMaariv'
 import { rhMussaf } from './rhMussaf'
@@ -37,6 +38,7 @@ export {
   kolNidrei,
   ykMaariv,
   chanukah,
+  pesachSeder,
   purim,
   tishaBav,
   birkatHamazon,
@@ -84,7 +86,7 @@ export const allGroups: Group[] = [
     id: 'songs',
     name: 'Songs',
     hebrewName: 'שירים',
-    sections: [birkatHamazon, zmirotNight, zmirotDay, havdala]
+    sections: [birkatHamazon, zmirotNight, zmirotDay, havdala, pesachSeder]
   }
 ]
 
