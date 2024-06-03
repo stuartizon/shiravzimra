@@ -65,6 +65,15 @@ export const kabbalatShabbat: Section = {
         Many of the classic synagogue composers wrote L'cha Dodi melodies for the three weeks, not exclusively on the Eli Tzion theme, but incorporating it somewhere either as a refrain or for just one of the verses. However, each of these compositions is individual, there is no one universal melody across Nusach Ashkenaz. These melodies were also typically composed for the whole three week period, not just for Shabbat Chazon.\n
         Japhet's score is an exception – in addition to his L'cha Dodi for Shabbat Chazon, he wrote this separate melody (which does not include Eli Tzion) for the other two Shabbatot. This arrangement contains only the first part of his melody, which is reprised for the final verse, Boi V'shalom.\n
         Some commentators disagreed with the practice of using a sad tune for L'cha Dodi, since public mourning is generally forbidden on Shabbat. Some congregations get around this by ensuring that Kabbalat Shabbat is said before sunset (easier in the Northern hemisphere at this time of year). Others will use the Eli Tzion melody for only one, or a few of the verses. Perhaps this is partly the reason why some communities only change the tune for Shabbat Chazon.`
+    },
+    {
+      id: '10h',
+      name: "L'cha Dodi (for S'fira)",
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/_uCaRouQUhQ',
+      description: `As mentioned above, there is a historic practice of changing the tune for L'cha Dodi on the Shabbatot during the Omer period. In the mid 19th century, Mombach wrote this magnum opus, which is distinct from the traditional S'fira melody, to be used for both the Omer period and also for the Shabbatot during the Three Weeks. This venerated tradition is still upheld in many UK congregations, with some reportedly adapting the melody for other prayers e.g. Ein Keloheinu. \n
+        This is a complex work for chazzan and choir, with contrasting sections emphasising the meaning of the words. Structurally, Mombach follows the old tradition of changing to a faster tune at Hitor'ri (not Lo Tevoshi as per contemporary practice), and returning to the first part of the melody for Boi V'shalom. As I have mentioned previously, there is some disagreement regarding the use of a melancholic tune for L'cha Dodi, as public mourning is generally forbidden on Shabbat. However, kabbalat shabbat is typically said prior to the onset of Shabbat in both the S'fira period and Ben Hametzarim (in the northern hemisphere, at least). Mombach astutely modulates to the parallel major at the final refrain as we welcome the Shabbat in delight.\n
+        Mombach's melody does not utilise the traditional S'fira Lecha Dodi tune anywhere, although the editors of the Blue Book sought to incorporate that into Mombach's piece, replacing his Boi V'shalom Da Capo. In my opinion this is a rather clumsy and unwarranted amalgamation. However, when this piece is sung during the Three Weeks, the verse Boi V'shalom is indeed replaced with the melody for Eli Tzion (according to both Mombach's score and the Blue Book).`
     }
   ]
 }
