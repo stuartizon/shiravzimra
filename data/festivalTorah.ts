@@ -25,6 +25,13 @@ export const festivalTorah: Section = {
         Naumbourg scored his melody for a unison choir in octaves, with harmony only on the second iteration. This composition was later included in an abridged form in Zamru Lo, and today many congregations which utilise this melody typically do so by repeating the first phrase three times.`
     },
     {
+      id: '134d',
+      name: "Va'ani T'filati",
+      author: 'Samuel Goldfarb',
+      youtubeUrl: 'https://youtu.be/PKcGkT6x98s',
+      description: `One of the most well-known melodies for Va'ani T'filati, particularly in North America, is this composition by Goldfarb, with its insistent "aneni, aneni" – "answer me, answer me". Unlike some other musical options for this prayer, Goldfarb only wrote one verse, so this line is repeated two more times verbatim. Over the years, a couple of common usage errors have crept in: the beginning is often glossed over, avoiding the repetition on the word "t'filati". However, the composer's intent is clearly to create two matching halves – the melody at "elohim" mirrors "va'ani t'filati" in the same way that "aneni" mirrors "l'cha adonai". Additionally, many negligently flatten the accidental on "ratzon" which is necessary for the secondary dominant (V/V).`
+    },
+    {
       id: '135a',
       name: "Sh'ma Yisrael",
       author: 'Julius Mombach',
