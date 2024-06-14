@@ -79,6 +79,13 @@ export const shabbatTorah: Section = {
       description: `This melody by Gershon Ephros for the first part of L'cha Adonai, when we carry the Torah to the Bimah, is popular mostly among non-orthodox congregations in the US. In the version which appears in his cantorial anthology, Ephros scores a canon and some very unusual major 7th chords for the choir, which I have not included in this arrangement.`
     },
     {
+      id: '57a',
+      name: "V'zot Hatorah",
+      author: 'Louis Lewandowski',
+      youtubeUrl: 'https://youtu.be/L34e8I3wwck',
+      description: `At the conclusion of the reading of the Law, an honouree raises the Torah aloft, displaying the portion which has just been read. This well-known melody was written by Louis Lewandowski and is likely the most popular Ashkenaz tune for V'zot Hatorah outside of North America.`
+    },
+    {
       id: '57b',
       name: "V'zot Hatorah",
       author: 'Jacob Beimel',
