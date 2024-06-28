@@ -124,6 +124,18 @@ export const shabbatTorah: Section = {
         Perhaps the most famous use (besides Hatikva) is by the Czech composer, Bedřich Smetana in his epic symphonic poem Vltava.`
     },
     {
+      id: '65e',
+      name: "Y'chad'sheihu (for Tammuz)",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/UmUyW0yKcog',
+      description: `At the centre of the selichot for the 17th of Tammuz is the poem Sh'ei Ne'esar (composed by Solomon Ibn Gabirol) whose words are poignant and ever relevant to us in these difficult times:\n
+        "Turn, O Lord, to the hostages who were taken by Babylon and Seir.
+        We have been crying to You endlessly, and begging like young children...
+        Judge the cause of the mute;  may the destroyer and executioner be punished.
+        On this day the enemy prevailed and the city was taken."\n
+        There is an ancient melody specifically for this piyyut, which is appropriately employed by Marcus Hast for Y'chad'sheihu before Rosh Chodesh Tammuz.`,
+    },
+    {
       id: '65i',
       name: "Y'chad'sheihu (for Kislev)",
       author: 'Trad.',
