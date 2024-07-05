@@ -14,6 +14,13 @@ export const hallel: Section = {
       description: `This traditional melody is by far the most commonly used tune in the UK – I imagine that many congregants would struggle to name another – yet it is completely unknown in other parts of the world. Intriguingly given this background, it is not found in the Blue Book and no original source for it has emerged, which may mean it is more modern than other traditional melodies for surrounding parts of Hallel.`
     },
     {
+      id: '103b',
+      name: "B'tzeit Yisrael",
+      author: 'Joseph Millet',
+      youtubeUrl: 'https://youtu.be/oMriR2w-47Y',
+      description: `More overtly than any other melody for B'tzeit Yisrael, Millet's setting paints the perplexing dancelike motion of the "mountains skipping like rams; the hills like lambs". The opening of this tune is often combined with other melodies, but here is the entire composition. Joseph Millet was one of the most prominent conductors and composers in early 20th century Vienna, and B'tzeit Yisrael is his most well known work.`
+    },
+    {
       id: '107c',
       name: "Ma Ashiv (for Pesach)",
       author: 'Julius Mombach',
