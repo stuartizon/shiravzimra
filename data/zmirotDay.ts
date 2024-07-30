@@ -7,6 +7,14 @@ export const zmirotDay: Section = {
   hebrewName: 'זמירות ליום שבת',
   pieces: [
     {
+      id: '527b',
+      name: 'Baruch El Elyon',
+      author: 'Koifman Yodel Eidelson',
+      youtubeUrl: 'https://youtu.be/x14BbyzIRIg',
+      description: `Baruch El Elyon is a hymn of praise to those who keep the Sabbath. It was composed by the Talmudist and poet, Rabbi Baruch ben Samuel who lived in Mainz in the late 12th/early 13th century. Mainz had been the site of a massacre by Crusaders in 1096, and the memory of this event haunts the first stanza. The rest of the zemer describes the joy and dignity of the Sabbath, and the great rewards, on earth and in heaven, awaiting those who keep it. Many people sing Baruch El Elyon as part of the Shabbat day meal, but others reserve it for Seuda Sh'lishit.\n
+        This well known melody is by Koifman Yodel Eidelson, one of the great court composers of Modzitz during the late 19th century/early 20th century. It begins with a lament, as befits the words of the first verse, but contains four other separate sections gradually becoming more joyous as the song progresses. This is a prominent example of a chassidic melody which has become celebrated more broadly across various Ashkenazi communities. I have observed a tradition which many seem to uphold, to prolong this song with a sequence of niggunim after the final verse. These niggunim are not actually attached to this composition, and have various unrelated origins e.g. the Belz Hakafa niggun.`
+    },
+    {
       id: '529d',
       name: 'Yom Shabbaton',
       author: 'Yigal Calek',
