@@ -136,6 +136,14 @@ export const shabbatTorah: Section = {
         There is an ancient melody specifically for this piyyut, which is appropriately employed by Marcus Hast for Y'chad'sheihu before Rosh Chodesh Tammuz.`,
     },
     {
+      id: '65f',
+      name: "Y'chad'sheihu (for Av)",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/4r-Xy1LcaI4',
+      description: `The month of Av contains the saddest day in the Jewish calendar, Tisha B'av, on which a number of disasters befell the Jewish people, including the destruction of both Temples. For blessing the month of Av, it is traditional to use the melody of Eli Tzion, the most well known of the kinot recited on Tisha B'av. The melody goes back to the mid 18th century, if not earlier, but there does not appear to be an authoritative version – there are minor variations between different communities. This arrangement includes a second part of the theme, as sung in England.\n
+        As I've noted previously, Eli Tzion is not an especially melancholic tune. Idelsohn identified the same melody in a German Catholic hymn, a Spanish folksong, and a Czechoslovakian folksong. His conclusion was that "it originated in Spain, whence it was in all likelihood carried to Central and Eastern Europe by pilgrims; and was picked up by Jewish singers likewise".`,
+    },
+    {
       id: '65i',
       name: "Y'chad'sheihu (for Kislev)",
       author: 'Trad.',
