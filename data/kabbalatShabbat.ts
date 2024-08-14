@@ -74,6 +74,13 @@ export const kabbalatShabbat: Section = {
       description: `As mentioned above, there is a historic practice of changing the tune for L'cha Dodi on the Shabbatot during the Omer period. In the mid 19th century, Mombach wrote this magnum opus, which is distinct from the traditional S'fira melody, to be used for both the Omer period and also for the Shabbatot during the Three Weeks. This venerated tradition is still upheld in many UK congregations, with some reportedly adapting the melody for other prayers e.g. Ein Keloheinu. \n
         This is a complex work for chazzan and choir, with contrasting sections emphasising the meaning of the words. Structurally, Mombach follows the old tradition of changing to a faster tune at Hitor'ri (not Lo Tevoshi as per contemporary practice), and returning to the first part of the melody for Boi V'shalom. As I have mentioned previously, there is some disagreement regarding the use of a melancholic tune for L'cha Dodi, as public mourning is generally forbidden on Shabbat. However, kabbalat shabbat is typically said prior to the onset of Shabbat in both the S'fira period and Ben Hametzarim (in the northern hemisphere, at least). Mombach astutely modulates to the parallel major at the final refrain as we welcome the Shabbat in delight.\n
         Mombach's melody does not utilise the traditional S'fira Lecha Dodi tune anywhere, although the editors of the Blue Book sought to incorporate that into Mombach's piece, replacing his Boi V'shalom Da Capo. In my opinion this is a rather clumsy and unwarranted amalgamation. However, when this piece is sung during the Three Weeks, the verse Boi V'shalom is indeed replaced with the melody for Eli Tzion (according to both Mombach's score and the Blue Book).`
+    },
+    {
+      id: '10i',
+      name: "L'cha Dodi (for Ben HaMetzarim)",
+      author: 'Samuel Naumbourg',
+      youtubeUrl: 'https://youtu.be/Yzo1Hz-daP4',
+      description: `Here is Naumbourg's very classical composition for L'cha Dodi during the Three Weeks, which utilises Eli Tzion for two of the verses. He picks out many of the phrases in L'cha Dodi with some beautiful word painting, alternating from minor to major, and includes what I can only describe as a rolling wave effect for two of the refrains and the Boi Kalah of the final verse. Like other composers, Naumbourg concludes the piece in the major, perhaps as a nod to the idea that we don't mourn on Shabbat, as we welcome the Sabbath Queen. This melody is still used today by the Alsace community (and perhaps some other French congregations) during Ben Hametzarim.`
     }
   ]
 }
