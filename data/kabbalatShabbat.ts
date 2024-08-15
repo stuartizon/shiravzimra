@@ -7,6 +7,14 @@ export const kabbalatShabbat: Section = {
   hebrewName: 'קבלת שבת',
   pieces: [
     {
+      id: '1b',
+      name: "Y'did Nefesh",
+      author: 'Yitzchok Alster',
+      youtubeUrl: 'https://youtu.be/cUNtRxwGU7s',
+      description: `Rabbi Sacks called Y'did Nefesh "one of the boldest expressions of love in Jewish literature, reminiscent in mood of the Song of Songs". It was first published by the kabbalist and poet Elazar Azikri , though his authorship is disputed. Azikri's diary contains the following epigraph for Y'did Nefesh: "A poem about unity and the desire of love". Each verse of Y'did Nefesh articulates a different relationship with the divine: as a male servant, as a female servant, as God’s child, and finally as God's lover. The first letters of each stanza make up the four letter ineffable name of God. Y'did Nefesh is often sung at Kabbalat Shabbat, as well as on Shabbat afternoon at Seuda Sh'lishit.\n
+        This well-known melody was written by Yitzhok Alster and is a favourite for many at Seuda Sh'lishit, though there is no particularly compelling reason to not use this melody at Kabbalat Shabbat or to necessitate it for Seuda. Alster composed it as a young man, sitting at a lake in the Catskills, and it was first recorded on the 1960 album "Torah Lives and Sings", a collection of melodies composed by scholars of the Bet Hamedrash of the Mesivta Rabbi Chaim Berlin. Despite its popularity, I have observed that many people don't actually know the melody line and prefer to sing one of the harmony lines instead.`
+    },
+    {
       id: '1d',
       name: "Y'did Nefesh",
       author: 'Abie Rotenberg',
