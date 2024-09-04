@@ -19,6 +19,14 @@ export const shabbatMaariv: Section = {
         This is a fascinating glimpse into what happens when choral pieces lose their harmonic setting, and congregational singing of the melody line becomes de rigueur. As inheritors of a patchwork of traditions, it makes some sense why we might accidentally recast V'sham'ru into a minor key, but here it is, with its original harmony.`
     },
     {
+      id: '20g',
+      name: "V'sham'ru",
+      author: 'Mark Raphael',
+      youtubeUrl: 'https://youtu.be/0_BrpkI1y0o',
+      description: `This charming setting is by Mark Henry Raphael, the distinguished baritone and composer. Raphael was director and choirmaster of the West London Synagogue for many years, professor at the Royal College of Music, and also taught voice at Jews' College. This composition was first recorded on the album "Choral Music from the Choir of the West London Synagogue". It has a beguiling harmonic language, immediately moving to a chromatic mediant from the first chord, and it is structured with the opening phrase repeating twice more throughout the short piece, the final repetition leaving us on a beautifully uplifting yet tranquil ending.\n
+        Thanks to Maya Levy from the West London Synagogue for providing me with Raphael's score.`
+    },
+    {
       id: '21a',
       name: "Kaddish",
       author: 'Trad.',
