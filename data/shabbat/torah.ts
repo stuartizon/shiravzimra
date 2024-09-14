@@ -144,6 +144,14 @@ export const shabbatTorah: Section = {
         As I've noted previously, Eli Tzion is not an especially melancholic tune. Idelsohn identified the same melody in a German Catholic hymn, a Spanish folksong, and a Czechoslovakian folksong. His conclusion was that "it originated in Spain, whence it was in all likelihood carried to Central and Eastern Europe by pilgrims; and was picked up by Jewish singers likewise".`,
     },
     {
+      id: '65g',
+      name: "Y'chad'sheihu (for Elul)",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/y8UgCpYkrFw',
+      description: `As we look forward to Elul and the High Holy Days beyond that, it is traditional to use the Ma'ariv High Holy Day melody for blessing the month of Elul. Personally, I have some reservations about using this theme, as it actually belongs to Tishrei (a month for which we don't perform Birkat Hachodesh), and there are other Elul options we could reference from Selichot. Nevertheless, this is what all the classic scores which detail these monthly melodies propose.\n
+        The melody itself is of ancient origin, used by both the Polish and German traditions during Ma'ariv, and is actually derived from the Great Aleinu which we say during Musaf on Rosh Hashana and Yom Kippur.`,
+    },
+    {
       id: '65i',
       name: "Y'chad'sheihu (for Kislev)",
       author: 'Trad.',
