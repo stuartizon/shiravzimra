@@ -7,6 +7,13 @@ export const rhMussaf: Section = {
   hebrewName: 'מוסף',
   pieces: [
     {
+      id: '249a',
+      name: "Chamol",
+      author: 'Yigal Calek',
+      youtubeUrl: 'https://youtu.be/1PZG_DLEFHU',
+      description: `After the Rosh Hashana Musaf Kedusha, we insert this paragraph into the chazzan's repetition. This prayer is woven out of several fragments from different places and times. Originally it began with the line "For with Your holiness" and the preceding line was added later. The theme is the mutual relationship between God's holiness and that of His people Israel. This popular tune was composed by Yigal Calek, and was originally recorded on the 1973 London School of Jewish Song's third album.`
+    },
+    {
       id: '257a',
       name: "Horeim",
       author: 'Trad.',
