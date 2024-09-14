@@ -1,4 +1,4 @@
-import { Section } from './types'
+import { Section } from '../types'
 
 export const hallel: Section = {
   id: 'hallel',

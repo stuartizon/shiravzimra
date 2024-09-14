@@ -1,94 +1,18 @@
-import { birkatHamazon } from './birkatHamazon'
-import { chanukah } from './chanukah'
-import { chuppah } from './chuppah'
-import { festivalMaariv } from './festivalMaariv'
-import { festivalMussaf } from './festivalMussaf'
-import { festivalTorah } from './festivalTorah'
-import { hallel } from './hallel'
-import { havdala } from './havdala'
-import { kabbalatShabbat } from './kabbalatShabbat'
-import { kolNidrei } from './kolNidrei'
-import { pesachSeder } from './pesachSeder'
-import { purim } from './purim'
-import { rhMaariv } from './rhMaariv'
-import { rhTorah } from './rhTorah'
-import { rhMussaf } from './rhMussaf'
-import { shabbatMaariv } from './shabbatMaariv'
-import { shabbatMussaf } from './shabbatMussaf'
-import { shabbatShacharit } from './shabbatShacharit'
-import { shabbatTorah } from './shabbatTorah'
-import { tishaBav } from './tishaBav'
 import { Group, Piece, Section } from './types'
-import { ykMaariv } from './ykMaariv'
-import { zmirotDay } from './zmirotDay'
-import { zmirotNight } from './zmirotNight'
-
-export {
-  kabbalatShabbat,
-  shabbatMaariv,
-  shabbatShacharit,
-  shabbatTorah,
-  shabbatMussaf,
-  hallel,
-  havdala,
-  festivalMaariv,
-  festivalTorah,
-  festivalMussaf,
-  rhMaariv,
-  rhMussaf,
-  kolNidrei,
-  ykMaariv,
-  chanukah,
-  pesachSeder,
-  purim,
-  tishaBav,
-  birkatHamazon,
-  zmirotNight
-}
+import { shabbat } from './shabbat'
+import { festivals } from './festivals'
+import { roshHashana } from './roshHashana'
+import { yomKippur } from './yomKippur'
+import { misc } from './misc'
+import { songs } from './songs'
 
 export const allGroups: Group[] = [
-  {
-    id: 'shabbat',
-    name: 'Shabbat',
-    hebrewName: 'שבת',
-    sections: [
-      kabbalatShabbat,
-      shabbatMaariv,
-      shabbatShacharit,
-      shabbatTorah,
-      shabbatMussaf
-    ]
-  },
-  {
-    id: 'festivals',
-    name: 'Festivals',
-    hebrewName: 'שלש רגלים',
-    sections: [hallel, festivalMaariv, festivalTorah, festivalMussaf]
-  },
-  {
-    id: 'rh',
-    name: 'Rosh Hashana',
-    hebrewName: 'ראש השנה',
-    sections: [rhTorah, rhMussaf]
-  },
-  {
-    id: 'yk',
-    name: 'Yom Kippur',
-    hebrewName: 'יום כפור',
-    sections: [kolNidrei, ykMaariv]
-  },
-  {
-    id: 'misc',
-    name: 'Miscellaneous',
-    hebrewName: 'שונות',
-    sections: [chanukah, purim, tishaBav, chuppah]
-  },
-  {
-    id: 'songs',
-    name: 'Songs',
-    hebrewName: 'שירים',
-    sections: [birkatHamazon, zmirotNight, zmirotDay, havdala, pesachSeder]
-  }
+  shabbat,
+  festivals,
+  roshHashana,
+  yomKippur,
+  misc,
+  songs
 ]
 
 export const allSections: Section[] = allGroups.flatMap(group => group.sections)
