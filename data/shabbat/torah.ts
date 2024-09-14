@@ -16,6 +16,13 @@ export const shabbatTorah: Section = {
         In the UK, it is universally sung on Shabbat, despite its inexplicable omission from the Blue Book. Most of Sulzer's compositions are for chazzan and choir, and though Ein Kamocha is sung in many synagogues without a choir, typically the final two lines are abbreviated, which is a great pity as the original ending is a glorious apotheosis. In North America there is an established practice to sing only the first paragraph, and then switch to Dunajewsky's melody for Av Harachamim.`
     },
     {
+      id: '50b',
+      name: 'Ein Kamocha',
+      author: 'Abraham Dunajewsky',
+      youtubeUrl: 'https://youtu.be/Cb3aCJB4Mt4',
+      description: `Dunajewsky's melody for the beginning of Ein Kamocha is animated and exultant, in a major key, but switches to a pleading minor melody at Av Harachamim, as the words become more imploring. The second part of this melody will be familiar to North American listeners: in most synagogues on Shabbat, this Av Harachamim is appended onto the first part of Sulzer's setting, though the repeats are typically neglected. While Dunajewsky wrote this composition for regular Shabbat usage, it is traditional in many UK communities to sing it on Yom Tov (though this minhag is in danger of being forgotten).`
+    },
+    {
       id: '51a',
       name: 'Av Harachamim',
       author: 'Salomon Sulzer',
@@ -23,6 +30,13 @@ export const shabbatTorah: Section = {
       description: `Ein Kamocha is a fusion of several verses from Psalms, ingeniously compiled to impart the message that God is eternal, and so too are the words of the Torah which we read thereafter.\n
         By far the most common melody for Ein Kamocha is by Salomon Sulzer – most Ashkenazi synagogues sing some variant of this. Sulzer's setting is a dialogue between chazzan and choir, beginning with a dramatic fanfare and remaining in a major key throughout. There is some beautiful word painting at "rebuild the walls" and "high and exalted".\n
         In the UK, it is universally sung on Shabbat, despite its inexplicable omission from the Blue Book. Most of Sulzer's compositions are for chazzan and choir, and though Ein Kamocha is sung in many synagogues without a choir, typically the final two lines are abbreviated, which is a great pity as the original ending is a glorious apotheosis. In North America there is an established practice to sing only the first paragraph, and then switch to Dunajewsky's melody for Av Harachamim.`
+    },
+    {
+      id: '51b',
+      name: 'Av Harachamim',
+      author: 'Abraham Dunajewsky',
+      youtubeUrl: 'https://youtu.be/Cb3aCJB4Mt4',
+      description: `Dunajewsky's melody for the beginning of Ein Kamocha is animated and exultant, in a major key, but switches to a pleading minor melody at Av Harachamim, as the words become more imploring. The second part of this melody will be familiar to North American listeners: in most synagogues on Shabbat, this Av Harachamim is appended onto the first part of Sulzer's setting, though the repeats are typically neglected. While Dunajewsky wrote this composition for regular Shabbat usage, it is traditional in many UK communities to sing it on Yom Tov (though this minhag is in danger of being forgotten).`
     },
     {
       id: '52b',
