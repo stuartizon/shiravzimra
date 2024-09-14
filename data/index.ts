@@ -11,6 +11,7 @@ import { kolNidrei } from './kolNidrei'
 import { pesachSeder } from './pesachSeder'
 import { purim } from './purim'
 import { rhMaariv } from './rhMaariv'
+import { rhTorah } from './rhTorah'
 import { rhMussaf } from './rhMussaf'
 import { shabbatMaariv } from './shabbatMaariv'
 import { shabbatMussaf } from './shabbatMussaf'
@@ -68,7 +69,7 @@ export const allGroups: Group[] = [
     id: 'rh',
     name: 'Rosh Hashana',
     hebrewName: 'ראש השנה',
-    sections: [rhMussaf]
+    sections: [rhTorah, rhMussaf]
   },
   {
     id: 'yk',
