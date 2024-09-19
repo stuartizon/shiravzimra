@@ -52,6 +52,15 @@ export const rhMussaf: Section = {
       youtubeUrl: 'https://youtu.be/Ry-XXmbN6wE',
       description: `Aside from its inclusion in P'sukei D'zimra, the entirety of Psalm 150 is inserted into the Shofarot section of the Rosh Hashana Musaf Amida, since it explicitly mentions the shofar, along with a list of other instruments we use to praise God. Additionally, its message that we should praise God with all of our faculties is strikingly relevant on the day we crown God as King.\n
         While David Montague Davis is best known for his role in editing "The Voice of Prayer and Praise" (1899) together with Rabbi Francis Lyon Cohen, he also wrote some wonderful compositions. His Halleluyah was originally intended for the choral wedding service, but its infectious energy makes for an equally fine addition to the Rosh Hashana service.`
+    },
+    {
+      id: '274a',
+      name: 'Adon Olam',
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/kOFHX1zMfzI',
+      description: `There are hundreds of melodies to Adon Olam, but this one is (at least in Nusach Anglia) *the* Rosh Hashana/Yom Kippur tune. The authorship is unknown — it is listed as Traditional in the Blue Book, and given its age, I was surprised to learn that not everyone sings (or even knows) this tune.\n
+        There is a bittersweet feel to the melody as it switches between a major, low section and a minor, high section. The Blue Book specifies it should be sung slowly, though in my personal experience by the time the end of Mussaf rolls around, most of us end up singing it at a significantly faster lick!\n
+        Many congregations also sing this at the end of Kol Nidrei following Yigdal.`
     }
   ]
 }
