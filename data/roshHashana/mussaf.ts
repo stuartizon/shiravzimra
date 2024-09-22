@@ -7,6 +7,15 @@ export const rhMussaf: Section = {
   hebrewName: 'מוסף',
   pieces: [
     {
+      id: '241a',
+      name: "Un'tane Tokef",
+      author: 'Nissan Blumenthal',
+      youtubeUrl: 'https://youtu.be/odOgxU6a4W0',
+      description: `Un'tane Tokef is the central piyut of the High Holy Days mussaf repetition, and contains some of the most dramatic poetry in the entire liturgy. It is a symphony in four movements, the first of which depicts the high drama of the day of judgement where even the angels in heaven tremble in fear. The following section depicts a gentler image of God as shepherd of His flock. Though a well-known legend from the Ohr Zarua recounts that this prayer was composed by Rabbi Amnon of Mainz, this is certainly inaccurate since fragments have been found in the Cairo Geniza, but it may be responsible for its transmission and how it gained universal acceptance in the liturgy.\n
+        Nissan Blumenthal's composition must surely rate as one of the finest classic settings of Un'tane Tokef, with its beautiful romantic themes, stirring solo sections and elegant harmony. In many congregations, Un'tane Tokef is a patchwork of different compositions, but often includes parts of the Blumenthal. The second section (beginning at K'vakarat) is sadly less well known. Blumenthal's pastoral setting evokes the kindly shepherd in the meadow, and begins with what appears to be a direct quotation from the "Ranz des vaches" section of Rossini's William Tell Overture.\n
+        Blumenthal would have been a contemporary of Rossini. He was chief chazzan at Odessa's choral Broder Synagogue, and is cited by many as the first "khor hazzan" in eastern Europe. He viewed the incorporation of references from classical repertoire as artistically beneficial to chazzanut – if they were appropriate to the text and could fit into the proper prayer modes, not as unconsidered dilutions for the sake of popularity.`
+    },
+    {
       id: '249a',
       name: "Chamol",
       author: 'Yigal Calek',
