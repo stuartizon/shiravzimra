@@ -63,6 +63,13 @@ export const rhMussaf: Section = {
         While David Montague Davis is best known for his role in editing "The Voice of Prayer and Praise" (1899) together with Rabbi Francis Lyon Cohen, he also wrote some wonderful compositions. His Halleluyah was originally intended for the choral wedding service, but its infectious energy makes for an equally fine addition to the Rosh Hashana service.`
     },
     {
+      id: '266e',
+      name: 'Halleluyah',
+      author: 'Michele Bolaffi',
+      youtubeUrl: 'https://youtu.be/B6SJ82sPYvk',
+      description: `This is one of Bolaffi's most famous compositions (after his well known melody for Psalm 29), and is one of the most dynamic settings for Psalm 150. There is some superb word painting here, including a fanfare of rising thirds leading to a triumphant dominant seventh on the word "t'ruah". Although I've seen this referred to as a Simchat Torah melody, it really does make for an excellent choice on Rosh Hashana.`
+    },
+    {
       id: '274a',
       name: 'Adon Olam',
       author: 'Trad.',
