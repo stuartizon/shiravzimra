@@ -55,6 +55,13 @@ export const rhMussaf: Section = {
         Julius Mombach's melody reflects the austere and serious mood of these words, and is the most prevalent tune used in Nusach Anglia today.`
     },
     {
+      id: '263c',
+      name: "Areshet S'fateinu",
+      author: 'Shaul Yedidya Elazar Taub',
+      youtubeUrl: 'https://youtu.be/emuD4oMsoP8',
+      description: `Although many of us are more familiar with this as an El Adon melody, this tune was actually composed by the second Modzitzer Rebbe, Shaul Yedidya Elazar Taub, for the prayer Areshet S'fateinu in the aftermath of the First World War. Later when several communities started singing it to El Adon, the melody was subtly adjusted to better fit those words.`
+    },
+    {
       id: '266a',
       name: 'Halleluyah',
       author: 'David Montague Davis',
