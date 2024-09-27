@@ -62,6 +62,13 @@ export const rhMussaf: Section = {
       description: `Although many of us are more familiar with this as an El Adon melody, this tune was actually composed by the second Modzitzer Rebbe, Shaul Yedidya Elazar Taub, for the prayer Areshet S'fateinu in the aftermath of the First World War. Later when several communities started singing it to El Adon, the melody was subtly adjusted to better fit those words.`
     },
     {
+      id: '264a',
+      name: "V'al Y'dei Avadecha",
+      author: 'Louis Lewandowski',
+      youtubeUrl: 'https://youtu.be/kITRXSGlbNk',
+      description: `Lewandowksi's V'al Y'dei Avadecha is widely considered to be one of the most beautiful compositions in the entire liturgy. Indeed the lyrics are some of the most moving words from Tanach. While the Torah often portrays the Israelites in the wilderness as rebellious, stiff-necked and ungrateful, these verses from Jeremiah describe how the Israelites were willing to follow God into the desert to a destination none of them had seen, echoing the journey of faith which Abraham and Sarah took.`
+    },
+    {
       id: '266a',
       name: 'Halleluyah',
       author: 'David Montague Davis',
