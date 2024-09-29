@@ -7,6 +7,14 @@ export const rhMussaf: Section = {
   hebrewName: 'מוסף',
   pieces: [
     {
+      id: '240c',
+      name: "Melech Elyon",
+      author: 'Geoffrey Shisler',
+      youtubeUrl: 'https://youtu.be/-czNxgr5Eig',
+      description: `During the Musaf repetition on the first day of Rosh Hashana we add the piyut Melech Elyon. (There is a similar piyut appearing in the Shacharit repetition on the second day, but the stanza lengths are different, so most tunes are not compatible for both poems.) It is clear from the text of this poem that it has been truncated from its original form – originally each pair of verses compared God the Supreme King with a human ruler, but now we only include two "destitute king" verses towards the end, and we close the Ark for these.\n
+        Geoffrey Shisler's melody is in the minor, which is atypical, as most tunes for Melech Elyon are in a major key. Nevertheless, in his own characterisation, "it is not a 'down' melody and whenever I sang it over the years I always made it quite upbeat". The simple and melodic line makes it easy for the congregation to join in on the words "Melech Elyon" at the end of each verse.`
+    },
+    {
       id: '241a',
       name: "Un'tane Tokef",
       author: 'Nissan Blumenthal',
