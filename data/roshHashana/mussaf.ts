@@ -92,6 +92,13 @@ export const rhMussaf: Section = {
       description: `This is one of Bolaffi's most famous compositions (after his well known melody for Psalm 29), and is one of the most dynamic settings for Psalm 150. There is some superb word painting here, including a fanfare of rising thirds leading to a triumphant dominant seventh on the word "t'ruah". Although I've seen this referred to as a Simchat Torah melody, it really does make for an excellent choice on Rosh Hashana.`
     },
     {
+      id: '266g',
+      name: 'Halleluyah',
+      author: 'Kobi Oshrat',
+      youtubeUrl: 'https://youtu.be/jntC9lwa5bQ',
+      description: `Kobi Oshrat's Halleluyah was originally performed by Milk and Honey at the 1979 Eurovision Song Contest in Jerusalem, where it won first place. Despite the use of the word Halleluyah (which itself contains the name of God), the original lyrics are more secular in tone. Here I have transplanted the melody onto the words of Psalm 150.`
+    },
+    {
       id: '274a',
       name: 'Adon Olam',
       author: 'Trad.',
