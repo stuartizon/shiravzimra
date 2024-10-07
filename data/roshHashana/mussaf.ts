@@ -7,6 +7,13 @@ export const rhMussaf: Section = {
   hebrewName: 'מוסף',
   pieces: [
     {
+      id: '231a',
+      name: "S'u Sh'arim",
+      author: 'Samuel Naumbourg',
+      youtubeUrl: 'https://youtu.be/xckc741LKUU',
+      description: `Of all the many settings for this Psalm, Samuel Naumbourg's is probably the most well known. Like several of his works, it imitates the choral marches found in grand opera during the 19th century. The chazzan (or originally a solo soprano) sings a soaring melodic line while the choir provides an insistent march-like rhythm, popping out of the texture to add vocal fanfares. Near the end the tempo quickens to build to a dramatic coda and apotheosis over the words "He is the King of glory!". Though Naumbourg composed this for general Yom Tov, in many congregations its ecstatic drama is reserved for the High Holidays, leaving room for other tunes on Shalosh Regalim.`
+    },
+    {
       id: '240c',
       name: "Melech Elyon",
       author: 'Geoffrey Shisler',
