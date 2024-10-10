@@ -7,6 +7,14 @@ export const ykMaariv: Section = {
   hebrewName: 'מעריב',
   pieces: [
     {
+      id: '311a',
+      name: "Dark'cha",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/NMNBXWtTAlY',
+      description: `These two lines are the refrain from the alphabetic acrostic Omnam Ashameinu, composed by the 4th/5th century poet Yose ben Yose. This is the second of the Selichot we include in Yom Kippur Ma'ariv. However, today most congregations say only this refrain, along with the final stanza Ta'ale Arucha. These words are also included in some formulations of Shomea T'fila (which appears near the beginning of each day's Selichot).\n
+        The melody is an ancient, traditional one, and although there are slight variations, it can be found in many sources including the Blue Book, Baer, Lewandowski, Hast, Gerovitch, Wasserzug, Deutsch, and Sulzer.`
+    },
+    {
       id: '312a',
       name: 'El Melech Yosheiv',
       author: 'Trad.',
