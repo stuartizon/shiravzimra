@@ -59,7 +59,7 @@ export const festivalMaariv: Section = {
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/MgncZ69SCGA',
       description: `Of the three characteristic Yigdal melodies for the Shalosh Regalim, this one is the least well known... and yet, in Melbourne I have definitely heard something resembling the final line used for all three of the Festivals, which could perhaps be a corruption of this melody.\n
-        The Sukkot melody is lively and celebratory, fitting for the festival known as the "Season of our Rejoicing". It was also used by Isaac Nathan in his 1815 collection "Hebrew Melodies" for his setting of Byron's "The Wild Gazelle". Despite Nathan's exaggerated claim that these tunes were "upwards of 1000 years old and some of them performed by the Ancient Hebrews before the destruction of the Temple", this melody likely dates to the 1700s.\n
+        The Sukkot melody is lively and celebratory, fitting for the festival known as the "Season of our Rejoicing". It was also used by Isaac Nathan in his 1815 collection "Hebrew Melodies" for his setting of Byron's "The Wild Gazelle". Despite Nathan's exaggerated claim that these tunes were "upwards of 1000 years old and some of them performed by the Ancient Hebrews before the destruction of the Temple", this melody likely dates to the late 1700s.\n
         The melody consists of four sections, which don’t neatly correspond to Yigdal’s 13 lines of text, even with the final line repeated. Some adjustment is necessary to make the tune fit the stanzas – Mombach’s score and the Blue Book offer different solutions to this, while Hast includes an alternate last line for "Meitim" not found in other versions.`
     }
   ]
