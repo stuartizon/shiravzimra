@@ -89,6 +89,13 @@ export const kabbalatShabbat: Section = {
       author: 'Samuel Naumbourg',
       youtubeUrl: 'https://youtu.be/Yzo1Hz-daP4',
       description: `Here is Naumbourg's very classical composition for L'cha Dodi during the Three Weeks, which utilises Eli Tzion for two of the verses. He picks out many of the phrases in L'cha Dodi with some beautiful word painting, alternating from minor to major, and includes what I can only describe as a rolling wave effect for two of the refrains and the Boi Kalah of the final verse. Like other composers, Naumbourg concludes the piece in the major, perhaps as a nod to the idea that we don't mourn on Shabbat, as we welcome the Sabbath Queen. This melody is still used today by the Alsace community (and perhaps some other French congregations) during Ben Hametzarim.`
+    },
+    {
+      id: '10q',
+      name: "Boi V'shalom",
+      author: 'Shlomo Carlebach',
+      youtubeUrl: 'https://youtu.be/9AyOtkZ3I5o',
+      description: `As might be expected, Carlebach composed several melodies specifically for L'cha Dodi, along with various others which have been adapted for it over time. One of my favourites is this beautiful tune for the final verse, Boi V’shalom. Of course you could easily use it for the last four verses — or even from the beginning.`
     }
   ]
 }
