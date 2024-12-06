@@ -98,6 +98,14 @@ export const shabbatMussaf: Section = {
         Here is Hu Eloheinu from the Mussaf K'dusha set to this legendary melody.`
     },
     {
+      id: '86a',
+      name: "Kad'sheinu",
+      author: 'Abraham Wolf Binder',
+      youtubeUrl: 'https://youtu.be/7Nf77-R4cos',
+      description: `Kad'sheinu is the central blessing of the Shabbat Amidah, detailing the sanctification of the day. It replaces the 13 middle blessings of the weekday Amidah and highlights Shabbat as not only a time for physical rest but also an opportunity for spiritual growth and connection with God.\n
+        This theme has become an anonymous motif in the canon of Ashkenazi synagogue music, and is quoted by many ba'alei t'fila. However the composition is for the entire paragraph, and was written by Abraham Wolf Binder, the founding music director of the Stephen Wise Free Synagogue and editor of the Union Hymnal. Over time, small melodic inaccuracies have crept in, and most renditions revert to nusach instead of using Binder's original ending for the b'racha itself.`
+    },
+    {
       id: '92a',
       name: 'Ein Keloheinu',
       author: 'Julius Freudenthal',
