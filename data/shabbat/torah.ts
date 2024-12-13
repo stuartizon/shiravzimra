@@ -46,6 +46,13 @@ export const shabbatTorah: Section = {
       description: `This old traditional Dukes Place melody is less well known nowadays, except for its last line which is typically pasted on to Sulzer's melody in Commonwealth countries.`
     },
     {
+      id: '52h',
+      name: "Vay'hi Binsoa",
+      author: 'Emile Jonas',
+      youtubeUrl: 'https://youtu.be/AXD_HGLxYXY',
+      description: `There is something nostalgic in this piece by 19th century French composer Emile Jonas, which seems to evoke the golden age of Hollywood with its lush use of the minor four chord. Intriguingly, an almost identical composition appears without attribution in the publications of Emmanuel Kirschner (who was 30 years younger than Jonas).`
+    },
+    {
       id: '54a',
       name: "Sh'ma Yisrael",
       author: 'Salomon Sulzer',
