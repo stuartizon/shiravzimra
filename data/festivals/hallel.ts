@@ -32,6 +32,14 @@ export const hallel: Section = {
         "How can I repay the Lord for all His goodness to me? I will lift the cup of salvation and call on the name of the Lord."`
     },
     {
+      id: '108b',
+      name: "Hal'lu",
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/L_ZnCUBTiIU',
+      description: `This is the shortest of all the psalms and the shortest chapter of the Bible. Compared to the surrounding psalms of the Hallel which are particularistic and mostly in the singular, this is more universalistic in message.\n
+        In theory this is actually a Chanukah melody: it appears in the Chanukah section of Mombach's book with a corresponding L'cha Ezbach, but in the Blue Book it is referred to as a general Hallel melody suitable for all festivals (and an arrangement of Maoz Tzur is suggested for Psalm 117 instead).`
+    },
+    {
       id: '109b',
       name: "Hodu Ladonai (for Shavuot)",
       author: 'Trad.',
