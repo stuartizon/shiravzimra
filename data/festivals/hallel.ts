@@ -75,6 +75,14 @@ export const hallel: Section = {
         Lo Amut is undoubtably Gottbeiter's most well known composition, and was published in Avraham Moshe Bernstein's Avodat Habore.`
     },
     {
+      id: '112a',
+      name: 'Ana Adonai',
+      author: 'Berele Chagy',
+      youtubeUrl: 'https://youtu.be/zvq567x0z5w',
+      description: `Here is one of the most fascinating transformations of a liturgical composition. This melody is typically sung by the entire congregation in unison in younger Modern Orthodox and Conservative communities, at double the speed, to a wordless niggun. At the conclusion of each line, the Chazzan joyfully proclaims the words Ana Adonai Hoshia/Hatzlicha Na, followed by the congregation.\n
+        However in the original composition, Chagy sets the words to the melody itself. The atmosphere is more devotional than ecstatic, a meditation on the word Ana – please.`
+    },
+    {
       id: '112c',
       name: 'Ana Adonai (for Sukkot)',
       author: 'Trad.',
