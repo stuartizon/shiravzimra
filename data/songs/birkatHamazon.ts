@@ -7,6 +7,15 @@ export const birkatHamazon: Section = {
   hebrewName: 'ברכת המזון',
   pieces: [
     {
+      id: '501a',
+      name: "Shir Hama'alot",
+      author: 'Pinchas Minkowsky',
+      youtubeUrl: 'https://youtu.be/F9mSztOJKn8',
+      description: `Shir Hama'alot is one of the most well known psalms, recited by many immediately preceding Birkat Hamazon on Shabbat and festive occasions, as well as on Shabbat afternoon following Mincha during the winter months. While it is often sung to joyous, fast melodies, the words of the psalm are full of poignancy describing the end of the exile, and the redemption of the land of Israel.\n
+        Although Yossele Rosenblatt made this setting of Shir Hama'alot famous, it is attributed by most to Pinchas Minkowsky, a well known chazzan in Odessa, who also had a brief tenure at Eldridge Street Synagogue in New York. Minkowsky was known to be a passionate Zionist, and some of his acquaintances insisted that he was the true composer of this Shir Hama'alot. Incidentally, Minkowsky was also known for his pejorative views of the phonograph as being inappropriate for sacred music, and consequently there are no recordings of his voice.\n
+        This melody is very well known, but often sung much faster than the original composition, and in an absent-minded fashion without regard to the pathos of the words. During his visit to Israel, Rosenblatt performed this song for the 1933 movie "The Dream of My People" in a boat on the Jordan river. After hearing Rosenblatt singing it, Hayim Bialik reportedly wanted to use this tune for Hatikvah. Given its themes of redemption, Psalm 126 was also proposed by the early religious Zionists to be the national anthem of the State of Israel.`
+    },
+    {
       id: '508',
       name: 'Harachaman',
       author: 'Haim Kirsch',
