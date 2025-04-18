@@ -26,6 +26,14 @@ export const festivalMussaf: Section = {
       youtubeUrl: 'https://youtu.be/vVe6ktoyJog',
       description: `On Festivals which fall on weekdays, we sing Ladonai Ha'aretz (Psalm 24) as we carry the Torah scrolls back to the ark, following the Torah reading.\n
         This splendid melody is understood to have been written by William Wasserzug, son of the famous composer Haim Wasserzug. Note that it doesn't appear in his father's magnum opus, Schirei Mikdosch. I am personally very familiar with this setting, as it is used in both orthodox synagogues in Birmingham: Central and Singers Hill. Most other UK congregations defer to Mombach's composition. It is written in ABCC form with a dramatic opening, a lighter section beginning "He shall receive blessing" in duple time with some rather unusual harmony, and a dancelike theme for the final verses "O gates, lift up your heads!"`
+    },
+    {
+      id: '143f',
+      name: "S'u Sh'arim",
+      author: 'Abraham Himelstein',
+      youtubeUrl: 'https://youtu.be/sgYdUdiz59w',
+      description: `On Festivals which fall on weekdays, we sing Ladonai Ha'aretz (Psalm 24) as we carry the scrolls back to the ark, following the Torah reading. \n
+        Abraham Himelstein wrote this charming classical-sounding melody in the 1970s, for the final section of Psalm 24.`
     }
   ]
 }
