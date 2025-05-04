@@ -96,6 +96,15 @@ export const kabbalatShabbat: Section = {
       author: 'Shlomo Carlebach',
       youtubeUrl: 'https://youtu.be/9AyOtkZ3I5o',
       description: `As might be expected, Carlebach composed several melodies specifically for L'cha Dodi, along with various others which have been adapted for it over time. One of my favourites is this beautiful tune for the final verse, Boi V’shalom. Of course you could easily use it for the last four verses — or even from the beginning.`
+    },
+    {
+      id: '10v',
+      name: "L'cha Dodi (for S'fira)",
+      author: 'Nissan Blumenthal',
+      youtubeUrl: 'https://youtu.be/8Lfyit1AOWs',
+      description: `Though there is also a traditional S'fira tune, Nissan Blumenthal wrote this complex piece for L'cha Dodi during S'fira (which does not use the traditional theme). I understand that this melody is still used by some Hungarian Jewish communities today.\n
+        Blumenthal spent most of his career in Odessa, and was strongly influenced by German classical music, so it is perhaps unsurprising that several sections of his L'cha Dodi resemble an operatic aria (e.g. 'adonai echad ushmo echad').\n
+        In the stanza Mikdash Melech, the words describe the ruins of Jerusalem and the valley of tears. Here, Blumenthal takes us into a slower section in the Ahava Raba mode to accentuate our sorrow. As with most other compositions from this era, he changes the tune at Hitor'ri (wake up!) and returns to the slow melody for the final verse Boi V'shalom. Blumenthal did not publish his own compositions, and consequently like most of his works this comes from later transcriptions.`
     }
   ]
 }
