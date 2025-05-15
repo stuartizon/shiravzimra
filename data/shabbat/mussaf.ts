@@ -106,6 +106,14 @@ export const shabbatMussaf: Section = {
         This theme has become an anonymous motif in the canon of Ashkenazi synagogue music, and is quoted by many ba'alei t'fila. However the composition is for the entire paragraph, and was written by Abraham Wolf Binder, the founding music director of the Stephen Wise Free Synagogue and editor of the Union Hymnal. Over time, small melodic inaccuracies have crept in, and most renditions revert to nusach instead of using Binder's original ending for the b'racha itself.`
     },
     {
+      id: '91b',
+      name: "Sim Shalom",
+      author: 'Israel Goldfarb',
+      youtubeUrl: 'https://youtu.be/ILa_twr7sMI',
+      description: `In Judaism peace is valued higher than any other ideal. Grace after meals ends with peace, the priestly blessings end with peace, and every Amida ends with peace. As Rabbi Sacks once said "Whenever Jews pray, we end with a prayer for peace, and at that point we take three steps backwards. To make peace you have to make space for someone else. You have to give up a little of your dream for the sale of someone else's dream."\n
+        This well known melody for Sim Shalom was composed by Israel Goldfarb and published in Avodas Yisroel, his book of original compositions for the Shabbat morning service. Though this Sim Shalom is predominantly in the minor mode (Magen Avot), he modulates back to Ahava Rabba for the chatima.`
+    },
+    {
       id: '92a',
       name: 'Ein Keloheinu',
       author: 'Julius Freudenthal',
