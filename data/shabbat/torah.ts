@@ -145,6 +145,13 @@ export const shabbatTorah: Section = {
         Perhaps the most famous use (besides Hatikva) is by the Czech composer, Bedřich Smetana in his epic symphonic poem Vltava.`
     },
     {
+      id: '65d',
+      name: "Y'chad'sheihu (for Sivan)",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/5eyCmP32mbQ',
+      description: `This theme for Sivan is based on an old melody for Akdamut (which in almost all congregations has been supplanted by an antiphonal chant). This melody was considered to be THE traditional Shavuot theme, in the same way that the traditional Adir Hu/Maoz Tzur/Eli Tzion melodies define Pesach, Chanukah and Tisha B'Av. However nowadays, it is not widely known which is a pity, especially as there are so few tunes specifically for Shavuot.`
+    },
+    {
       id: '65e',
       name: "Y'chad'sheihu (for Tammuz)",
       author: 'Trad.',
