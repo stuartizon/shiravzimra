@@ -25,6 +25,13 @@ export const festivalTorah: Section = {
         Naumbourg scored his melody for a unison choir in octaves, with harmony only on the second iteration. This composition was later included in an abridged form in Zamru Lo, and today many congregations which utilise this melody typically do so by repeating the first phrase three times.`
     },
     {
+      id: '134c',
+      name: "Va'ani T'filati",
+      author: 'Geoffrey Shisler',
+      youtubeUrl: 'https://youtu.be/C0dqn72-9z0',
+      description: `This tune by Shisler is built around a minor arpeggio. Like some other compositions for this prayer (e.g. Goldfarb) it contains a pleading quality over the repeated "aneni, aneni". Va'ani T'filati was the first piece Shisler wrote for synagogue, and though he described it as "inconsequential", it is one of his most well known melodies.`
+    },
+    {
       id: '134d',
       name: "Va'ani T'filati",
       author: 'Samuel Goldfarb',
