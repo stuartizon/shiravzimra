@@ -34,6 +34,16 @@ export const shabbatMussaf: Section = {
       description: `Where commonwealth congregations generally opt for Mombach's melody for Hodo Al Eretz, US congregations typically favour Salomon Sulzer's melody. However in my experience the way it is often sung bears only a cursory resemblance to the original piece, derailing entirely towards the end, and you can find several recordings online which attest to this. Notably, Sulzer's composition is written in 3/4 time and maintains the waltz-like feel throughout.`
     },
     {
+      id: '70a',
+      name: 'Havu Ladonai',
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/7dCKxCksuzk',
+      description: `Psalm 29 is one of the most well loved psalms. It describes God's omnipotence over nature, and in particular His arrival during a storm. We read this Psalm in its entirety during Kabbalat Shabbat, and when returning the Torah to the Ark on Shabbat morning.\n
+        This is one of Julius Mombach's best known melodies, and this composition completely epitomises Mombach's style: very singable, straightforward harmony and a most satisfying ending. Surprisingly, it was not in the original edition of the Blue Book, only being added later in the 1933 supplement (edited by Alman).\n
+        Havu Ladonai is written in ternary form, with the middle section modulating to the subdominant, a structure which appears in a number of Mombach's compositions. As it is typically sung in unison on the melody line nowadays, I would speculate that most people don't even realise there is a key change in the middle, which only returns to the original tonality at "Adonai lamabul yashav". This is manifested by many congregants not flattening the 7th (the 4th in the new key) at "vayarkidem", resulting in a "soft launch" into the new key, as it were.\n
+        The psalm ends with the oft quoted words "The Lord will give strength to His people, the Lord will bless His people with peace." May we be worthy to witness both the former and the latter, speedily in our days.`
+    },
+    {
       id: '71a',
       name: 'Eitz Chayim',
       author: 'Nissan Blumenthal',
