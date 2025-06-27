@@ -39,6 +39,15 @@ export const shabbatTorah: Section = {
       description: `Dunajewsky's melody for the beginning of Ein Kamocha is animated and exultant, in a major key, but switches to a pleading minor melody at Av Harachamim, as the words become more imploring. The second part of this melody will be familiar to North American listeners: in most synagogues on Shabbat, this Av Harachamim is appended onto the first part of Sulzer's setting, though the repeats are typically neglected. While Dunajewsky wrote this composition for regular Shabbat usage, it is traditional in many UK communities to sing it on Yom Tov (though this minhag is in danger of being forgotten).`
     },
     {
+      id: '52a',
+      name: "Vay'hi Binsoa",
+      author: 'Salomon Sulzer',
+      youtubeUrl: 'https://youtu.be/6-S5CHWHZ5A',
+      description: `Sulzer's melody for Vay'hi Binsoa is so incredibly popular that it's easy to forget that it is only one of many options for this paragraph. Despite its dominance today, this setting does not appear in the Blue Book at all. Surprisingly, the composition is originally from the Festival section of Sulzer's score Schir Zion; he has a different melody for Shabbat that I doubt anyone uses. Sulzer also didn't include the line Baruch Shenatan Torah, and consequently the piece ends at Mirushalayim, which I've faithfully adhered to in this arrangement. I am familiar with a number of customs concerning what to do with these extra words in reality:\n
+        In the USA, the common practice is to repeat the melody of Ki Mitzion with the words Baruch Shenatan Torah. Some eschew this as they are opposed to the theological sentiments of repeating these words (which were not even part of the original composition). Others take this a stage further, not wishing to even repeat Ki Mitzion and try to fit the entire set of words onto the melody without any repeats, which does not work well and ruins the piece in my opinion.\n
+        In the UK, other commonwealth countries, and in Israel to some extent, it is typical to paste on the final line from an earlier traditional setting for Vay'hi Binsoa, which is rarely sung in its entirety, and can be found on the following page.`
+    },
+    {
       id: '52b',
       name: "Vay'hi Binsoa",
       author: 'Trad.',
