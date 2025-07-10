@@ -71,6 +71,13 @@ export const shabbatMaariv: Section = {
       description: `"Then the Lord shall be King over all the earth: on that day the Lord shall be One and His name One."\n
         This familiar phrase from the end of Aleinu appears at the end of all daily services. The second paragraph of Aleinu describes in detail how the world will operate, and how our relationship with God will be in the Messianic age. Its original context was during the Malchuyot section of Rosh Hashana Mussaf, and the custom of concluding all services with Aleinu developed during the middle ages.\n
         Many melodies have been composed to this very brief text for Shabbat and Festival services. This tune by Wasserzug, like many others, ends on a strong cadence to round off the service. Wasserzug's melody is superior to the prevalent tune in America, which bears an uncanny resemblance to the nursery rhyme "The Farmer in the Dell" and repeats the word "ush'mo" three times, which some avoid for its potential Christian implication.`
+    },
+    {
+      id: '27b',
+      name: "Bayom Hahu",
+      author: 'Zavel Zilberts',
+      youtubeUrl: 'https://youtu.be/hoYjX49-ryU',
+      description: `This short melody by acclaimed conductor and composer, Zavel Zilberts, is mostly used by reform and conservative congregations in the US, and was printed in several synagogue music anthologies (including Zamru Lo and Mizmor L'david).`
     }
   ]
 }
