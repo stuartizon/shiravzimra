@@ -7,6 +7,13 @@ export const shabbatShacharit: Section = {
   hebrewName: 'שחרית',
   pieces: [
     {
+      id: '45a',
+      name: "Mim'kom'cha",
+      author: 'Yechezkel Shraga Rotenberg',
+      youtubeUrl: 'https://youtu.be/dfKZZhAFPA8',
+      description: `This moving melody for Mim'kom'cha was composed by the Bobov hassid, Rabbi Yechezkel Shraga Rotenberg, who was gabbai of the Kedushas Tzion, Rabbi Ben Zion Halberstam. It is filled with anguish, and while it was apparently well known during the Holocaust, it found a wider audience after it was included on the second album by Pirchei Agudath Israel of America. Rotenberg was murdered in the Holocaust.`
+    },
+    {
       id: '45c',
       name: "Mim'kom'cha",
       author: 'Stephen Levey',
