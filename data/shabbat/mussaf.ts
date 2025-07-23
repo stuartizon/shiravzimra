@@ -108,6 +108,15 @@ export const shabbatMussaf: Section = {
         Here is Hu Eloheinu from the Mussaf K'dusha set to this legendary melody.`
     },
     {
+      id: '82a',
+      name: "Ata Yatzarta",
+      author: 'Yossele Mandelbaum',
+      youtubeUrl: 'https://youtu.be/pvmBp5-fPpA',
+      description: `Ata Yatzarta is a most unusual prayer. It replaces the regular Tikanta Shabbat from the Musaf Amida when Rosh Chodesh coincides with Shabbat, and its language is markedly different. While it refers to both Shabbat and Rosh Chodesh, it also includes words from the Yom Tov liturgy as well as phrases which appear in no other prayers throughout the year. (This is in stark contrast to Shabbat Chol Hamoed/Shabbat Yom Tov where Musaf is fundamentally a Yom Tov Amida with more modest insertions for Shabbat.)\n
+        The Midrash states that Rosh Chodesh was supposed to have the status of a Yom Tov, but this was lost due to the sin of the golden calf. Nevertheless we experience some sense of this original intent when Shabbat and Rosh Chodesh coincide, and we see from the liturgy that the sanctity of the combination is greater than the sum of its parts. The words of Ata Yatzarta are notably sombre in tone and lament the destruction of the Temple. The implicit tension is that Rosh Chodesh is a symbol of renewal but how can we celebrate renewal when the core of our spiritual life lies in ruins?\n
+        This piece by Yossele Mandelbaum is one of the most striking settings for Ata Yatzarta. Mandelbaum was a protégé of the Bobover Rebbe, known for his beautiful voice and incredible vocal dexterity. He was born in Krakow, and after his liberation in 1946 from a concentration camp, emigrated to America, where he helped to rebuild Bobov. His composition for Ata Yatzarta includes ecstatic, fiery sections as well as some soft, thoughtful passages. Mandelbaum particularly emphasises the words "ulfi shechatanu l'fanecha" and "char'va irenu v'shamem bet mikdashenu" with two wistful melodies sung first by the chazzan, and then repeated by the choir.`
+    },
+    {
       id: '86a',
       name: "Kad'sheinu",
       author: 'Abraham Wolf Binder',
