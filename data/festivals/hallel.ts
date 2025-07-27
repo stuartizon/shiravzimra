@@ -69,10 +69,10 @@ export const hallel: Section = {
     {
       id: '111e',
       name: "Lo Amut",
-      author: 'Joseph Gottbeiter',
+      author: 'Joseph Gottbetter',
       youtubeUrl: 'https://youtu.be/0dmkXqNo_28',
-      description: `Gottbeiter's Lo Amut from Hallel is one of the classic "big pieces" of chazzanut. Not only is it technically demanding, containing distinct sections of various textures, but it spans an emotional range from resilience to introspection to great joy. It is well worth the challenge, for its picturesque word painting and dramatic ending.\n
-        Lo Amut is undoubtably Gottbeiter's most well known composition, and was published in Avraham Moshe Bernstein's Avodat Habore.`
+      description: `Gottbetter's Lo Amut from Hallel is one of the classic "big pieces" of chazzanut. Not only is it technically demanding, containing distinct sections of various textures, but it spans an emotional range from resilience to introspection to great joy. It is well worth the challenge, for its picturesque word painting and dramatic ending.\n
+        Lo Amut is undoubtably Gottbetter's most well known composition, and was published in Avraham Moshe Bernstein's Avodat Habore.`
     },
     {
       id: '112a',
