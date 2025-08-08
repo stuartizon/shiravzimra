@@ -55,7 +55,7 @@ export const kabbalatShabbat: Section = {
       name: "L'cha Dodi",
       author: 'Michael David Levi',
       youtubeUrl: 'https://youtu.be/udeIwiTRli4',
-      description: `Here is one of the most ubiquitous melodies for L'cha Dodi, composed by well-known Israeli educator and conductor, Michael David Levi. Supposedly, this was based on a tune already familiar to Levi growing up in his home in Breslov, but he is the one who combined it with the words of L'cha Dodi during his voyage to Israel in 1934. In any event, no other source or alternate lyrics for this melody have been found to date. Levi's setting was made famous in Israel and throughout the world via his connections to Beit Tzeirot Mizrachi and his close friendship with Rabbi Moshe-Zvi Neria (who established the first B'nei Akiva yeshiva in Kfar Haroeh).`
+      description: `Here is one of the most ubiquitous melodies for L'cha Dodi, composed by well-known Israeli educator and conductor, Michael David Levi. Supposedly, this was based on a tune already familiar to Levi growing up in his home in Wrocław, but he is the one who combined it with the words of L'cha Dodi during his voyage to Israel in 1934. In any event, no other source or alternate lyrics for this melody have been found to date. Levi's setting was made famous in Israel and throughout the world via his connections to Beit Tzeirot Mizrachi and his close friendship with Rabbi Moshe-Zvi Neria (who established the first B'nei Akiva yeshiva in Kfar Haroeh).`
     },
     {
       id: '10f',
