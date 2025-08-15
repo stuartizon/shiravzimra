@@ -78,6 +78,13 @@ export const shabbatMussaf: Section = {
       description: `This charming composition by Mombach is perhaps one of his least well known, and also one of the least well known melodies for this paragraph. This is a pity as it is an easily-singable setting, which remains in a major key throughout, and plainly conveys the meaning of the words.`
     },
     {
+      id: '71m',
+      name: 'Eitz Chayim',
+      author: 'Salomon Sulzer',
+      youtubeUrl: 'https://youtu.be/8QsK26K7T8o',
+      description: `Sulzer's melody for Eitz Chayim Hi is unfamiliar to most congregations nowadays, as it necessitates a choir and the tune demands a wide tessitura. The theme is in the major, but modulates to the parallel minor at Hashiveinu. The chazzan enters and forcefully declares Chadesh Yamenu K'kedem to return us to the original tonality, but not before an unexpected (and deeply satisfying) chromatic pivot, an apposite metaphor for these paradoxical words "renew as of old". Finally the choir restates the first theme.`
+    },
+    {
       id: '74a',
       name: "M'chalkel",
       author: 'Max Wohlberg',
