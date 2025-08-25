@@ -11,7 +11,7 @@ export const kolNidrei: Section = {
       name: "V'nislach",
       author: 'Jacob Matz',
       youtubeUrl: 'https://youtu.be/0jm1844oX3Q',
-      description: `Near the beginning of the Kol Nidrei service we recite this verse from B'midbar three times. In its original context it relates to a situation where the entire community sins accidentally. As Rabbi Sacks points out, its presence here in the liturgy signals that: 1) we have come together as a community to seek forgiveness; 2) via repentance and remorse, can we revoke the intention of our past deliberate sins, and they can thus be forgiven.\n
+      description: `Near the beginning of the Kol Nidrei service we recite this verse from B'midbar three times. In its original context it relates to a situation where the entire community sins accidentally. As Rabbi Sacks points out, its presence here in the liturgy signals that: 1) we have come together as a community to seek forgiveness; 2) via repentance and remorse, we can revoke the intention of our past deliberate sins, and they can thus be forgiven.\n
         This melody is fairly well known, but the earliest source I've seen for it is in Jacob Matz's volume, Kol Jacob. I've not seen this attributed to Matz anywhere else, but he does claim in his introduction that the compositions are all original. He recounts that his more elaborate pieces were conceived when he was chazzan in Russia, but his more simple, melodious music (such as this) was introduced when he was in Manchester.`
     },
     {
