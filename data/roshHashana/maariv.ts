@@ -7,6 +7,14 @@ export const rhMaariv: Section = {
   hebrewName: 'מעריב',
   pieces: [
     {
+      id: '203a',
+      name: "Ahavat Olam",
+      author: 'Marcus Hast',
+      youtubeUrl: 'https://youtu.be/NwsL1m38Bf4',
+      description: `It is perhaps understandable that this Ahavat Olam by Marcus Hast is not particularly well known, as it is impossible to perform without a choir. This is a great shame because it is a superb setting for evoking the mood of the high holy days, and I would encourage those congregations who can to incorporate this into their repertoire.\n
+        The composition opens triumphantly in the major with the words "You loved the house of Israel", and Hast scores the two halves of the choir antiphonally. The middle section is slower, in the relative minor and contains some deft word-painting for the text "when we lie down" and "when we rise up". Finally the chazzan enters, with an inversion of the high holiday ma'ariv theme at "for they are our life", which builds to a great crescendo and ends on a glorious cadence.`
+    },
+    {
       id: '206a',
       name: "Hashkiveinu",
       author: 'Harris Rosenberg',
