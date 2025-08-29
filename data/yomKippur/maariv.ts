@@ -23,6 +23,14 @@ export const ykMaariv: Section = {
         This beautiful melody of unknown authorship, (beginning partway into the paragraph of El Melech Yosheiv) forms one of the great emotional highlights of the holiday period, particularly with its many repetitions during Kol Nidrei and N’ila, and in many communities, it has become a leitmotif for the High Holidays.`
     },
     {
+      id: '317b',
+      name: "Vahaviotim",
+      author: 'Yitzchok Alster',
+      youtubeUrl: 'https://youtu.be/8hvckkGMIOM',
+      description: `Vahaviotim appears near the end of the Z'chor Lanu section in each of the services of Yom Kippur and S'lichot (and is also read as part of the Haftara for fast days). This section of the liturgy quotes verses from Tanach, asking God to remember the merits of Israel and grant mercy. This particular verse from Isaiah illustrates God's desire for a universal community of worshippers, unified in prayer and jubilant in His presence.\n
+        The upbeat nature of this melody by Rav Yitzhok Alster accords well with the joyful plain meaning of the verse. Alster wrote this melody in the 1960s but it became more widely known via its inclusion on Suki and Ding's 1985 album Torah.`
+    },
+    {
       id: '318a',
       name: "Sh'ma Koleinu",
       author: 'Trad.',
