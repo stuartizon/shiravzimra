@@ -102,7 +102,7 @@ export const rhMussaf: Section = {
       id: '266g',
       name: 'Halleluyah',
       author: 'Kobi Oshrat',
-      youtubeUrl: 'https://youtu.be/jntC9lwa5bQ',
+      youtubeUrl: 'https://youtu.be/mqQ7Zii99Y8',
       description: `Kobi Oshrat's Halleluyah was originally performed by Milk and Honey at the 1979 Eurovision Song Contest in Jerusalem, where it won first place. Despite the use of the word Halleluyah (which itself contains the name of God), the original lyrics are more secular in tone. Here I have transplanted the melody onto the words of Psalm 150.`
     },
     {
