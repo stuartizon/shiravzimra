@@ -7,6 +7,15 @@ export const ykMaariv: Section = {
   hebrewName: 'מעריב',
   pieces: [
     {
+      id: '310a',
+      name: "L'chu N'ran'na",
+      author: 'Joshua Weisser',
+      youtubeUrl: 'https://youtu.be/3ztCACYS7I8',
+      description: `The music of S'lichot is especially beautiful and poignant, perhaps none more so than Joshua Weisser's L'chu N'ran'na. The text comes from the verses at the end of the paragraph Shome’a T’fila, which we read every night of Selichot (including on Yom Kippur). The melody aches with longing on the words “Righteousness and justice are the foundations of Your throne".\n
+        Most arrangements of L'chu N'ran'na omit the second half of the piece entirely, apply the melody for Asher B'yado to Han'shama Lach, and alter/extend the chazzan and baritone solos beyond what is in the original score. Here I have gone back to Weisser's published version as the basis for this arrangement.\n
+        Weisser was born in Ukraine, but moved to New York at the onset of World War I. His compositional output is prodigious. In a time where Synagogue music had begun to be replaced by operatic arias and theatricalism, Weisser's music represents a return to traditional chazzanut and pure nusach.`
+    },
+    {
       id: '311a',
       name: "Dark'cha",
       author: 'Trad.',
