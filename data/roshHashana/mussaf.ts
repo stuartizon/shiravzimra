@@ -31,6 +31,14 @@ export const rhMussaf: Section = {
         Blumenthal would have been a contemporary of Rossini. He was chief chazzan at Odessa's choral Broder Synagogue, and is cited by many as the first "khor hazzan" in eastern Europe. He viewed the incorporation of references from classical repertoire as artistically beneficial to chazzanut – if they were appropriate to the text and could fit into the proper prayer modes, not as unconsidered dilutions for the sake of popularity.`
     },
     {
+      id: '246a',
+      name: "Ein Kitzva",
+      author: 'Koifman Yodel Eidelson',
+      youtubeUrl: 'https://youtu.be/Pctn0sIXOEw',
+      description: `Ein Kitzva segues us from the end of Un'tane Tokef into the K'dusha. After reflecting on the insignificance of man, we declare the greatness of God, everlasting, sanctified in heaven and earth.\n
+        This rousing and regal Modzitz march has recently become the most popular melody for this paragraph. People have argued at length on what the correct placement of the lyrics should be, however it appears that there is no authoritative version. Some sources attest that it was composed by Reb Koifman Yodel Eidelson in 1931, but according to notes from Rabbi Norman Lamm, it originated in Otwock where the Modzitz Rebbe lived until the outbreak of World War II, and whilst it was sung extensively by the Rebbe, it is difficult to ascertain conclusively whether it was composed by him or by Eidelson.`
+    },
+    {
       id: '249a',
       name: "Chamol",
       author: 'Yigal Calek',
