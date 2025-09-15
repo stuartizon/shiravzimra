@@ -28,7 +28,7 @@ export const rhMaariv: Section = {
       author: 'Louis Lewandowski',
       youtubeUrl: 'https://youtu.be/DWqdRYwHUFk',
       description: `The paragraph Hashkiveinu asks for God's protection through the night and watchful care. Though we recite it every evening at Ma'ariv and before we go to sleep, Lewandowski's setting is specifically for the high holidays.\n
-        The composition begins cautiously in the minor with solo chazzan and organ (here rearranged for choir accompaniment), enumerating the litany of worries we ask God for protection from. A jagged, augmented chord appears on the word 'satan' – the accuser. Uv'tzel K'nafecha, the more well known section, is a lyrical waltz for the choir, in the relative major. The ending is a dramatic dynamic contrast, with a bittersweet minor four chord resolving to the tonic.`
+        The composition begins cautiously in the minor with solo chazzan and organ (here rearranged for choir accompaniment), enumerating the litany of worries we ask God for protection from. A jagged, augmented chord appears on the word 'satan' – the accuser. Uvtzel K'nafecha, the more well known section, is a lyrical waltz for the choir, in the relative major. The ending is a dramatic dynamic contrast, with a bittersweet minor four chord resolving to the tonic.`
     },
   ]
 }
