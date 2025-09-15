@@ -22,5 +22,13 @@ export const rhMaariv: Section = {
       description: `Hashkiveinu is recited every evening at Ma'ariv, following the Sh'ma, as well as at night before we go to sleep. In this prayer, we ask for protection through the night, seeking God's watchful care and deliverance.\n
         This beautiful melody by Harris Philip Rosenberg (choirmaster of the New Synagogue on Egerton Road) is specifically intended for the High Holidays. Rosenberg's composition features a rich variety of textures, including solo chazzan, choir, duets, and a baritone solo. Although the original piece also required boy sopranos, I have arranged it here for a male voice choir.`
     },
+    {
+      id: '206b',
+      name: "V'hagein Ba'adeinu",
+      author: 'Louis Lewandowski',
+      youtubeUrl: 'https://youtu.be/DWqdRYwHUFk',
+      description: `The paragraph Hashkiveinu asks for God's protection through the night and watchful care. Though we recite it every evening at Ma'ariv and before we go to sleep, Lewandowski's setting is specifically for the high holidays.\n
+        The composition begins cautiously in the minor with solo chazzan and organ (here rearranged for choir accompaniment), enumerating the litany of worries we ask God for protection from. A jagged, augmented chord appears on the word 'satan' – the accuser. Uv'tzel K'nafecha, the more well known section, is a lyrical waltz for the choir, in the relative major. The ending is a dramatic dynamic contrast, with a bittersweet minor four chord resolving to the tonic.`
+    },
   ]
 }
