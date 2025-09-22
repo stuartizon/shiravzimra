@@ -39,6 +39,15 @@ export const rhMussaf: Section = {
         Blumenthal would have been a contemporary of Rossini. He was chief chazzan at Odessa's choral Broder Synagogue, and is cited by many as the first "khor hazzan" in eastern Europe. He viewed the incorporation of references from classical repertoire as artistically beneficial to chazzanut – if they were appropriate to the text and could fit into the proper prayer modes, not as unconsidered dilutions for the sake of popularity.`
     },
     {
+      id: '241b',
+      name: "Uvashofar Gadol",
+      author: 'Wolf Shestapol',
+      youtubeUrl: 'https://youtu.be/8WFLPGTlEfM',
+      description: `The K'vakarat section of this composition is very well known, to the level it has become part of the anonymous corpus of synagogue music. This setting is attributed to Wolf Shestapol, however his music was never published, and survives only through fragmented collections. It certainly sounds like his signature style, and accords with the opinions of Abraham Zvi Idelsohn: that Shestapol wrote memorable tunes but was rather uninventive harmonically. Here the harmony is restricted to only three chords, though I have added a little variety in this arrangement. I have reconstructed this setting from a number of sources, but it's impossible to say how closely this resembles the composer's original intention.\n
+        Shestapol impresses on us the weight of the judgement at "ki lo yizku v'einecha badin". Following the baritone solo, the word "din" is repeated over and over in groups of threes, by each of the choir sections in turn, ever intensifying in volume.\n
+        The meaning of the phrase "kivnei-maron" is elusive; many machzorim say "like sheep" but the Talmud (Rosh Hashana 18a) gives three possible translations, one of which is "like soldiers from the house of David", who could be surveyed with a single glance. The rabbis seem to be discussing the nature of the individual's relationship to the community, vis-a-vis repentance. Later scholarly analysis has shown it to be derived from a Greek word "kinumeron", a legion. This appears to be the approach Shestapol has taken, particularly with the famous K'vakarat which has the feel of a march (notwithstanding the recording by Sirota which is far slower). The symbolism is less pastoral and more akin to a military inspection, for we are like soldiers entrusted with a vital mission.`
+    },
+    {
       id: '246a',
       name: "Ein Kitzva",
       author: 'Koifman Yodel Eidelson',
