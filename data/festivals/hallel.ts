@@ -53,7 +53,9 @@ export const hallel: Section = {
     {
       id: '109c',
       name: "Hodu Ladonai (for Sukkot)",
-      author: 'Trad.'
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/KbnyGpgK3P0',
+      description: `This is a traditional Dukes Place Sukkot melody for Hodu dating back to at least the 19th century. It has a joyous quality befitting the “time of our rejoicing” but is slow enough to fit in the na’anuim. The second part of the choral response seems to be identical to the High Holy Day k’dusha. It’s hard to say for certain which is the original, but presumably this is a callback to tie Sukkot into the High Holy day season, despite it being one of the regalim.`
     },
     {
       id: '111a',
