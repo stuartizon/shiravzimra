@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap && yarn build:scores-pdf",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:scores-pdf": "node scripts/merge-scores.js"
   },
   "dependencies": {
     "next": "13.2.4",
     "next-sitemap": "^4.2.3",
+    "pdf-lib": "^1.17.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pdf": "^6.2.2",
