@@ -6,7 +6,7 @@ require('ts-node').register({
 const fs = require('fs');
 const path = require('path');
 const { PDFDocument, StandardFonts, rgb } = require('pdf-lib');
-const { allPieces, allSections } = require('../data');
+const { allSections } = require('../data');
 
 async function mergeScores() {
   const scoresDir = path.join(__dirname, '..', 'public', 'scores');
@@ -17,27 +17,39 @@ async function mergeScores() {
     throw new Error(`Scores directory not found at ${scoresDir}`);
   }
 
-  const files = allPieces.map((piece) => {
-    const filePath = path.join(scoresDir, `${piece.id}.pdf`);
-    return { pieceId: piece.id, filePath };
-  });
+  const contentItems = allSections.flatMap((section) =>
+    section.pieces.map((piece) => ({ section, piece }))
+  );
 
-  const missing = files.filter(({ filePath }) => !fs.existsSync(filePath));
-  if (missing.length > 0) {
-    const missingList = missing.map((m) => m.pieceId).join(', ');
-    throw new Error(`Missing PDF files for piece ids: ${missingList}`);
+  const loadedPieces = [];
+  const pieceStartPages = new Map();
+  let contentPageCounter = 0;
+
+  for (const { section, piece } of contentItems) {
+    const filePath = path.join(scoresDir, `${piece.id}.pdf`);
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`Missing PDF file for piece id: ${piece.id}`);
+    }
+
+    const pdfBytes = fs.readFileSync(filePath);
+    const pdfDoc = await PDFDocument.load(pdfBytes);
+    const pageIndices = pdfDoc.getPageIndices();
+
+    const startPage = contentPageCounter + 1;
+    pieceStartPages.set(piece.id, startPage);
+    contentPageCounter += pageIndices.length;
+
+    loadedPieces.push({ section, piece, pdfDoc, pageIndices });
   }
 
   const mergedPdf = await PDFDocument.create();
   const bodyFont = await mergedPdf.embedFont(StandardFonts.Helvetica);
   const titleFont = await mergedPdf.embedFont(StandardFonts.HelveticaBold);
 
-  const tocPages = addTableOfContents(mergedPdf, allSections, bodyFont, titleFont);
+  const tocPages = addTableOfContents(mergedPdf, allSections, pieceStartPages, bodyFont, titleFont);
 
-  for (const { filePath, pieceId } of files) {
-    const pdfBytes = fs.readFileSync(filePath);
-    const pdfDoc = await PDFDocument.load(pdfBytes);
-    const copiedPages = await mergedPdf.copyPages(pdfDoc, pdfDoc.getPageIndices());
+  for (const { pdfDoc, pageIndices } of loadedPieces) {
+    const copiedPages = await mergedPdf.copyPages(pdfDoc, pageIndices);
     copiedPages.forEach((page) => mergedPdf.addPage(page));
   }
 
@@ -67,10 +79,10 @@ async function mergeScores() {
   const mergedBytes = await mergedPdf.save();
   fs.writeFileSync(outputFile, mergedBytes);
 
-  console.log(`Merged ${files.length} PDFs into ${path.relative(process.cwd(), outputFile)}`);
+  console.log(`Merged ${loadedPieces.length} PDFs into ${path.relative(process.cwd(), outputFile)}`);
 }
 
-function addTableOfContents(pdf, sections, bodyFont, titleFont) {
+function addTableOfContents(pdf, sections, pieceStartPages, bodyFont, titleFont) {
   const startPageCount = pdf.getPageCount();
   const margin = 50;
   const titleSize = 16;
@@ -98,6 +110,9 @@ function addTableOfContents(pdf, sections, bodyFont, titleFont) {
     drawHeader();
 
     section.pieces.forEach((piece) => {
+      const pageNumber = pieceStartPages.get(piece.id);
+      const line = `${piece.name} ${pageNumber ?? ''}`.trim();
+
       if (y < margin + lineHeight) {
         page = pdf.addPage();
         ({ width, height } = page.getSize());
@@ -105,7 +120,7 @@ function addTableOfContents(pdf, sections, bodyFont, titleFont) {
         drawHeader();
       }
 
-      page.drawText(piece.name, {
+      page.drawText(line, {
         x: margin,
         y,
         size: lineSize,
