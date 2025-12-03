@@ -1,6 +1,12 @@
+// Register ts-node so we can import TypeScript data in a Node script.
+require('ts-node').register({
+  transpileOnly: true,
+  compilerOptions: { module: 'CommonJS' }
+});
 const fs = require('fs');
 const path = require('path');
 const { PDFDocument } = require('pdf-lib');
+const { allPieces } = require('../data');
 
 async function mergeScores() {
   const scoresDir = path.join(__dirname, '..', 'public', 'scores');
@@ -11,19 +17,20 @@ async function mergeScores() {
     throw new Error(`Scores directory not found at ${scoresDir}`);
   }
 
-  const files = fs
-    .readdirSync(scoresDir)
-    .filter((file) => file.toLowerCase().endsWith('.pdf'))
-    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+  const files = allPieces.map((piece) => {
+    const filePath = path.join(scoresDir, `${piece.id}.pdf`);
+    return { pieceId: piece.id, filePath };
+  });
 
-  if (files.length === 0) {
-    throw new Error(`No PDF files found in ${scoresDir}`);
+  const missing = files.filter(({ filePath }) => !fs.existsSync(filePath));
+  if (missing.length > 0) {
+    const missingList = missing.map((m) => m.pieceId).join(', ');
+    throw new Error(`Missing PDF files for piece ids: ${missingList}`);
   }
 
   const mergedPdf = await PDFDocument.create();
 
-  for (const file of files) {
-    const filePath = path.join(scoresDir, file);
+  for (const { filePath, pieceId } of files) {
     const pdfBytes = fs.readFileSync(filePath);
     const pdfDoc = await PDFDocument.load(pdfBytes);
     const copiedPages = await mergedPdf.copyPages(pdfDoc, pdfDoc.getPageIndices());
