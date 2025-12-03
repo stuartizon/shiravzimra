@@ -5,7 +5,7 @@ require('ts-node').register({
 });
 const fs = require('fs');
 const path = require('path');
-const { PDFDocument } = require('pdf-lib');
+const { PDFDocument, StandardFonts, rgb } = require('pdf-lib');
 const { allPieces } = require('../data');
 
 async function mergeScores() {
@@ -36,6 +36,25 @@ async function mergeScores() {
     const copiedPages = await mergedPdf.copyPages(pdfDoc, pdfDoc.getPageIndices());
     copiedPages.forEach((page) => mergedPdf.addPage(page));
   }
+
+  const pageNumberFont = await mergedPdf.embedFont(StandardFonts.Helvetica);
+  const pages = mergedPdf.getPages();
+  const fontSize = 10;
+  const margin = 24;
+
+  pages.forEach((page, index) => {
+    const pageNumber = `${index + 1}`;
+    const { width } = page.getSize();
+    const textWidth = pageNumberFont.widthOfTextAtSize(pageNumber, fontSize);
+    const x = (width - textWidth) / 2;
+    page.drawText(pageNumber, {
+      x,
+      y: margin,
+      size: fontSize,
+      font: pageNumberFont,
+      color: rgb(0, 0, 0)
+    });
+  });
 
   if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
