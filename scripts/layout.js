@@ -12,16 +12,17 @@ const layoutConfig = {
   introLineHeight: 24,
   sectionLineSize: 14,
   sectionLineHeight: 18,
-  partGap: 18,
-  leaderGap: 3
+  partGap: 30,
+  leaderGap: 3,
+  partLineSize: 20
 };
 
 function computeTocLayout(sections, pieceStartPages, totalContentPages, font, fontSize, margin, pageWidth) {
   const padding = 8;
   const minWidths = {
-    name: 240,
-    author: 170,
-    id: 20,
+    id: 40,
+    name: 230,
+    author: 180,
     page: 30
   };
 

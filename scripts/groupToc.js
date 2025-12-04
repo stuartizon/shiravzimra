@@ -14,7 +14,8 @@ function renderGroupContents(pdf, groups, sectionTocPages, fonts) {
     topPadding,
     headerGap,
     partGap,
-    leaderGap
+    leaderGap,
+    partLineSize
   } = layoutConfig;
 
   const safeText = (text) =>
@@ -42,12 +43,9 @@ function renderGroupContents(pdf, groups, sectionTocPages, fonts) {
 
   groups.forEach((group, idx) => {
     y -= partGap;
-    const leftText = `PART ${idx + 1}: ${group.name.toUpperCase()} – `;
-    const hebrewText = hebrewFont ? group.hebrewName || '' : safeText(group.hebrewName || '');
-    const leftWidth = bodyFont.widthOfTextAtSize(leftText, introLineSize);
-    const hebrewWidth = (hebrewFont || bodyFont).widthOfTextAtSize(hebrewText, introLineSize);
-    const totalWidth = leftWidth + hebrewWidth;
-    const lineX = (width - totalWidth) / 2;
+    const leftText = `PART ${idx + 1}: ${group.name.toUpperCase()}`;
+    const lineWidth = bodyFont.widthOfTextAtSize(leftText, partLineSize);
+    const lineX = (width - lineWidth) / 2;
     const neededHeight = introLineHeight + group.sections.length * sectionLineHeight;
     if (y < margin + neededHeight) {
       page = pdf.addPage();
@@ -55,14 +53,7 @@ function renderGroupContents(pdf, groups, sectionTocPages, fonts) {
       ({ width, height } = page.getSize());
       y = height - margin - topPadding;
     }
-    page.drawText(leftText, { x: lineX, y, size: introLineSize, font: bodyFont, color: rgb(0, 0, 0) });
-    page.drawText(hebrewText, {
-      x: lineX + leftWidth,
-      y,
-      size: introLineSize,
-      font: hebrewFont || bodyFont,
-      color: rgb(0, 0, 0)
-    });
+    page.drawText(leftText, { x: lineX, y, size: partLineSize, font: bodyFont, color: rgb(0, 0, 0) });
     y -= introLineHeight;
 
     group.sections.forEach((section) => {
