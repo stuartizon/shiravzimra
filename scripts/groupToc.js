@@ -2,8 +2,8 @@ const { rgb } = require('pdf-lib');
 const { layoutConfig, drawDotLeader } = require('./layout');
 const { toRoman } = require('./utils');
 
-function renderGroupContents(pdf, groups, sectionTocPages, fonts) {
-  const { bodyFont, introTitleFont, hebrewFont } = fonts;
+function renderGroupContents(pdf, groups, sectionTocPages, fonts, linkRecords = []) {
+  const { bodyFont, bodyBoldFont, introTitleFont, hebrewFont } = fonts;
   const {
     margin,
     introHeaderSize,
@@ -67,7 +67,7 @@ function renderGroupContents(pdf, groups, sectionTocPages, fonts) {
       const sectionWidth = bodyFont.widthOfTextAtSize(sectionText, sectionLineSize);
       const sectionPage = sectionTocPages.get(section.id);
       const pageText = sectionPage ? toRoman(sectionPage) : '';
-      const pageWidth = bodyFont.widthOfTextAtSize(pageText, sectionLineSize);
+      const pageWidth = bodyBoldFont.widthOfTextAtSize(pageText, sectionLineSize);
       const leftX = margin;
       const pageX = width - margin - pageWidth;
 
@@ -93,8 +93,14 @@ function renderGroupContents(pdf, groups, sectionTocPages, fonts) {
           x: pageX,
           y,
           size: sectionLineSize,
-          font: bodyFont,
-          color: rgb(0, 0, 0)
+          font: bodyBoldFont,
+          color: rgb(22 / 255, 101 / 255, 52 / 255)
+        });
+        const tocPageIndex = pdf.getPageCount() - 1;
+        linkRecords.push({
+          tocPageIndex,
+          sectionPage,
+          rect: [pageX, y, pageX + pageWidth, y + sectionLineSize]
         });
       }
 

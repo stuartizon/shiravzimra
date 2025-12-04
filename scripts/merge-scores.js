@@ -67,11 +67,18 @@ async function mergeScores() {
 
   console.log('🧭 Generating table of contents...');
   // Group overview pages (unnumbered)
-  const groupPages = renderGroupContents(mergedPdf, allGroups, sectionPagination.sectionFirstPage, {
-    bodyFont,
-    introTitleFont,
-    hebrewFont
-  });
+  const groupPages = renderGroupContents(
+    mergedPdf,
+    allGroups,
+    sectionPagination.sectionFirstPage,
+    {
+      bodyFont,
+      bodyBoldFont,
+      introTitleFont,
+      hebrewFont
+    },
+    tocLinks
+  );
 
   // Section-level TOC pages (with piece listings and links)
   const sectionPagesResult = renderSectionContents(
@@ -120,7 +127,7 @@ async function mergeScores() {
     });
   });
 
-  addTocLinks(mergedPdf, tocLinks, totalTocPages);
+  addTocLinks(mergedPdf, tocLinks, totalTocPages, groupPages);
 
   if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
@@ -137,12 +144,17 @@ async function mergeScores() {
   );
 }
 
-function addTocLinks(pdf, links, tocPages) {
+function addTocLinks(pdf, links, tocPages, groupPages = 0) {
   const pages = pdf.getPages();
   const context = pdf.context;
 
-  links.forEach(({ tocPageIndex, targetPageNumber, rect }) => {
-    const targetIndex = tocPages + targetPageNumber - 1;
+  links.forEach(({ tocPageIndex, targetPageNumber, sectionPage, rect }) => {
+    let targetIndex = null;
+    if (sectionPage != null) {
+      targetIndex = groupPages + sectionPage - 1;
+    } else if (targetPageNumber != null) {
+      targetIndex = tocPages + targetPageNumber - 1;
+    }
     const tocPage = pages[tocPageIndex];
     const targetPage = pages[targetIndex];
     if (!tocPage || !targetPage) return;
