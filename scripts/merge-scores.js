@@ -17,6 +17,9 @@ async function mergeScores() {
     throw new Error(`Scores directory not found at ${scoresDir}`);
   }
 
+  console.log('🔨 Building merged PDF from data index...');
+  console.log('📄 Loading piece PDFs...');
+
   const contentItems = allSections.flatMap((section) =>
     section.pieces.map((piece) => ({ section, piece }))
   );
@@ -46,6 +49,7 @@ async function mergeScores() {
   const bodyFont = await mergedPdf.embedFont(StandardFonts.Helvetica);
   const titleFont = await mergedPdf.embedFont(StandardFonts.HelveticaBold);
 
+  console.log('🧭 Generating table of contents...');
   const tocPages = addTableOfContents(
     mergedPdf,
     allSections,
@@ -55,10 +59,14 @@ async function mergeScores() {
     titleFont
   );
 
+  console.log('📚 Merging piece PDFs...');
+
   for (const { pdfDoc, pageIndices } of loadedPieces) {
     const copiedPages = await mergedPdf.copyPages(pdfDoc, pageIndices);
     copiedPages.forEach((page) => mergedPdf.addPage(page));
   }
+
+  console.log('🔢 Adding page numbers...');
 
   const pages = mergedPdf.getPages();
   const fontSize = 10;
@@ -86,7 +94,12 @@ async function mergeScores() {
   const mergedBytes = await mergedPdf.save();
   fs.writeFileSync(outputFile, mergedBytes);
 
-  console.log(`Merged ${loadedPieces.length} PDFs into ${path.relative(process.cwd(), outputFile)}`);
+  console.log(
+    `✅ Merged ${loadedPieces.length} PDFs into ${path.relative(
+      process.cwd(),
+      outputFile
+    )} (${mergedPdf.getPageCount()} pages total)`
+  );
 }
 
 function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, bodyFont, titleFont) {
