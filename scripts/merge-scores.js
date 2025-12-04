@@ -65,19 +65,34 @@ async function mergeScores() {
     ['NotoSerifHebrew-Regular.ttf', 'NotoSerifHebrew.ttf', 'NotoSerifHebrew-VariableFont_wght.ttf', 'NotoSerifHebrew[wght].ttf'],
     ['notoserifhebrew']
   );
+  const edwinFontPath = resolveFontPath(
+    fontsDir,
+    ['Edwin-Roman.otf', 'Edwin.ttf', 'Edwin-Regular.ttf', 'Edwin.otf'],
+    ['edwin']
+  );
+  const edwinBoldPath = resolveFontPath(
+    fontsDir,
+    ['Edwin-Bold.otf', 'Edwin-Bold.ttf', 'EdwinBold.ttf', 'Edwin.otf'],
+    ['edwin', 'bold']
+  );
 
   const fallbackBody = await mergedPdf.embedFont(StandardFonts.TimesRoman);
   const fallbackBold = await mergedPdf.embedFont(StandardFonts.TimesRomanBold);
 
-  const bodyFont = await embedFontOrFallback(mergedPdf, serifRegularPath, fallbackBody, 'Noto Serif');
-  const boldCandidatePath = serifBoldPath || serifRegularPath;
+  const bodyFont = await embedFontOrFallback(
+    mergedPdf,
+    edwinFontPath || serifRegularPath,
+    fallbackBody,
+    'Edwin'
+  );
   const bodyBoldFont = await embedFontOrFallback(
     mergedPdf,
-    boldCandidatePath,
+    edwinBoldPath || edwinFontPath || serifBoldPath || serifRegularPath,
     fallbackBold,
-    'Noto Serif Bold'
+    'Edwin Bold'
   );
-  const titleFont = bodyBoldFont;
+  const titleFont = bodyFont;
+  const introTitleFont = bodyFont;
 
   let hebrewFont = null;
   if (hebrewFontPath && fs.existsSync(hebrewFontPath)) {
@@ -102,9 +117,9 @@ async function mergeScores() {
     bodyFont,
     bodyBoldFont,
     titleFont,
+    introTitleFont,
     tocLinks,
-    hebrewFont,
-    hebrewFontPath
+    hebrewFont
   );
 
   console.log('📚 Merging piece PDFs...');
@@ -161,6 +176,7 @@ function addTableOfContents(
   bodyFont,
   bodyBoldFont,
   titleFont,
+  introTitleFont,
   linkRecords,
   hebrewFont
 ) {
@@ -198,12 +214,12 @@ function addTableOfContents(
   let y = height - margin - topPadding;
 
   const introTitle = 'TABLE OF CONTENTS';
-  const introTitleWidth = titleFont.widthOfTextAtSize(introTitle, introHeaderSize);
+  const introTitleWidth = introTitleFont.widthOfTextAtSize(introTitle, introHeaderSize);
   page.drawText(introTitle, {
     x: (width - introTitleWidth) / 2,
     y,
     size: introHeaderSize,
-    font: titleFont,
+    font: introTitleFont,
     color: rgb(0, 0, 0)
   });
   y -= introHeaderSize + headerGap;
@@ -241,13 +257,13 @@ function addTableOfContents(
 
     const drawHeader = () => {
       const titleText = sectionTitle.toUpperCase();
-      const titleWidth = titleFont.widthOfTextAtSize(titleText, titleSize);
+      const titleWidth = introTitleFont.widthOfTextAtSize(titleText, titleSize);
       const x = (width - titleWidth) / 2;
       page.drawText(titleText, {
         x,
         y,
         size: titleSize,
-        font: titleFont,
+        font: introTitleFont,
         color: rgb(0, 0, 0)
       });
       y -= titleSize + headerGap;
@@ -487,12 +503,12 @@ function resolveFontPath(fontsDir, candidates, keywords = []) {
   if (!fs.existsSync(fontsDir)) return null;
   for (const candidate of candidates) {
     const candidatePath = path.join(fontsDir, candidate);
-    if (fs.existsSync(candidatePath)) return candidatePath;
+    if (fs.existsSync(candidatePath) && !/italic/i.test(candidate)) return candidatePath;
   }
   if (keywords.length > 0) {
     const files = fs.readdirSync(fontsDir);
     const match = files.find((file) =>
-      keywords.every((k) => file.toLowerCase().includes(k.toLowerCase()))
+      !/italic/i.test(file) && keywords.every((k) => file.toLowerCase().includes(k.toLowerCase()))
     );
     if (match) return path.join(fontsDir, match);
   }
