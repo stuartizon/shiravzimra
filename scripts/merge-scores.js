@@ -46,8 +46,8 @@ async function mergeScores() {
   }
 
   const mergedPdf = await PDFDocument.create();
-  const bodyFont = await mergedPdf.embedFont(StandardFonts.Helvetica);
-  const bodyBoldFont = await mergedPdf.embedFont(StandardFonts.HelveticaBold);
+  const bodyFont = await mergedPdf.embedFont(StandardFonts.TimesRoman);
+  const bodyBoldFont = await mergedPdf.embedFont(StandardFonts.TimesRomanBold);
   const titleFont = await mergedPdf.embedFont(StandardFonts.TimesRomanBold);
   const tocLinks = [];
 
@@ -126,6 +126,7 @@ function addTableOfContents(
   const headerGap = 18;
   const topPadding = 2 * 16; // 2rem in points (approx, assuming 16px baseline)
   const overlaps = [];
+  const leaderGap = 3;
 
   const layout = computeTocLayout(
     sections,
@@ -189,6 +190,8 @@ function addTableOfContents(
       });
 
       const nameEnd = layout.nameX + bodyFont.widthOfTextAtSize(piece.name, lineSize);
+      const authorStart = layout.authorX;
+      drawDotLeader(page, nameEnd + leaderGap, authorStart - leaderGap, y, bodyFont, lineSize, rgb(0, 0, 0));
 
       page.drawText(piece.author, {
         x: layout.authorX,
@@ -206,6 +209,7 @@ function addTableOfContents(
         const pageTextWidth = bodyBoldFont.widthOfTextAtSize(displayText, lineSize);
         const pageX = layout.pageX + layout.pageWidth - pageTextWidth;
         const linkColor = rgb(22 / 255, 101 / 255, 52 / 255);
+        drawDotLeader(page, authorEnd + leaderGap, pageX - leaderGap, y, bodyFont, lineSize, rgb(0, 0, 0));
         page.drawText(displayText, {
           x: pageX,
           y,
@@ -257,10 +261,10 @@ function computeTocLayout(
 ) {
   const padding = 8;
   const minWidths = {
-    name: 218,
-    author: 100,
-    id: 50,
-    page: 40
+    name: 240,
+    author: 170,
+    id: 20,
+    page: 30
   };
 
   const pieces = sections.flatMap((section) =>
@@ -322,6 +326,23 @@ function getPageWidth(pdf) {
   const { width } = tempPage.getSize();
   pdf.removePage(pdf.getPageCount() - 1);
   return width;
+}
+
+function drawDotLeader(page, fromX, toX, y, font, fontSize, color) {
+  if (fromX >= toX) return;
+  const dot = '.';
+  const dotWidth = font.widthOfTextAtSize(dot, fontSize);
+  let x = fromX;
+  while (x + dotWidth <= toX) {
+    page.drawText(dot, {
+      x,
+      y,
+      size: fontSize,
+      font,
+      color: color ?? rgb(0, 0, 0)
+    });
+    x += dotWidth;
+  }
 }
 
 function addTocLinks(pdf, links, tocPages) {
