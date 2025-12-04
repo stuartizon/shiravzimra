@@ -47,7 +47,7 @@ async function mergeScores() {
 
   const mergedPdf = await PDFDocument.create();
   const bodyFont = await mergedPdf.embedFont(StandardFonts.Helvetica);
-  const titleFont = await mergedPdf.embedFont(StandardFonts.HelveticaBold);
+  const titleFont = await mergedPdf.embedFont(StandardFonts.TimesRomanBold);
 
   console.log('🧭 Generating table of contents...');
   const tocPages = addTableOfContents(
@@ -105,9 +105,12 @@ async function mergeScores() {
 function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, bodyFont, titleFont) {
   const startPageCount = pdf.getPageCount();
   const margin = 50;
-  const titleSize = 16;
-  const lineSize = 12;
-  const lineHeight = 16;
+  const titleSize = 24; // ~1.5rem
+  const lineSize = 14; // slightly tighter to fit columns
+  const lineHeight = 19;
+  const headerGap = 18;
+  const topPadding = 2 * 16; // 2rem in points (approx, assuming 16px baseline)
+  const overlaps = [];
 
   const layout = computeTocLayout(
     sections,
@@ -122,19 +125,22 @@ function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, b
   sections.forEach((section) => {
     let page = pdf.addPage();
     let { width, height } = page.getSize();
-    let y = height - margin;
+    let y = height - margin - topPadding;
 
     const sectionTitle = section.name;
 
     const drawHeader = () => {
-      page.drawText(sectionTitle, {
-        x: margin,
+      const titleText = sectionTitle.toUpperCase();
+      const titleWidth = titleFont.widthOfTextAtSize(titleText, titleSize);
+      const x = (width - titleWidth) / 2;
+      page.drawText(titleText, {
+        x,
         y,
         size: titleSize,
         font: titleFont,
         color: rgb(0, 0, 0)
       });
-      y -= titleSize + 12;
+      y -= titleSize + headerGap;
     };
 
     drawHeader();
@@ -157,6 +163,8 @@ function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, b
         color: rgb(0, 0, 0)
       });
 
+      const idEnd = layout.idX + bodyFont.widthOfTextAtSize(piece.id, lineSize);
+
       page.drawText(piece.name, {
         x: layout.nameX,
         y,
@@ -165,6 +173,8 @@ function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, b
         color: rgb(0, 0, 0)
       });
 
+      const nameEnd = layout.nameX + bodyFont.widthOfTextAtSize(piece.name, lineSize);
+
       page.drawText(piece.author, {
         x: layout.authorX,
         y,
@@ -172,6 +182,8 @@ function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, b
         font: bodyFont,
         color: rgb(0, 0, 0)
       });
+
+      const authorEnd = layout.authorX + bodyFont.widthOfTextAtSize(piece.author, lineSize);
 
       if (pageNumber != null) {
         const pageText = String(pageNumber);
@@ -186,8 +198,26 @@ function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, b
       }
 
       y -= lineHeight;
+
+      const pageStart = layout.pageX;
+      if (idEnd > layout.nameX || nameEnd > layout.authorX || authorEnd > pageStart) {
+        overlaps.push({
+          section: section.id,
+          piece: piece.id,
+          idEnd,
+          nameEnd,
+          authorEnd,
+          nameStart: layout.nameX,
+          authorStart: layout.authorX,
+          pageStart
+        });
+      }
     });
   });
+
+  if (overlaps.length > 0) {
+    console.warn('TOC overlaps detected:', overlaps);
+  }
 
   return pdf.getPageCount() - startPageCount;
 }
@@ -201,10 +231,10 @@ function computeTocLayout(
   margin,
   pageWidth
 ) {
-  const padding = 12;
+  const padding = 8;
   const minWidths = {
-    name: 180,
-    author: 140,
+    name: 218,
+    author: 100,
     id: 50,
     page: 40
   };
