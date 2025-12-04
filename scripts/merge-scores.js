@@ -46,7 +46,14 @@ async function mergeScores() {
   const bodyFont = await mergedPdf.embedFont(StandardFonts.Helvetica);
   const titleFont = await mergedPdf.embedFont(StandardFonts.HelveticaBold);
 
-  const tocPages = addTableOfContents(mergedPdf, allSections, pieceStartPages, bodyFont, titleFont);
+  const tocPages = addTableOfContents(
+    mergedPdf,
+    allSections,
+    pieceStartPages,
+    contentPageCounter,
+    bodyFont,
+    titleFont
+  );
 
   for (const { pdfDoc, pageIndices } of loadedPieces) {
     const copiedPages = await mergedPdf.copyPages(pdfDoc, pageIndices);
@@ -82,12 +89,22 @@ async function mergeScores() {
   console.log(`Merged ${loadedPieces.length} PDFs into ${path.relative(process.cwd(), outputFile)}`);
 }
 
-function addTableOfContents(pdf, sections, pieceStartPages, bodyFont, titleFont) {
+function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, bodyFont, titleFont) {
   const startPageCount = pdf.getPageCount();
   const margin = 50;
   const titleSize = 16;
   const lineSize = 12;
   const lineHeight = 16;
+
+  const layout = computeTocLayout(
+    sections,
+    pieceStartPages,
+    totalContentPages,
+    bodyFont,
+    lineSize,
+    margin,
+    getPageWidth(pdf)
+  );
 
   sections.forEach((section) => {
     let page = pdf.addPage();
@@ -111,7 +128,6 @@ function addTableOfContents(pdf, sections, pieceStartPages, bodyFont, titleFont)
 
     section.pieces.forEach((piece) => {
       const pageNumber = pieceStartPages.get(piece.id);
-      const line = `${piece.name} ${pageNumber ?? ''}`.trim();
 
       if (y < margin + lineHeight) {
         page = pdf.addPage();
@@ -120,18 +136,125 @@ function addTableOfContents(pdf, sections, pieceStartPages, bodyFont, titleFont)
         drawHeader();
       }
 
-      page.drawText(line, {
-        x: margin,
+      page.drawText(piece.id, {
+        x: layout.idX,
         y,
         size: lineSize,
         font: bodyFont,
         color: rgb(0, 0, 0)
       });
+
+      page.drawText(piece.name, {
+        x: layout.nameX,
+        y,
+        size: lineSize,
+        font: bodyFont,
+        color: rgb(0, 0, 0)
+      });
+
+      page.drawText(piece.author, {
+        x: layout.authorX,
+        y,
+        size: lineSize,
+        font: bodyFont,
+        color: rgb(0, 0, 0)
+      });
+
+      if (pageNumber != null) {
+        const pageText = String(pageNumber);
+        const pageTextWidth = bodyFont.widthOfTextAtSize(pageText, lineSize);
+        page.drawText(String(pageNumber), {
+          x: layout.pageX + layout.pageWidth - pageTextWidth,
+          y,
+          size: lineSize,
+          font: bodyFont,
+          color: rgb(0, 0, 0)
+        });
+      }
+
       y -= lineHeight;
     });
   });
 
   return pdf.getPageCount() - startPageCount;
+}
+
+function computeTocLayout(
+  sections,
+  pieceStartPages,
+  totalContentPages,
+  font,
+  fontSize,
+  margin,
+  pageWidth
+) {
+  const padding = 12;
+  const minWidths = {
+    name: 180,
+    author: 140,
+    id: 50,
+    page: 40
+  };
+
+  const pieces = sections.flatMap((section) =>
+    section.pieces.map((piece) => ({
+      name: piece.name || '',
+      author: piece.author || '',
+      id: piece.id || '',
+      page: pieceStartPages.get(piece.id)
+    }))
+  );
+
+  const measure = (text = '') => font.widthOfTextAtSize(text, fontSize);
+
+  let idWidth = Math.max(minWidths.id, Math.max(...pieces.map((p) => measure(p.id)), 0) + padding);
+  let nameWidth = Math.max(
+    minWidths.name,
+    Math.max(...pieces.map((p) => measure(p.name)), 0) + padding
+  );
+  let authorWidth = Math.max(
+    minWidths.author,
+    Math.max(...pieces.map((p) => measure(p.author)), 0) + padding
+  );
+  const widestPageNumber = String(totalContentPages || 0);
+  let pageWidthCol = Math.max(minWidths.page, measure(widestPageNumber) + padding);
+
+  const available = pageWidth - margin * 2;
+  let widths = [idWidth, nameWidth, authorWidth, pageWidthCol];
+  const mins = [minWidths.id, minWidths.name, minWidths.author, minWidths.page];
+
+  const reduceIfNeeded = () => {
+    let total = widths.reduce((sum, val) => sum + val, 0);
+    let overflow = total - available;
+    if (overflow <= 0) return;
+
+    for (let i = 0; i < widths.length && overflow > 0; i++) {
+      const reducible = widths[i] - mins[i];
+      if (reducible <= 0) continue;
+      const delta = Math.min(reducible, overflow);
+      widths[i] -= delta;
+      overflow -= delta;
+    }
+  };
+
+  reduceIfNeeded();
+
+  [idWidth, nameWidth, authorWidth, pageWidthCol] = widths;
+
+  return {
+    idX: margin,
+    nameX: margin + idWidth,
+    authorX: margin + idWidth + nameWidth,
+    pageX: margin + idWidth + nameWidth + authorWidth,
+    pageWidth: pageWidthCol
+  };
+}
+
+function getPageWidth(pdf) {
+  const tempPage = pdf.addPage();
+  const { width } = tempPage.getSize();
+  pdf.removePage(pdf.getPageCount() - 1);
+  return width;
 }
 
 function toRoman(num) {
