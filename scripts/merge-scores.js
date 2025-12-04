@@ -6,12 +6,14 @@ require('ts-node').register({
 const fs = require('fs');
 const path = require('path');
 const { PDFDocument, StandardFonts, rgb, PDFName, PDFArray } = require('pdf-lib');
-const { allSections } = require('../data');
+const fontkit = require('@pdf-lib/fontkit');
+const { allSections, allGroups } = require('../data');
 
 async function mergeScores() {
   const scoresDir = path.join(__dirname, '..', 'public', 'scores');
   const distDir = path.join(__dirname, '..', 'dist');
   const outputFile = path.join(distDir, 'all-scores.pdf');
+  const fontsDir = path.join(__dirname, '..', 'fonts');
 
   if (!fs.existsSync(scoresDir)) {
     throw new Error(`Scores directory not found at ${scoresDir}`);
@@ -46,21 +48,63 @@ async function mergeScores() {
   }
 
   const mergedPdf = await PDFDocument.create();
-  const bodyFont = await mergedPdf.embedFont(StandardFonts.TimesRoman);
-  const bodyBoldFont = await mergedPdf.embedFont(StandardFonts.TimesRomanBold);
-  const titleFont = await mergedPdf.embedFont(StandardFonts.TimesRomanBold);
+  mergedPdf.registerFontkit(fontkit);
+
+  const serifRegularPath = resolveFontPath(
+    fontsDir,
+    ['NotoSerif-Regular.ttf', 'NotoSerif.ttf', 'NotoSerif-VariableFont_wght.ttf', 'NotoSerif[wght].ttf'],
+    ['notoserif']
+  );
+  const serifBoldPath = resolveFontPath(
+    fontsDir,
+    ['NotoSerif-Bold.ttf', 'NotoSerif-Bold.ttf', 'NotoSerif-VariableFont_wght.ttf', 'NotoSerif[wght].ttf'],
+    ['notoserif', 'bold']
+  );
+  const hebrewFontPath = resolveFontPath(
+    fontsDir,
+    ['NotoSerifHebrew-Regular.ttf', 'NotoSerifHebrew.ttf', 'NotoSerifHebrew-VariableFont_wght.ttf', 'NotoSerifHebrew[wght].ttf'],
+    ['notoserifhebrew']
+  );
+
+  const fallbackBody = await mergedPdf.embedFont(StandardFonts.TimesRoman);
+  const fallbackBold = await mergedPdf.embedFont(StandardFonts.TimesRomanBold);
+
+  const bodyFont = await embedFontOrFallback(mergedPdf, serifRegularPath, fallbackBody, 'Noto Serif');
+  const boldCandidatePath = serifBoldPath || serifRegularPath;
+  const bodyBoldFont = await embedFontOrFallback(
+    mergedPdf,
+    boldCandidatePath,
+    fallbackBold,
+    'Noto Serif Bold'
+  );
+  const titleFont = bodyBoldFont;
+
+  let hebrewFont = null;
+  if (hebrewFontPath && fs.existsSync(hebrewFontPath)) {
+    const hebrewBytes = fs.readFileSync(hebrewFontPath);
+    hebrewFont = await mergedPdf.embedFont(hebrewBytes);
+  } else {
+    console.warn(
+      `Hebrew font not found at ${
+        hebrewFontPath ? path.relative(process.cwd(), hebrewFontPath) : '[not provided]'
+      }; Hebrew names may be degraded.`
+    );
+  }
   const tocLinks = [];
 
   console.log('🧭 Generating table of contents...');
   const tocPages = addTableOfContents(
     mergedPdf,
+    allGroups,
     allSections,
     pieceStartPages,
     contentPageCounter,
     bodyFont,
     bodyBoldFont,
     titleFont,
-    tocLinks
+    tocLinks,
+    hebrewFont,
+    hebrewFontPath
   );
 
   console.log('📚 Merging piece PDFs...');
@@ -110,13 +154,15 @@ async function mergeScores() {
 
 function addTableOfContents(
   pdf,
+  groups,
   sections,
   pieceStartPages,
   totalContentPages,
   bodyFont,
   bodyBoldFont,
   titleFont,
-  linkRecords
+  linkRecords,
+  hebrewFont
 ) {
   const startPageCount = pdf.getPageCount();
   const margin = 50;
@@ -125,8 +171,16 @@ function addTableOfContents(
   const lineHeight = 19;
   const headerGap = 18;
   const topPadding = 2 * 16; // 2rem in points (approx, assuming 16px baseline)
+  const introHeaderSize = 26;
+  const introLineSize = 16;
+  const introLineHeight = 24;
   const overlaps = [];
   const leaderGap = 3;
+  const safeText = (text) =>
+    text
+      .split('')
+      .map((ch) => (ch.charCodeAt(0) <= 255 ? ch : '?'))
+      .join('');
 
   const layout = computeTocLayout(
     sections,
@@ -138,10 +192,50 @@ function addTableOfContents(
     getPageWidth(pdf)
   );
 
+  // Intro page listing parts/groups
+  let page = pdf.addPage();
+  let { width, height } = page.getSize();
+  let y = height - margin - topPadding;
+
+  const introTitle = 'TABLE OF CONTENTS';
+  const introTitleWidth = titleFont.widthOfTextAtSize(introTitle, introHeaderSize);
+  page.drawText(introTitle, {
+    x: (width - introTitleWidth) / 2,
+    y,
+    size: introHeaderSize,
+    font: titleFont,
+    color: rgb(0, 0, 0)
+  });
+  y -= introHeaderSize + headerGap;
+
+  groups.forEach((group, idx) => {
+    const leftText = `Part ${idx + 1}: ${group.name.toUpperCase()} – `;
+    const hebrewText = hebrewFont ? group.hebrewName || '' : safeText(group.hebrewName || '');
+    const leftWidth = bodyFont.widthOfTextAtSize(leftText, introLineSize);
+    const hebrewWidth = (hebrewFont || bodyFont).widthOfTextAtSize(hebrewText, introLineSize);
+    const totalWidth = leftWidth + hebrewWidth;
+    const lineX = (width - totalWidth) / 2;
+    if (y < margin + introLineHeight) {
+      page = pdf.addPage();
+      ({ width, height } = page.getSize());
+      y = height - margin - topPadding;
+    }
+    page.drawText(leftText, { x: lineX, y, size: introLineSize, font: bodyFont, color: rgb(0, 0, 0) });
+    page.drawText(hebrewText, {
+      x: lineX + leftWidth,
+      y,
+      size: introLineSize,
+      font: hebrewFont || bodyFont,
+      color: rgb(0, 0, 0)
+    });
+    y -= introLineHeight;
+  });
+
+  // Section-level TOCs follow
   sections.forEach((section) => {
-    let page = pdf.addPage();
-    let { width, height } = page.getSize();
-    let y = height - margin - topPadding;
+    page = pdf.addPage();
+    ({ width, height } = page.getSize());
+    y = height - margin - topPadding;
 
     const sectionTitle = section.name;
 
@@ -374,6 +468,35 @@ function addTocLinks(pdf, links, tocPages) {
     }
     annots.push(linkAnnot);
   });
+}
+
+function embedFontOrFallback(pdf, fontPath, fallbackFont, label) {
+  if (fontPath && fs.existsSync(fontPath)) {
+    const fontBytes = fs.readFileSync(fontPath);
+    return pdf.embedFont(fontBytes);
+  }
+  console.warn(
+    `${label} font not found at ${
+      fontPath ? path.relative(process.cwd(), fontPath) : '[not provided]'
+    }; using fallback.`
+  );
+  return fallbackFont;
+}
+
+function resolveFontPath(fontsDir, candidates, keywords = []) {
+  if (!fs.existsSync(fontsDir)) return null;
+  for (const candidate of candidates) {
+    const candidatePath = path.join(fontsDir, candidate);
+    if (fs.existsSync(candidatePath)) return candidatePath;
+  }
+  if (keywords.length > 0) {
+    const files = fs.readdirSync(fontsDir);
+    const match = files.find((file) =>
+      keywords.every((k) => file.toLowerCase().includes(k.toLowerCase()))
+    );
+    if (match) return path.join(fontsDir, match);
+  }
+  return null;
 }
 
 function toRoman(num) {
