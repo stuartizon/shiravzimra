@@ -5,7 +5,7 @@ require('ts-node').register({
 });
 const fs = require('fs');
 const path = require('path');
-const { PDFDocument, StandardFonts, rgb } = require('pdf-lib');
+const { PDFDocument, StandardFonts, rgb, PDFName, PDFArray } = require('pdf-lib');
 const { allSections } = require('../data');
 
 async function mergeScores() {
@@ -47,7 +47,9 @@ async function mergeScores() {
 
   const mergedPdf = await PDFDocument.create();
   const bodyFont = await mergedPdf.embedFont(StandardFonts.Helvetica);
+  const bodyBoldFont = await mergedPdf.embedFont(StandardFonts.HelveticaBold);
   const titleFont = await mergedPdf.embedFont(StandardFonts.TimesRomanBold);
+  const tocLinks = [];
 
   console.log('🧭 Generating table of contents...');
   const tocPages = addTableOfContents(
@@ -56,7 +58,9 @@ async function mergeScores() {
     pieceStartPages,
     contentPageCounter,
     bodyFont,
-    titleFont
+    bodyBoldFont,
+    titleFont,
+    tocLinks
   );
 
   console.log('📚 Merging piece PDFs...');
@@ -87,6 +91,8 @@ async function mergeScores() {
     });
   });
 
+  addTocLinks(mergedPdf, tocLinks, tocPages);
+
   if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
   }
@@ -102,7 +108,16 @@ async function mergeScores() {
   );
 }
 
-function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, bodyFont, titleFont) {
+function addTableOfContents(
+  pdf,
+  sections,
+  pieceStartPages,
+  totalContentPages,
+  bodyFont,
+  bodyBoldFont,
+  titleFont,
+  linkRecords
+) {
   const startPageCount = pdf.getPageCount();
   const margin = 50;
   const titleSize = 24; // ~1.5rem
@@ -187,13 +202,22 @@ function addTableOfContents(pdf, sections, pieceStartPages, totalContentPages, b
 
       if (pageNumber != null) {
         const pageText = String(pageNumber);
-        const pageTextWidth = bodyFont.widthOfTextAtSize(pageText, lineSize);
-        page.drawText(String(pageNumber), {
-          x: layout.pageX + layout.pageWidth - pageTextWidth,
+        const displayText = pageText;
+        const pageTextWidth = bodyBoldFont.widthOfTextAtSize(displayText, lineSize);
+        const pageX = layout.pageX + layout.pageWidth - pageTextWidth;
+        const linkColor = rgb(22 / 255, 101 / 255, 52 / 255);
+        page.drawText(displayText, {
+          x: pageX,
           y,
           size: lineSize,
-          font: bodyFont,
-          color: rgb(0, 0, 0)
+          font: bodyBoldFont,
+          color: linkColor
+        });
+        const pageIndex = pdf.getPageCount() - 1;
+        linkRecords.push({
+          tocPageIndex: pageIndex,
+          targetPageNumber: pageNumber,
+          rect: [pageX, y, pageX + pageTextWidth, y + lineSize]
         });
       }
 
@@ -298,6 +322,37 @@ function getPageWidth(pdf) {
   const { width } = tempPage.getSize();
   pdf.removePage(pdf.getPageCount() - 1);
   return width;
+}
+
+function addTocLinks(pdf, links, tocPages) {
+  const pages = pdf.getPages();
+  const context = pdf.context;
+
+  links.forEach(({ tocPageIndex, targetPageNumber, rect }) => {
+    const targetIndex = tocPages + targetPageNumber - 1;
+    const tocPage = pages[tocPageIndex];
+    const targetPage = pages[targetIndex];
+    if (!tocPage || !targetPage) return;
+
+    const linkAnnot = context.obj({
+      Type: 'Annot',
+      Subtype: 'Link',
+      Rect: rect,
+      Border: [0, 0, 0],
+      A: {
+        Type: 'Action',
+        S: 'GoTo',
+        D: [targetPage.ref, PDFName.of('XYZ'), null, null, null]
+      }
+    });
+
+    let annots = tocPage.node.lookup(PDFName.of('Annots'));
+    if (!annots) {
+      annots = PDFArray.withContext(context);
+      tocPage.node.set(PDFName.of('Annots'), annots);
+    }
+    annots.push(linkAnnot);
+  });
 }
 
 function toRoman(num) {
