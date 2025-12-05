@@ -8,6 +8,13 @@ export const festivalMussaf: Section = {
   pieces: [
     {
       id: '143a',
+      name: "S'u Sh'arim",
+      author: 'Samuel Naumbourg',
+      youtubeUrl: 'https://youtu.be/xckc741LKUU',
+      description: `Of all the many settings for this Psalm, Samuel Naumbourg's is probably the most well known. Like several of his works, it imitates the choral marches found in grand opera during the 19th century. The chazzan (or originally a solo soprano) sings a soaring melodic line while the choir provides an insistent march-like rhythm, popping out of the texture to add vocal fanfares. Near the end the tempo quickens to build to a dramatic coda and apotheosis over the words "He is the King of glory!". Though Naumbourg composed this for general Yom Tov, in many congregations its ecstatic drama is reserved for the High Holidays, leaving room for other tunes on Shalosh Regalim.`
+    },
+    {
+      id: '143b',
       name: "Ladonai Ha'aretz",
       author: 'Julius Mombach',
       youtubeUrl: 'https://youtu.be/42W5-V3II8U',
@@ -20,7 +27,7 @@ export const festivalMussaf: Section = {
         This glorious, regal melody in a processional style is classic Mombach. Similarly to his more familiar Havu Ladonai, it is written in ternary form, with the middle section modulating to the subdominant. This is probably the most well known setting of Ladonai Ha’aretz, excluding Naumbourg’s melody which is typically reserved for Rosh Hashana/Yom Kippur.`
     },
     {
-      id: '143b',
+      id: '143c',
       name: "Ladonai Ha'aretz",
       author: 'William Wasserzug',
       youtubeUrl: 'https://youtu.be/vVe6ktoyJog',

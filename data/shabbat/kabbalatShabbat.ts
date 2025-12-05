@@ -58,7 +58,14 @@ export const kabbalatShabbat: Section = {
       description: `Here is one of the most ubiquitous melodies for L'cha Dodi, composed by well-known Israeli educator and conductor, Michael David Levi. Supposedly, this was based on a tune already familiar to Levi growing up in his home in Wrocław, but he is the one who combined it with the words of L'cha Dodi during his voyage to Israel in 1934. In any event, no other source or alternate lyrics for this melody have been found to date. Levi's setting was made famous in Israel and throughout the world via his connections to Beit Tzeirot Mizrachi and his close friendship with Rabbi Moshe-Zvi Neria (who established the first B'nei Akiva yeshiva in Kfar Haroeh).`
     },
     {
-      id: '10f',
+      id: '10q',
+      name: "Boi V'shalom",
+      author: 'Shlomo Carlebach',
+      youtubeUrl: 'https://youtu.be/9AyOtkZ3I5o',
+      description: `As might be expected, Carlebach composed several melodies specifically for L'cha Dodi, along with various others which have been adapted for it over time. One of my favourites is this beautiful tune for the final verse, Boi V’shalom. Of course you could easily use it for the last four verses — or even from the beginning.`
+    },
+    {
+      id: '10t',
       name: "L'cha Dodi (for S'fira)",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/mFphX_4mnOI',
@@ -69,7 +76,25 @@ export const kabbalatShabbat: Section = {
         This simple but charming air was once common across many European communities. Some have tenuously described it as resembling "Se Vuol Ballare" by Mozart.`
     },
     {
-      id: '10g',
+      id: '10u',
+      name: "L'cha Dodi (for S'fira)",
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/_uCaRouQUhQ',
+      description: `As mentioned above, there is a historic practice of changing the tune for L'cha Dodi on the Shabbatot during the Omer period. In the mid 19th century, Mombach wrote this magnum opus, which is distinct from the traditional S'fira melody, to be used for both the Omer period and also for the Shabbatot during the Three Weeks. This venerated tradition is still upheld in many UK congregations, with some reportedly adapting the melody for other prayers e.g. Ein Keloheinu. \n
+        This is a complex work for chazzan and choir, with contrasting sections emphasising the meaning of the words. Structurally, Mombach follows the old tradition of changing to a faster tune at Hitor'ri (not Lo Tevoshi as per contemporary practice), and returning to the first part of the melody for Boi V'shalom. As I have mentioned previously, there is some disagreement regarding the use of a melancholic tune for L'cha Dodi, as public mourning is generally forbidden on Shabbat. However, kabbalat shabbat is typically said prior to the onset of Shabbat in both the S'fira period and Ben Hametzarim (in the northern hemisphere, at least). Mombach astutely modulates to the parallel major at the final refrain as we welcome the Shabbat in delight.\n
+        Mombach's melody does not utilise the traditional S'fira Lecha Dodi tune anywhere, although the editors of the Blue Book sought to incorporate that into Mombach's piece, replacing his Boi V'shalom Da Capo. In my opinion this is a rather clumsy and unwarranted amalgamation. However, when this piece is sung during the Three Weeks, the verse Boi V'shalom is indeed replaced with the melody for Eli Tzion (according to both Mombach's score and the Blue Book).`
+    },
+    {
+      id: '10v',
+      name: "L'cha Dodi (for S'fira)",
+      author: 'Nissan Blumenthal',
+      youtubeUrl: 'https://youtu.be/8Lfyit1AOWs',
+      description: `Though there is also a traditional S'fira tune, Nissan Blumenthal wrote this complex piece for L'cha Dodi during S'fira (which does not use the traditional theme). I understand that this melody is still used by some Hungarian Jewish communities today.\n
+        Blumenthal spent most of his career in Odessa, and was strongly influenced by German classical music, so it is perhaps unsurprising that several sections of his L'cha Dodi resemble an operatic aria (e.g. 'adonai echad ushmo echad').\n
+        In the stanza Mikdash Melech, the words describe the ruins of Jerusalem and the valley of tears. Here, Blumenthal takes us into a slower section in the Ahava Raba mode to accentuate our sorrow. As with most other compositions from this era, he changes the tune at Hitor'ri (wake up!) and returns to the slow melody for the final verse Boi V'shalom. Blumenthal did not publish his own compositions, and consequently like most of his works this comes from later transcriptions.`
+    },
+    {
+      id: '10w',
       name: "L'cha Dodi (for Ben HaMetzarim)",
       author: 'Israel Meyer Japhet',
       youtubeUrl: 'https://youtu.be/2ulDrwGUeHM',
@@ -82,36 +107,11 @@ export const kabbalatShabbat: Section = {
         Some commentators disagreed with the practice of using a sad tune for L'cha Dodi, since public mourning is generally forbidden on Shabbat. Some congregations get around this by ensuring that Kabbalat Shabbat is said before sunset (easier in the Northern hemisphere at this time of year). Others will use the Eli Tzion melody for only one, or a few of the verses. Perhaps this is partly the reason why some communities only change the tune for Shabbat Chazon.`
     },
     {
-      id: '10h',
-      name: "L'cha Dodi (for S'fira)",
-      author: 'Julius Mombach',
-      youtubeUrl: 'https://youtu.be/_uCaRouQUhQ',
-      description: `As mentioned above, there is a historic practice of changing the tune for L'cha Dodi on the Shabbatot during the Omer period. In the mid 19th century, Mombach wrote this magnum opus, which is distinct from the traditional S'fira melody, to be used for both the Omer period and also for the Shabbatot during the Three Weeks. This venerated tradition is still upheld in many UK congregations, with some reportedly adapting the melody for other prayers e.g. Ein Keloheinu. \n
-        This is a complex work for chazzan and choir, with contrasting sections emphasising the meaning of the words. Structurally, Mombach follows the old tradition of changing to a faster tune at Hitor'ri (not Lo Tevoshi as per contemporary practice), and returning to the first part of the melody for Boi V'shalom. As I have mentioned previously, there is some disagreement regarding the use of a melancholic tune for L'cha Dodi, as public mourning is generally forbidden on Shabbat. However, kabbalat shabbat is typically said prior to the onset of Shabbat in both the S'fira period and Ben Hametzarim (in the northern hemisphere, at least). Mombach astutely modulates to the parallel major at the final refrain as we welcome the Shabbat in delight.\n
-        Mombach's melody does not utilise the traditional S'fira Lecha Dodi tune anywhere, although the editors of the Blue Book sought to incorporate that into Mombach's piece, replacing his Boi V'shalom Da Capo. In my opinion this is a rather clumsy and unwarranted amalgamation. However, when this piece is sung during the Three Weeks, the verse Boi V'shalom is indeed replaced with the melody for Eli Tzion (according to both Mombach's score and the Blue Book).`
-    },
-    {
-      id: '10i',
+      id: '10x',
       name: "L'cha Dodi (for Ben HaMetzarim)",
       author: 'Samuel Naumbourg',
       youtubeUrl: 'https://youtu.be/Yzo1Hz-daP4',
       description: `Here is Naumbourg's very classical composition for L'cha Dodi during the Three Weeks, which utilises Eli Tzion for two of the verses. He picks out many of the phrases in L'cha Dodi with some beautiful word painting, alternating from minor to major, and includes what I can only describe as a rolling wave effect for two of the refrains and the Boi Kalah of the final verse. Like other composers, Naumbourg concludes the piece in the major, perhaps as a nod to the idea that we don't mourn on Shabbat, as we welcome the Sabbath Queen. This melody is still used today by the Alsace community (and perhaps some other French congregations) during Ben Hametzarim.`
-    },
-    {
-      id: '10q',
-      name: "Boi V'shalom",
-      author: 'Shlomo Carlebach',
-      youtubeUrl: 'https://youtu.be/9AyOtkZ3I5o',
-      description: `As might be expected, Carlebach composed several melodies specifically for L'cha Dodi, along with various others which have been adapted for it over time. One of my favourites is this beautiful tune for the final verse, Boi V’shalom. Of course you could easily use it for the last four verses — or even from the beginning.`
-    },
-    {
-      id: '10v',
-      name: "L'cha Dodi (for S'fira)",
-      author: 'Nissan Blumenthal',
-      youtubeUrl: 'https://youtu.be/8Lfyit1AOWs',
-      description: `Though there is also a traditional S'fira tune, Nissan Blumenthal wrote this complex piece for L'cha Dodi during S'fira (which does not use the traditional theme). I understand that this melody is still used by some Hungarian Jewish communities today.\n
-        Blumenthal spent most of his career in Odessa, and was strongly influenced by German classical music, so it is perhaps unsurprising that several sections of his L'cha Dodi resemble an operatic aria (e.g. 'adonai echad ushmo echad').\n
-        In the stanza Mikdash Melech, the words describe the ruins of Jerusalem and the valley of tears. Here, Blumenthal takes us into a slower section in the Ahava Raba mode to accentuate our sorrow. As with most other compositions from this era, he changes the tune at Hitor'ri (wake up!) and returns to the slow melody for the final verse Boi V'shalom. Blumenthal did not publish his own compositions, and consequently like most of his works this comes from later transcriptions.`
     },
     {
       id: '12d',

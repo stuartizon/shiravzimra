@@ -39,16 +39,6 @@ export const festivalTorah: Section = {
       description: `One of the most well-known melodies for Va'ani T'filati, particularly in North America, is this composition by Goldfarb, with its insistent "aneni, aneni" – "answer me, answer me". Unlike some other musical options for this prayer, Goldfarb only wrote one verse, so this line is repeated two more times verbatim. Over the years, a couple of common usage errors have crept in: the beginning is often glossed over, avoiding the repetition on the word "t'filati". However, the composer's intent is clearly to create two matching halves – the melody at "elohim" mirrors "va'ani t'filati" in the same way that "aneni" mirrors "l'cha adonai". Additionally, many negligently flatten the accidental on "ratzon" which is necessary for the secondary dominant (V/V).`
     },
     {
-      id: '135a',
-      name: "Sh'ma Yisrael",
-      author: 'Julius Mombach',
-      youtubeUrl: 'https://youtu.be/6u8xiz6erYo',
-      spotifyUrl: 'https://open.spotify.com/album/7q1HHRb77JAsQf2Zw3ZNCL',
-      appleUrl: 'https://music.apple.com/us/album/shma-yisrael-for-festivals-single/1686220013',
-      amazonUrl: 'https://music.amazon.com/albums/B0C47CVDGL',
-      description: `Whilst Sulzer's melody is typically used by most congregations for Sh'ma Yisrael on Shabbat, it is customary to switch to a different melody on Festivals. Julius Mombach's melody is traditionally used in many UK synagogues on Yom Tov, though this is certainly less prevalent than it used to be. This is typically followed by Mombach's L'cha Adonai which utilises the same theme. (A few communities use these as their regular Shabbat melodies.)`
-    },
-    {
       id: '137',
       name: 'Az Yashir Moshe',
       author: 'Trad.',
@@ -71,7 +61,7 @@ export const festivalTorah: Section = {
         Similarly to Hatikva, Leoni's Yigdal and Blumenthal's Eitz Chaim, the opening line traces the ascending minor scale. The last line is very similar to the beginning of When You Believe from The Prince of Egypt, providing another reason for singing this on Pesach.`
     },
     {
-      id: '140',
+      id: '140a',
       name: "Y'tziv Pitgam",
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/oehY6wnO6lU',

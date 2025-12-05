@@ -1,9 +1,9 @@
 import { Section } from '../types'
 
 export const selichot: Section = {
-  id: 'selichot',
-  name: "Selichot",
-  shortName: "Selichot",
+  id: "s'lichot",
+  name: "S'lichot",
+  shortName: "S'lichot",
   hebrewName: 'סליחות',
   pieces: [
     {
