@@ -2,11 +2,11 @@ const { rgb } = require('pdf-lib');
 
 const layoutConfig = {
   margin: 50,
-  titleSize: 28, // section headers
+  titleSize: 28,
   lineSize: 14,
   lineHeight: 19,
   headerGap: 18,
-  topPadding: 2 * 16, // ~2rem
+  topPadding: 32,
   introHeaderSize: 28,
   introLineSize: 16,
   introLineHeight: 24,
@@ -17,7 +17,16 @@ const layoutConfig = {
   partLineSize: 20
 };
 
-function computeTocLayout(sections, pieceStartPages, totalContentPages, font, fontSize, margin, pageWidth) {
+function computeTocLayout(
+  sections,
+  pieceStartPages,
+  totalContentPages,
+  font,
+  fontSize,
+  margin,
+  pageWidth,
+  formatPageNumber = String
+) {
   const padding = 8;
   const minWidths = {
     id: 40,
@@ -46,7 +55,7 @@ function computeTocLayout(sections, pieceStartPages, totalContentPages, font, fo
     minWidths.author,
     Math.max(...pieces.map((p) => measure(p.author)), 0) + padding
   );
-  const widestPageNumber = String(totalContentPages || 0);
+  const widestPageNumber = formatPageNumber(totalContentPages || 0);
   let pageWidthCol = Math.max(minWidths.page, measure(widestPageNumber) + padding);
 
   const available = pageWidth - margin * 2;

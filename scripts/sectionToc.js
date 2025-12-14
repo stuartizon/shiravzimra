@@ -40,10 +40,11 @@ function renderSectionContents(pdf, sections, pieceStartPages, fonts, linkRecord
   const overlaps = [];
   let pageCount = 0;
 
+  const maxContentPage = pieceStartPages.size ? Math.max(...pieceStartPages.values()) : 0;
   const layout = computeTocLayout(
     sections,
     pieceStartPages,
-    pieceStartPages.size ? Math.max(...pieceStartPages.values()) : 0,
+    maxContentPage,
     bodyFont,
     lineSize,
     margin,
@@ -121,8 +122,7 @@ function renderSectionContents(pdf, sections, pieceStartPages, fonts, linkRecord
       const authorEnd = layout.authorX + bodyFont.widthOfTextAtSize(piece.author, lineSize);
 
       if (pageNumber != null) {
-        const pageText = String(pageNumber);
-        const displayText = pageText;
+        const displayText = String(pageNumber);
         const pageTextWidth = bodyBoldFont.widthOfTextAtSize(displayText, lineSize);
         const pageX = layout.pageX + layout.pageWidth - pageTextWidth;
         const linkColor = rgb(22 / 255, 101 / 255, 52 / 255);

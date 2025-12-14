@@ -10,7 +10,7 @@ const { PDFDocument, PDFName, PDFArray, rgb, StandardFonts } = require('pdf-lib'
 const { allSections, allGroups } = require('../data');
 const { loadFonts } = require('./fonts');
 const { computeSectionPagination, renderSectionContents } = require('./sectionToc');
-const { renderGroupContents } = require('./groupToc');
+const { renderGroupContents, computeGroupPagination } = require('./groupToc');
 const { toRoman } = require('./utils');
 
 async function mergeScores() {
@@ -64,9 +64,10 @@ async function mergeScores() {
     bodyFont,
     titleFont: introTitleFont
   });
+  const groupPagesEstimate = computeGroupPagination(mergedPdf, allGroups);
 
   console.log('🧭 Generating table of contents...');
-  // Group overview pages (unnumbered)
+  // Group overview pages
   const groupPages = renderGroupContents(
     mergedPdf,
     allGroups,
@@ -77,7 +78,8 @@ async function mergeScores() {
       introTitleFont,
       hebrewFont
     },
-    tocLinks
+    tocLinks,
+    groupPagesEstimate
   );
 
   // Section-level TOC pages (with piece listings and links)
@@ -105,14 +107,11 @@ async function mergeScores() {
   const margin = 24;
 
   pages.forEach((page, index) => {
-    // Intro/group pages: no numbers
-    if (index < groupPages) return;
-
     let pageNumber;
     if (index < totalTocPages) {
-      pageNumber = toRoman(index - groupPages + 1);
+      pageNumber = toRoman(index + 1);
     } else {
-      pageNumber = `${index - totalTocPages + 1}`;
+      pageNumber = String(index - totalTocPages + 1);
     }
 
     const { width } = page.getSize();

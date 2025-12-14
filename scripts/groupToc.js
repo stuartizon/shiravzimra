@@ -1,8 +1,45 @@
 const { rgb } = require('pdf-lib');
-const { layoutConfig, drawDotLeader } = require('./layout');
+const { layoutConfig, drawDotLeader, getPageSize } = require('./layout');
 const { toRoman } = require('./utils');
 
-function renderGroupContents(pdf, groups, sectionTocPages, fonts, linkRecords = []) {
+function computeGroupPagination(pdf, groups) {
+  const {
+    margin,
+    introHeaderSize,
+    introLineHeight,
+    sectionLineHeight,
+    topPadding,
+    headerGap,
+    partGap
+  } = layoutConfig;
+  const { height } = getPageSize(pdf);
+
+  let pageCount = 1;
+  let y = height - margin - topPadding;
+  y -= introHeaderSize + headerGap;
+
+  groups.forEach((group) => {
+    y -= partGap;
+    const neededHeight = introLineHeight + group.sections.length * sectionLineHeight;
+    if (y < margin + neededHeight) {
+      pageCount += 1;
+      y = height - margin - topPadding;
+    }
+    y -= introLineHeight;
+
+    group.sections.forEach(() => {
+      if (y < margin + sectionLineHeight) {
+        pageCount += 1;
+        y = height - margin - topPadding;
+      }
+      y -= sectionLineHeight;
+    });
+  });
+
+  return pageCount;
+}
+
+function renderGroupContents(pdf, groups, sectionTocPages, fonts, linkRecords = [], pageOffset = 0) {
   const { bodyFont, bodyBoldFont, introTitleFont, hebrewFont } = fonts;
   const {
     margin,
@@ -66,7 +103,7 @@ function renderGroupContents(pdf, groups, sectionTocPages, fonts, linkRecords = 
       const sectionText = section.shortName || section.name || section.id;
       const sectionWidth = bodyFont.widthOfTextAtSize(sectionText, sectionLineSize);
       const sectionPage = sectionTocPages.get(section.id);
-      const pageText = sectionPage ? toRoman(sectionPage) : '';
+      const pageText = sectionPage ? toRoman(sectionPage + pageOffset) : '';
       const pageWidth = bodyBoldFont.widthOfTextAtSize(pageText, sectionLineSize);
       const leftX = margin;
       const pageX = width - margin - pageWidth;
@@ -112,5 +149,6 @@ function renderGroupContents(pdf, groups, sectionTocPages, fonts, linkRecords = 
 }
 
 module.exports = {
-  renderGroupContents
+  renderGroupContents,
+  computeGroupPagination
 };
