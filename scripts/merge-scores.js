@@ -15,6 +15,7 @@ const { toRoman } = require('./utils');
 
 async function mergeScores() {
   const scoresDir = path.join(__dirname, '..', 'public', 'scores');
+  const introFile = path.join(__dirname, '..', 'public', 'introduction.pdf');
   const distDir = path.join(__dirname, '..', 'dist');
   const outputFile = path.join(distDir, 'all-scores.pdf');
   const fontsDir = path.join(__dirname, '..', 'fonts');
@@ -59,6 +60,18 @@ async function mergeScores() {
   );
   const tocLinks = [];
 
+  // Prepend introduction PDF (front matter)
+  if (!fs.existsSync(introFile)) {
+    throw new Error(`Introduction PDF not found at ${introFile}`);
+  }
+  console.log('📄 Adding introduction pages...');
+  const introBytes = fs.readFileSync(introFile);
+  const introDoc = await PDFDocument.load(introBytes);
+  const introPageIndices = introDoc.getPageIndices();
+  const introPages = await mergedPdf.copyPages(introDoc, introPageIndices);
+  introPages.forEach((page) => mergedPdf.addPage(page));
+  const introPageCount = introPages.length;
+
   // Compute section pagination (for section TOC pages)
   const sectionPagination = computeSectionPagination(mergedPdf, allSections, pieceStartPages, {
     bodyFont,
@@ -79,7 +92,7 @@ async function mergeScores() {
       hebrewFont
     },
     tocLinks,
-    groupPagesEstimate
+    introPageCount + groupPagesEstimate - 1
   );
 
   // Section-level TOC pages (with piece listings and links)
@@ -107,11 +120,19 @@ async function mergeScores() {
   const margin = 24;
 
   pages.forEach((page, index) => {
+    // Introduction first page is intentionally unnumbered
+    if (index === 0 && introPageCount > 0) return;
+
     let pageNumber;
-    if (index < totalTocPages) {
-      pageNumber = toRoman(index + 1);
+    const tocStartIndex = introPageCount;
+    const contentStartIndex = introPageCount + totalTocPages;
+
+    if (index < contentStartIndex) {
+      // Roman numbering for intro (after first page) + TOC
+      pageNumber = toRoman(index);
     } else {
-      pageNumber = String(index - totalTocPages + 1);
+      // Arabic numbering for music pieces
+      pageNumber = String(index - contentStartIndex + 1);
     }
 
     const { width } = page.getSize();
@@ -126,7 +147,7 @@ async function mergeScores() {
     });
   });
 
-  addTocLinks(mergedPdf, tocLinks, totalTocPages, groupPages);
+  addTocLinks(mergedPdf, tocLinks, totalTocPages, groupPages, introPageCount);
 
   if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
@@ -143,16 +164,16 @@ async function mergeScores() {
   );
 }
 
-function addTocLinks(pdf, links, tocPages, groupPages = 0) {
+function addTocLinks(pdf, links, tocPages, groupPages = 0, introPages = 0) {
   const pages = pdf.getPages();
   const context = pdf.context;
 
   links.forEach(({ tocPageIndex, targetPageNumber, sectionPage, rect }) => {
     let targetIndex = null;
     if (sectionPage != null) {
-      targetIndex = groupPages + sectionPage - 1;
+      targetIndex = introPages + groupPages + sectionPage - 1;
     } else if (targetPageNumber != null) {
-      targetIndex = tocPages + targetPageNumber - 1;
+      targetIndex = introPages + tocPages + targetPageNumber - 1;
     }
     const tocPage = pages[tocPageIndex];
     const targetPage = pages[targetIndex];
