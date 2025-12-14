@@ -78,6 +78,7 @@ async function mergeScores() {
     titleFont: introTitleFont
   });
   const groupPagesEstimate = computeGroupPagination(mergedPdf, allGroups);
+  const prefacePageIndex = introPageCount > 1 ? 1 : null;
 
   console.log('🧭 Generating table of contents...');
   // Group overview pages
@@ -92,7 +93,8 @@ async function mergeScores() {
       hebrewFont
     },
     tocLinks,
-    introPageCount + groupPagesEstimate - 1
+    introPageCount + groupPagesEstimate - 1,
+    prefacePageIndex
   );
 
   // Section-level TOC pages (with piece listings and links)
@@ -168,9 +170,11 @@ function addTocLinks(pdf, links, tocPages, groupPages = 0, introPages = 0) {
   const pages = pdf.getPages();
   const context = pdf.context;
 
-  links.forEach(({ tocPageIndex, targetPageNumber, sectionPage, rect }) => {
+  links.forEach(({ tocPageIndex, targetPageNumber, sectionPage, rect, targetPageIndex }) => {
     let targetIndex = null;
-    if (sectionPage != null) {
+    if (targetPageIndex != null) {
+      targetIndex = targetPageIndex;
+    } else if (sectionPage != null) {
       targetIndex = introPages + groupPages + sectionPage - 1;
     } else if (targetPageNumber != null) {
       targetIndex = introPages + tocPages + targetPageNumber - 1;

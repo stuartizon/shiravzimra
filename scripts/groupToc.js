@@ -18,6 +18,13 @@ function computeGroupPagination(pdf, groups) {
   let y = height - margin - topPadding;
   y -= introHeaderSize + headerGap;
 
+  // Preface entry
+  if (y < margin + sectionLineHeight) {
+    pageCount += 1;
+    y = height - margin - topPadding;
+  }
+  y -= sectionLineHeight;
+
   groups.forEach((group) => {
     y -= partGap;
     const neededHeight = introLineHeight + group.sections.length * sectionLineHeight;
@@ -39,7 +46,15 @@ function computeGroupPagination(pdf, groups) {
   return pageCount;
 }
 
-function renderGroupContents(pdf, groups, sectionTocPages, fonts, linkRecords = [], pageOffset = 0) {
+function renderGroupContents(
+  pdf,
+  groups,
+  sectionTocPages,
+  fonts,
+  linkRecords = [],
+  pageOffset = 0,
+  prefacePageIndex = null
+) {
   const { bodyFont, bodyBoldFont, introTitleFont, hebrewFont } = fonts;
   const {
     margin,
@@ -77,6 +92,47 @@ function renderGroupContents(pdf, groups, sectionTocPages, fonts, linkRecords = 
     color: rgb(0, 0, 0)
   });
   y -= introHeaderSize + headerGap;
+
+  if (prefacePageIndex != null) {
+    if (y < margin + sectionLineHeight) {
+      page = pdf.addPage();
+      pageCount += 1;
+      ({ width, height } = page.getSize());
+      y = height - margin - topPadding;
+    }
+    const prefaceLabel = 'Preface';
+    const prefaceLabelWidth = bodyFont.widthOfTextAtSize(prefaceLabel, sectionLineSize);
+    const pageText = toRoman(prefacePageIndex);
+    const pageWidth = bodyBoldFont.widthOfTextAtSize(pageText, sectionLineSize);
+    const leftX = margin;
+    const pageX = width - margin - pageWidth;
+
+    page.drawText(prefaceLabel, {
+      x: leftX,
+      y,
+      size: sectionLineSize,
+      font: bodyFont,
+      color: rgb(0, 0, 0)
+    });
+
+    drawDotLeader(page, leftX + prefaceLabelWidth + leaderGap, pageX - leaderGap, y, bodyFont, sectionLineSize, rgb(0, 0, 0));
+    page.drawText(pageText, {
+      x: pageX,
+      y,
+      size: sectionLineSize,
+      font: bodyBoldFont,
+      color: rgb(22 / 255, 101 / 255, 52 / 255)
+    });
+
+    const tocPageIndex = pdf.getPageCount() - 1;
+    linkRecords.push({
+      tocPageIndex,
+      targetPageIndex: prefacePageIndex,
+      rect: [pageX, y, pageX + pageWidth, y + sectionLineSize]
+    });
+
+    y -= sectionLineHeight;
+  }
 
   groups.forEach((group, idx) => {
     y -= partGap;
