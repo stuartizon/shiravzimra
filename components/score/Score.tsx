@@ -1,4 +1,4 @@
-import React, { AnchorHTMLAttributes, useState } from 'react'
+import React, { AnchorHTMLAttributes, useRef, useState } from 'react'
 import { Document, Page } from 'react-pdf'
 
 import { pdfjs } from 'react-pdf'
@@ -7,7 +7,7 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 import 'react-pdf/dist/esm/Page/TextLayer.css'
 import { SwiperSlide } from 'swiper/react'
 import SwiperWithControls from '../swiperWithControls/SwiperWithControls'
-import { useElementSize } from 'usehooks-ts'
+import { useResizeObserver } from 'usehooks-ts'
 import 'swiper/css'
 import { Amazon, Apple, Download, Spotify, YouTube } from '../icon/Icon'
 
@@ -72,12 +72,13 @@ const Link = (props: AnchorHTMLAttributes<HTMLAnchorElement>) =>
   <a {...props} target='_blank' rel="noreferrer"/>
 
 const Pages = ({ numPages }: { numPages: number }) => {
-  const [ref, { width }] = useElementSize()
+  const containerRef = useRef<HTMLDivElement | null>(null)
+  const { width = 0 } = useResizeObserver({ ref: containerRef })
 
   return (
     <SwiperWithControls
       // style={{ minHeight: 1018 }}
-      ref={ref}
+      ref={containerRef}
     >
       {Array.from(new Array(numPages), (_el, index) => (
         <SwiperSlide key={'page_' + index}>
