@@ -16,9 +16,11 @@ pdfjs.GlobalWorkerOptions.workerSrc =
 
 const AllScoresViewer = ({ file }: { file: string }) => {
   const [numPages, setNumPages] = useState<number>(0)
-  const [swiper, setSwiper] = useState<SwiperClass>()
-
+  const swiperRef = useRef<SwiperClass | null>(null)
   const pages = useMemo(() => Array.from({ length: numPages }, (_el, idx) => idx + 1), [numPages])
+  const onItemClick = ({ pageIndex }: { pageIndex: number }) => {
+    swiperRef.current?.slideTo(pageIndex)
+  }
 
   return (
     <div className='py-10'>
@@ -27,15 +29,16 @@ const AllScoresViewer = ({ file }: { file: string }) => {
         loading={<div className='text-center py-10'>Loading PDF…</div>}
         error={<div className='text-center py-10'>Unable to load PDF.</div>}
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-        onItemClick={({ pageNumber }) => {
-          console.log('Clicked page number:', pageNumber);
-          if (!swiper || !pageNumber) return
-          swiper.slideTo(pageNumber - 1)
-        }}
+        onItemClick={onItemClick}
       >
-        <Pages pages={pages} onSwiper={setSwiper} />
+        <Pages
+          pages={pages}
+          onSwiper={(s) => {
+            swiperRef.current = s
+          }}
+        />
       </Document>
-    </div>
+    </div >
   )
 }
 
@@ -53,7 +56,7 @@ const Pages = ({
     <SwiperWithControls
       ref={containerRef}
       modules={[Virtual]}
-      virtual
+      virtual={{ enabled: true, addSlidesBefore: 2, addSlidesAfter: 2 }}
       slidesPerView={1}
       onSwiper={onSwiper}
     >
