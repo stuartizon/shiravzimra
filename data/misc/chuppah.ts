@@ -7,6 +7,12 @@ export const chuppah: Section = {
   hebrewName: 'חפה',
   pieces: [
     {
+      id: '429a',
+      name: 'Baruch Haba',
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/P4heDAYEqok'
+    },
+    {
       id: '436b',
       name: "Im Eshkachech",
       author: 'Shlomo Carlebach',
