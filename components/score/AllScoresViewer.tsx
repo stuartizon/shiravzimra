@@ -1,6 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import { SwiperSlide } from 'swiper/react'
+import { Swiper as SwiperClass } from 'swiper/types'
+import { Virtual } from 'swiper/modules'
 import SwiperWithControls from '../swiperWithControls/SwiperWithControls'
 import { useResizeObserver } from 'usehooks-ts'
 
@@ -14,6 +16,9 @@ pdfjs.GlobalWorkerOptions.workerSrc =
 
 const AllScoresViewer = ({ file }: { file: string }) => {
   const [numPages, setNumPages] = useState<number>(0)
+  const [swiper, setSwiper] = useState<SwiperClass>()
+
+  const pages = useMemo(() => Array.from({ length: numPages }, (_el, idx) => idx + 1), [numPages])
 
   return (
     <div className='py-10'>
@@ -22,28 +27,43 @@ const AllScoresViewer = ({ file }: { file: string }) => {
         loading={<div className='text-center py-10'>Loading PDF…</div>}
         error={<div className='text-center py-10'>Unable to load PDF.</div>}
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+        onItemClick={({ pageNumber }) => {
+          console.log('Clicked page number:', pageNumber);
+          if (!swiper || !pageNumber) return
+          swiper.slideTo(pageNumber - 1)
+        }}
       >
-        <Pages numPages={numPages} />
+        <Pages pages={pages} onSwiper={setSwiper} />
       </Document>
     </div>
   )
 }
 
-const Pages = ({ numPages }: { numPages: number }) => {
+const Pages = ({
+  pages,
+  onSwiper
+}: {
+  pages: number[]
+  onSwiper: (instance: SwiperClass) => void
+}) => {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const { width = 0 } = useResizeObserver({ ref: containerRef })
 
   return (
-    <SwiperWithControls ref={containerRef}>
-      {Array.from({ length: numPages }, (_el, idx) => {
-        const pageNumber = idx + 1
-        return (
-          <SwiperSlide key={`page_${pageNumber}`}>
-            <Page pageNumber={pageNumber} width={width} />
-          </SwiperSlide>
-        )
-      })}
-    </SwiperWithControls>);
+    <SwiperWithControls
+      ref={containerRef}
+      modules={[Virtual]}
+      virtual
+      slidesPerView={1}
+      onSwiper={onSwiper}
+    >
+      {pages.map((pageNumber) => (
+        <SwiperSlide key={`page_${pageNumber}`} virtualIndex={pageNumber - 1}>
+          <Page pageNumber={pageNumber} width={width} />
+        </SwiperSlide>
+      ))}
+    </SwiperWithControls>
+  )
 }
 
 export default AllScoresViewer
