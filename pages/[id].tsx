@@ -1,10 +1,12 @@
 import type { GetStaticProps, GetStaticPaths, NextPage } from 'next'
-import Score from '../components/score/Score'
-import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic'
 import { allPieces, allPiecesMap } from '../data'
 import Head from 'next/head'
 
+const Score = dynamic(() => import('../components/score/Score'), { ssr: false })
+
 const Home: NextPage<Props> = ({
+  id,
   name,
   description,
   spotifyUrl,
@@ -12,16 +14,13 @@ const Home: NextPage<Props> = ({
   appleUrl,
   amazonUrl
 }) => {
-  const router = useRouter()
-  const { id } = router.query
-
   return (
     <>
     <Head>
       <title>{name}</title>
     </Head>
       <Score
-        id={id as string}
+        id={id}
         file={`/scores/${id}.pdf`}
         name={name}
         spotifyUrl={spotifyUrl}
@@ -44,6 +43,7 @@ export const getStaticProps: GetStaticProps<Props> = context => {
 
   return {
     props: {
+      id: id as string,
       name: thisPiece?.name ?? null,
       description: thisPiece?.description ?? null,
       spotifyUrl: thisPiece?.spotifyUrl ?? null,
@@ -68,6 +68,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 }
 
 interface Props {
+  id: string
   name: string | null
   description: string | null
   spotifyUrl: string | null

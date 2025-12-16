@@ -1,10 +1,9 @@
 import React, { AnchorHTMLAttributes, useRef, useState } from 'react'
-import { Document, Page } from 'react-pdf'
-
-import { pdfjs } from 'react-pdf'
-pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
-import 'react-pdf/dist/esm/Page/TextLayer.css'
+import { Document, Page, pdfjs } from 'react-pdf'
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
+pdfjs.GlobalWorkerOptions.workerSrc =
+  `https://unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`
 import { SwiperSlide } from 'swiper/react'
 import SwiperWithControls from '../swiperWithControls/SwiperWithControls'
 import { useResizeObserver } from 'usehooks-ts'
