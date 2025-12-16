@@ -13,6 +13,12 @@ export const chuppah: Section = {
       youtubeUrl: 'https://youtu.be/P4heDAYEqok'
     },
     {
+      id: '436a',
+      name: 'Im Eshkachech',
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/-9s2HKCkLo8'
+    },
+    {
       id: '436b',
       name: "Im Eshkachech",
       author: 'Shlomo Carlebach',
