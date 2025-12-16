@@ -128,8 +128,13 @@ const AllScoresViewer = ({
               return acc
             }, null)
             const nextId = chapterEntry?.id
-            if (!nextId) return
-            const targetPath = `/all-scores/${encodeURIComponent(nextId)}`
+            const targetPath =
+              currentPage === 1
+                ? '/all-scores'
+                : nextId
+                  ? `/all-scores/${encodeURIComponent(nextId)}`
+                  : null
+            if (!targetPath) return
             const currentPath = router.asPath.split('?')[0]
             if (currentPath !== targetPath) {
               suppressChapterApplyRef.current = true
