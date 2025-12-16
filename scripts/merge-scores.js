@@ -176,7 +176,15 @@ async function mergeScores() {
     page: sectionPageOffset + page
   }));
 
-  const piecePageMapCombined = [...piecePageList, ...sectionPageList].sort(
+  // Preface (always the second page of the introduction if present)
+  const prefacePageNumber = introPageCount > 1 ? 2 : null;
+  const prefaceEntry = prefacePageNumber ? [{ id: 'preface', page: prefacePageNumber }] : [];
+
+  // First Table of Contents page (immediately after introduction)
+  const tocFirstPageNumber = introPageCount + 1;
+  const tocEntry = [{ id: 'tableOfContents', page: tocFirstPageNumber }];
+
+  const piecePageMapCombined = [...prefaceEntry, ...tocEntry, ...piecePageList, ...sectionPageList].sort(
     (a, b) => a.page - b.page
   );
   const mapPath = path.join(distDir, 'piece-page-map.json');
