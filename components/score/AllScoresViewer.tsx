@@ -126,8 +126,14 @@ const AllScoresViewer = ({
     <div className={`py-10 ${styles.annotationOverrides}`}>
       <Document
         file={file}
-        loading={<div className='text-center py-10'>Loading PDF…</div>}
-        error={<div className='text-center py-10'>Unable to load PDF.</div>}
+        loading={
+          <div className='bg-white w-page m-auto flex flex-col justify-center text-center shadow-xl shadow-black' style={{ minHeight: 1018 }}>
+            Loading...
+          </div>
+        }
+        error={
+          <div className='text-center py-10'>Unable to load PDF.</div>
+        }
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         onItemClick={onItemClick}
       >
@@ -186,7 +192,18 @@ const Pages = ({
     >
       {pages.map((pageNumber) => (
         <SwiperSlide key={`page_${pageNumber}`} virtualIndex={pageNumber - 1}>
-          <Page pageNumber={pageNumber} width={width} />
+          <Page
+            pageNumber={pageNumber}
+            width={width}
+            loading={
+              <div
+                className='bg-white w-page m-auto flex flex-col justify-center text-center shadow-xl shadow-black'
+                style={{ minHeight: 1018 }}
+              >
+                Loading...
+              </div>
+            }
+          />
         </SwiperSlide>
       ))}
     </SwiperWithControls>
