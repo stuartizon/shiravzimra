@@ -16,7 +16,7 @@ const { toRoman } = require('./utils');
 async function mergeScores() {
   const scoresDir = path.join(__dirname, '..', 'public', 'scores');
   const introFile = path.join(__dirname, '..', 'public', 'introduction.pdf');
-  const distDir = path.join(__dirname, '..', 'dist');
+  const distDir = path.join(__dirname, '..', 'public', 'dist');
   const outputFile = path.join(distDir, 'all-scores.pdf');
   const fontsDir = path.join(__dirname, '..', 'fonts');
 

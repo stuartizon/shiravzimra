@@ -34,4 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 
 # build files
+public/dist/all-scores.pdf
 public/sitemap.xml
