@@ -168,8 +168,19 @@ async function mergeScores() {
     id,
     page: docPageOffset + contentPage
   }));
+
+  // Section contents pages (absolute) so routes can link to section TOC pages
+  const sectionPageOffset = introPageCount + groupPages;
+  const sectionPageList = Array.from(sectionPagesResult.sectionFirstPage, ([id, page]) => ({
+    id,
+    page: sectionPageOffset + page
+  }));
+
+  const piecePageMapCombined = [...piecePageList, ...sectionPageList].sort(
+    (a, b) => a.page - b.page
+  );
   const mapPath = path.join(distDir, 'piece-page-map.json');
-  fs.writeFileSync(mapPath, JSON.stringify(piecePageList, null, 2));
+  fs.writeFileSync(mapPath, JSON.stringify(piecePageMapCombined, null, 2));
 
   console.log(
     `✅ Merged ${loadedPieces.length} PDFs into ${path.relative(
