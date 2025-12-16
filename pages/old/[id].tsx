@@ -1,9 +1,9 @@
 import type { GetStaticProps, GetStaticPaths, NextPage } from 'next'
 import dynamic from 'next/dynamic'
-import { allPieces, allPiecesMap } from '../data'
+import { allPieces, allPiecesMap } from '../../data'
 import Head from 'next/head'
 
-const Score = dynamic(() => import('../components/score/Score'), { ssr: false })
+const Score = dynamic(() => import('../../components/score/Score'), { ssr: false })
 
 const Home: NextPage<Props> = ({
   id,

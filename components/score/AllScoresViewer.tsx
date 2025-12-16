@@ -130,9 +130,9 @@ const AllScoresViewer = ({
             const nextId = chapterEntry?.id
             const targetPath =
               currentPage === 1
-                ? '/all-scores'
+                ? '/'
                 : nextId
-                  ? `/all-scores/${encodeURIComponent(nextId)}`
+                  ? `/${encodeURIComponent(nextId)}`
                   : null
             if (!targetPath) return
             const currentPath = router.asPath.split('?')[0]

@@ -1,61 +1,42 @@
-import type { NextPage } from 'next'
-import { Cover } from '../components/cover/Cover'
-import { SwiperSlide } from 'swiper/react'
-import { HashNavigation } from 'swiper/modules'
-import { ContentsSection } from '../components/contents/Contents'
-import SwiperWithControls from '../components/swiperWithControls/SwiperWithControls'
-import { allSections } from '../data'
-
-import 'swiper/css'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import { TableOfContents } from '../components/table-of-contents/TableOfContents'
+import { useMemo } from 'react'
+import { useRouter } from 'next/router'
 
-const Index: NextPage = () => {
+const AllScoresViewer = dynamic(() => import('../components/score/AllScoresViewer'), {
+  ssr: false
+})
+
+const AllScoresPage = () => {
+  const router = useRouter()
+
+  const initialPage = useMemo(() => {
+    if (!router.isReady) return undefined
+    const value = Array.isArray(router.query.page) ? router.query.page[0] : router.query.page
+    const parsed = value ? Number(value) : NaN
+    return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined
+  }, [router.isReady, router.query.page])
+
+  const initialChapterId = useMemo(() => {
+    if (!router.isReady) return undefined
+    const value = Array.isArray(router.query.chapter)
+      ? router.query.chapter[0]
+      : router.query.chapter
+    return typeof value === 'string' ? value : undefined
+  }, [router.isReady, router.query.chapter])
+
   return (
     <>
-      {/* <Nav /> */}
-      {/* <div className='text-white text-6xl text-center'>Shira v'Zimra</div> */}
-      {/* <div className='text-white text-2xl text-center mt-8'> */}
-      {/* A book of Jewish music for the synagogue and the home, */}
-      {/* </div> */}
-      {/* <div className='text-white text-2xl text-center mb-8'> */}
-      {/* arranged for male voice choir */}
-      {/* </div> */}
-      {/* <div className='my-5' /> */}
-
       <Head>
-        <title>Shira v&apos;Zimra</title>
-        <meta
-          name='description'
-          content='A book of Jewish music for the synagogue and the home, arranged for male voice choir by Stuart Izon'
-        />
-        <meta name='author' content='Stuart Izon' />
+        <title>All Scores</title>
       </Head>
-
-      <div className='md:mt-10 md:mb-16 mb-2 mt-2'>
-        <SwiperWithControls
-          modules={[HashNavigation]}
-          hashNavigation={{ replaceState: true, watchState: true }}
-          className='page'
-          // Move the className and style attributes inside the SwiperWithControls class I think, cos its
-          // not obvious they apply to the classes on the Swiper, not on this class
-          // style={{ minHeight: 1018 }}
-        >
-          <SwiperSlide data-hash=''>
-            <Cover />
-          </SwiperSlide>
-          <SwiperSlide data-hash='contents'>
-            <TableOfContents />
-          </SwiperSlide>
-          {allSections.map(section => (
-            <SwiperSlide data-hash={section.id} key={section.id}>
-              <ContentsSection section={section} />
-            </SwiperSlide>
-          ))}
-        </SwiperWithControls>
-      </div>
+      <AllScoresViewer
+        file='/dist/all-scores.pdf'
+        initialPage={initialPage}
+        initialChapterId={initialChapterId}
+      />
     </>
   )
 }
 
-export default Index
+export default AllScoresPage
