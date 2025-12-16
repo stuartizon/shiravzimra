@@ -35,4 +35,5 @@ yarn-error.log*
 
 # build files
 public/dist/all-scores.pdf
+public/dist/piece-page-map.json
 public/sitemap.xml

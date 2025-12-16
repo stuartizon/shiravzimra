@@ -24,6 +24,10 @@ async function mergeScores() {
     throw new Error(`Scores directory not found at ${scoresDir}`);
   }
 
+  if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
+  }
+
   console.log('🔨 Building merged PDF from data index...');
   console.log('📄 Loading piece PDFs...');
 
@@ -158,12 +162,22 @@ async function mergeScores() {
   const mergedBytes = await mergedPdf.save();
   fs.writeFileSync(outputFile, mergedBytes);
 
+  // Convert content-relative page numbers to document-absolute (includes intro + TOC pages)
+  const docPageOffset = introPageCount + totalTocPages;
+  const piecePageList = Array.from(pieceStartPages, ([id, contentPage]) => ({
+    id,
+    page: docPageOffset + contentPage
+  }));
+  const mapPath = path.join(distDir, 'piece-page-map.json');
+  fs.writeFileSync(mapPath, JSON.stringify(piecePageList, null, 2));
+
   console.log(
     `✅ Merged ${loadedPieces.length} PDFs into ${path.relative(
       process.cwd(),
       outputFile
     )} (${mergedPdf.getPageCount()} pages total)`
   );
+  console.log(`🗺️  Wrote piece page map to ${path.relative(process.cwd(), mapPath)}`);
 }
 
 function addTocLinks(pdf, links, tocPages, groupPages = 0, introPages = 0) {
