@@ -4,7 +4,7 @@ import { allGroups } from '../../data'
 import styles from './Nav.module.css';
 import { Group } from '../../data/types';
 
-const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
+const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
   return (
     <nav className='w-screen top-0 font-semibold h-16 relative'>
       <div className='container mx-auto h-full'>
@@ -14,6 +14,10 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
             href='/'
             className='flex-grow text-3xl text-center md:text-left font-serif'
           />
+
+          <li className={styles.desktopMenuLink}>
+            <Link href="/preface" className='text-white align-sub'>Preface</Link>
+          </li>
 
           {allGroups.map(group => (
             <DesktopMenuLink key={group.id} {...group} />
@@ -25,6 +29,11 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
       </div>
       <div className={`${styles.menu} ${showMobileMenu ? 'visible' : 'invisible'}`}>
         <ul>
+          <li className='mt-3'>
+            <Link className='text-white' href='/preface' onClick={onClickMenu}>
+              Preface
+            </Link>
+          </li>
           {allGroups.map(group => (
             <Fragment key={group.id}>
               <li className='mt-3'>
@@ -49,21 +58,21 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
   )
 }
 
-const DesktopMenuLink: FC<Group> = ({name, sections}) => (
-    <li className={styles.desktopMenuLink}>
-      <Link href={`/${sections[0]?.id || ''}`} className='text-white align-sub'>{name}</Link>
-      <div className={styles.desktopMenuDropdown}>
-        <ul>
-          {sections.map(section => (
-            <li key={section.id}>
-              <Link className='text-white text-base' href={`/${section.id}`}>
-                {section.shortName}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </li>
+const DesktopMenuLink: FC<Group> = ({ name, sections }) => (
+  <li className={styles.desktopMenuLink}>
+    <Link href={`/${sections[0]?.id || ''}`} className='text-white align-sub'>{name}</Link>
+    <div className={styles.desktopMenuDropdown}>
+      <ul>
+        {sections.map(section => (
+          <li key={section.id}>
+            <Link className='text-white text-base' href={`/${section.id}`}>
+              {section.shortName}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </li>
 )
 
 const NavItem: FC<NavItemProps> = ({ name, href, className, style }) => (
