@@ -5,6 +5,7 @@ import { Swiper as SwiperClass } from 'swiper/types'
 import { Virtual } from 'swiper/modules'
 import SwiperWithControls from '../swiperWithControls/SwiperWithControls'
 import { useResizeObserver } from 'usehooks-ts'
+import { useRouter } from 'next/router'
 
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
@@ -25,9 +26,11 @@ const AllScoresViewer = ({
   initialPage?: number
   initialChapterId?: string
 }) => {
+  const router = useRouter()
   const [numPages, setNumPages] = useState<number>(0)
   const [piecePageMap, setPiecePageMap] = useState<PiecePageEntry[] | null>(null)
   const swiperRef = useRef<SwiperClass | null>(null)
+  const suppressChapterApplyRef = useRef(false)
   const pages = useMemo(() => Array.from({ length: numPages }, (_el, idx) => idx + 1), [numPages])
   const onItemClick = ({
     pageNumber,
@@ -67,7 +70,7 @@ const AllScoresViewer = ({
 
   // Navigate to a chapter id once the map is loaded
   useEffect(() => {
-    if (!initialChapterId) return
+    if (piecePageMap) return
     let cancelled = false
     const loadMap = async () => {
       try {
@@ -75,6 +78,7 @@ const AllScoresViewer = ({
         if (!res.ok) return
         const data = await res.json()
         if (!Array.isArray(data)) return
+        data.sort((a, b) => a.page - b.page)
         if (!cancelled) {
           setPiecePageMap(data)
         }
@@ -86,10 +90,14 @@ const AllScoresViewer = ({
     return () => {
       cancelled = true
     }
-  }, [initialChapterId])
+  }, [piecePageMap])
 
   useEffect(() => {
     if (!initialChapterId || !piecePageMap || !numPages) return
+    if (suppressChapterApplyRef.current) {
+      suppressChapterApplyRef.current = false
+      return
+    }
     const entry = piecePageMap.find((p) => p.id === initialChapterId)
     if (!entry) return
     const instance = swiperRef.current
@@ -112,6 +120,22 @@ const AllScoresViewer = ({
           onSwiper={(s) => {
             swiperRef.current = s
           }}
+          onSlideChange={(instance) => {
+            const currentPage = instance.activeIndex + 1
+            if (!piecePageMap || !router.isReady) return
+            const chapterEntry = piecePageMap.reduce<PiecePageEntry | null>((acc, curr) => {
+              if (curr.page <= currentPage) return curr
+              return acc
+            }, null)
+            const nextId = chapterEntry?.id
+            if (!nextId) return
+            const targetPath = `/all-scores/${encodeURIComponent(nextId)}`
+            const currentPath = router.asPath.split('?')[0]
+            if (currentPath !== targetPath) {
+              suppressChapterApplyRef.current = true
+              router.replace(targetPath, undefined, { shallow: true })
+            }
+          }}
         />
       </Document>
     </div >
@@ -120,10 +144,12 @@ const AllScoresViewer = ({
 
 const Pages = ({
   pages,
-  onSwiper
+  onSwiper,
+  onSlideChange
 }: {
   pages: number[]
   onSwiper: (instance: SwiperClass) => void
+  onSlideChange?: (instance: SwiperClass) => void
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const { width = 0 } = useResizeObserver({ ref: containerRef })
@@ -135,6 +161,7 @@ const Pages = ({
       virtual={{ enabled: true, addSlidesBefore: 2, addSlidesAfter: 2 }}
       slidesPerView={1}
       onSwiper={onSwiper}
+      onSlideChange={onSlideChange}
     >
       {pages.map((pageNumber) => (
         <SwiperSlide key={`page_${pageNumber}`} virtualIndex={pageNumber - 1}>
