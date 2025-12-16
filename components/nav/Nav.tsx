@@ -1,4 +1,4 @@
-import { CSSProperties, FC } from 'react'
+import { CSSProperties, FC, Fragment } from 'react'
 import Link from 'next/link'
 import { allGroups } from '../../data'
 import styles from './Nav.module.css';
@@ -26,22 +26,22 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
       <div className={`${styles.menu} ${showMobileMenu ? 'visible' : 'invisible'}`}>
         <ul>
           {allGroups.map(group => (
-            <>
-            <li className='mt-3'>
-              <Link className='text-white' href={`/${group.sections[0].id}`} onClick={onClickMenu}>
-                {group.name}
-              </Link>
-            </li>
-            <ul className='ml-4'>
-              {group.sections.map(section => (
-                <li key={section.id}>
-                  <Link className='text-white' href={`/${section.id}`} onClick={onClickMenu}>
-                    {section.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            </>
+            <Fragment key={group.id}>
+              <li className='mt-3'>
+                <Link className='text-white' href={`/${group.sections[0].id}`} onClick={onClickMenu}>
+                  {group.name}
+                </Link>
+              </li>
+              <ul className='ml-4'>
+                {group.sections.map(section => (
+                  <li key={section.id}>
+                    <Link className='text-white' href={`/${section.id}`} onClick={onClickMenu}>
+                      {section.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Fragment>
           ))}
         </ul>
       </div>
