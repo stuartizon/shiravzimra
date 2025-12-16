@@ -68,6 +68,16 @@ const AllScoresViewer = ({
     instance.slideTo(target, 0)
   }, [initialPage, numPages])
 
+  // If the route is the root path, ensure we jump back to the first page
+  useEffect(() => {
+    const instance = swiperRef.current
+    if (!instance || !numPages) return
+    const path = router.asPath.split('?')[0]
+    if (path === '/') {
+      instance.slideTo(0, 0)
+    }
+  }, [router.asPath, numPages])
+
   // Navigate to a chapter id once the map is loaded
   useEffect(() => {
     if (piecePageMap) return

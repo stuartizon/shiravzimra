@@ -1,4 +1,5 @@
 import { CSSProperties, FC } from 'react'
+import Link from 'next/link'
 import { allGroups } from '../../data'
 import styles from './Nav.module.css';
 import { Group } from '../../data/types';
@@ -27,11 +28,17 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
           {allGroups.map(group => (
             <>
             <li className='mt-3'>
-              <a className='text-white' href={`/${group.sections[0].id}`} onClick={onClickMenu}>{group.name}</a>
+              <Link className='text-white' href={`/${group.sections[0].id}`} onClick={onClickMenu}>
+                {group.name}
+              </Link>
             </li>
             <ul className='ml-4'>
               {group.sections.map(section => (
-                <li key={section.id}><a className='text-white' href={`/${section.id}`} onClick={onClickMenu}>{section.name}</a></li>
+                <li key={section.id}>
+                  <Link className='text-white' href={`/${section.id}`} onClick={onClickMenu}>
+                    {section.name}
+                  </Link>
+                </li>
               ))}
             </ul>
             </>
@@ -44,11 +51,15 @@ const Nav: FC<NavProps> = ({showMobileMenu, onClickMenu}) => {
 
 const DesktopMenuLink: FC<Group> = ({name, sections}) => (
     <li className={styles.desktopMenuLink}>
-      <a href={`/${sections[0]?.id || ''}`} className='text-white align-sub'>{name}</a>
+      <Link href={`/${sections[0]?.id || ''}`} className='text-white align-sub'>{name}</Link>
       <div className={styles.desktopMenuDropdown}>
         <ul>
           {sections.map(section => (
-            <li key={section.id}><a className='text-white text-base' href={`/${section.id}`}>{section.shortName}</a></li>
+            <li key={section.id}>
+              <Link className='text-white text-base' href={`/${section.id}`}>
+                {section.shortName}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>
@@ -57,9 +68,9 @@ const DesktopMenuLink: FC<Group> = ({name, sections}) => (
 
 const NavItem: FC<NavItemProps> = ({ name, href, className, style }) => (
   <li className={`mx-2 my-auto flex-shrink-0 ${className}`}>
-    <a href={href} className='text-white transition duration-100 align-sub' style={style}>
+    <Link href={href} className='text-white transition duration-100 align-sub' style={style}>
       {name}
-    </a>
+    </Link>
   </li>
 )
 
