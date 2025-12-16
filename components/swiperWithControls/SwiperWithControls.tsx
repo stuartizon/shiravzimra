@@ -10,17 +10,20 @@ import 'swiper/css'
 const SwiperWithControls = forwardRef<HTMLDivElement, SwiperProps>(
   (props, ref) => {
     const [swiper, setSwiper] = useState<SwiperClass>()
-    const [isBeginning, setBeginning] = useState<boolean>()
-    const [isEnd, setEnd] = useState<boolean>()
+    const [isBeginning, setBeginning] = useState<boolean>(true)
+    const [isEnd, setEnd] = useState<boolean>(true)
 
-    const handleSwiper = (s: SwiperClass) => {
+    const onSwiper = (s: SwiperClass) => {
       setSwiper(s)
-      setBeginning(s.isBeginning)
-      setEnd(s.isEnd)
       props.onSwiper?.(s)
     }
 
-    const handleSlideChange = (s: SwiperClass) => {
+    const onUpdate = (s: SwiperClass) => {
+      setBeginning(s.isBeginning)
+      setEnd(s.isEnd)
+    }
+
+    const onSlideChange = (s: SwiperClass) => {
       setBeginning(s.isBeginning)
       setEnd(s.isEnd)
       props.onSlideChange?.(s)
@@ -37,8 +40,9 @@ const SwiperWithControls = forwardRef<HTMLDivElement, SwiperProps>(
             <div className='' ref={ref}>
               <Swiper
                 {...props}
-                onSwiper={handleSwiper}
-                onSlideChange={handleSlideChange}
+                onSwiper={onSwiper}
+                onSlideChange={onSlideChange}
+                onUpdate={onUpdate}
               />
             </div>
           </Sheet>

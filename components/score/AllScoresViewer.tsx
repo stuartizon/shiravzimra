@@ -19,7 +19,7 @@ const AllScoresViewer = ({ file }: { file: string }) => {
   const swiperRef = useRef<SwiperClass | null>(null)
   const pages = useMemo(() => Array.from({ length: numPages }, (_el, idx) => idx + 1), [numPages])
   const onItemClick = ({ pageIndex }: { pageIndex: number }) => {
-    swiperRef.current?.slideTo(pageIndex)
+    swiperRef.current?.slideTo(pageIndex);
   }
 
   return (
