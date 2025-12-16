@@ -6,6 +6,7 @@ import { Virtual } from 'swiper/modules'
 import SwiperWithControls from '../swiperWithControls/SwiperWithControls'
 import { useResizeObserver } from 'usehooks-ts'
 import { useRouter } from 'next/router'
+import styles from './pdf-annotations.module.css'
 
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
@@ -122,7 +123,7 @@ const AllScoresViewer = ({
   }, [initialChapterId, numPages, piecePageMap])
 
   return (
-    <div className='py-10'>
+    <div className={`py-10 ${styles.annotationOverrides}`}>
       <Document
         file={file}
         loading={<div className='text-center py-10'>Loading PDF…</div>}

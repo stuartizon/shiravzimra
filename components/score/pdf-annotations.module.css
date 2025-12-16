@@ -1,0 +1,6 @@
+.annotationOverrides :global(.annotationLayer .linkAnnotation > a),
+.annotationOverrides :global(.annotationLayer .linkAnnotation > a:hover),
+.annotationOverrides :global(.annotationLayer .linkAnnotation > a:focus) {
+  background: transparent !important;
+  box-shadow: none !important;
+}

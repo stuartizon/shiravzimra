@@ -2,6 +2,7 @@ import React, { AnchorHTMLAttributes, useRef, useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
+import styles from './pdf-annotations.module.css'
 pdfjs.GlobalWorkerOptions.workerSrc =
   `https://unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`
 import { SwiperSlide } from 'swiper/react'
@@ -41,6 +42,7 @@ const Score = ({ id, file, name, spotifyUrl, youtubeUrl, appleUrl, amazonUrl }: 
           </>
         )}
       </div>
+      <div className={styles.annotationOverrides}>
       <Document
         file={{ url: file }}
         loading={
@@ -63,6 +65,7 @@ const Score = ({ id, file, name, spotifyUrl, youtubeUrl, appleUrl, amazonUrl }: 
       >
         <Pages numPages={numPages} />
       </Document>
+      </div>
     </div>
   )
 }
