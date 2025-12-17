@@ -106,7 +106,8 @@ export const shabbatTorah: Section = {
     {
       id: '55d',
       name: "L'cha Adonai",
-      author: 'Julius Mombach'
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/gxMuHBMmY7U'
     },
     {
       id: '57a',
