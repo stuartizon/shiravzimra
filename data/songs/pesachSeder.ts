@@ -15,6 +15,12 @@ export const pesachSeder: Section = {
         This arrangement follows Abileah's original score. There are several small variations to how Ma Nishtana is often sung nowadays: the scale is pentatonic – and doesn't trace the now expected dominant chord on "mikol haleilot", Abileah's word stresses are slightly different, some pitches have altered over time, and overall it is structurally slightly different: Abileah calls for "halailah hazeh" four times followed by "kulo matza" twice (or equivalent for the subsequent verses), and each verse begins with "ma nishtana" in Abileah's score, rather than skipping to "sheb'chol".`
     },
     {
+      id: '553a',
+      name: 'Adir Bimlucha',
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/WkT67h-gc0Q'
+    },
+    {
       id: '554a',
       name: 'Adir Hu',
       author: 'Trad.',
