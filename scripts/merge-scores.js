@@ -97,7 +97,7 @@ async function mergeScores() {
 
   const mergedPdf = await PDFDocument.create();
 
-  const { bodyFont, bodyBoldFont, introTitleFont, hebrewFont } = await loadFonts(
+  const { bodyFont, bodyBoldFont, introTitleFont } = await loadFonts(
     mergedPdf,
     fontsDir
   );
@@ -132,8 +132,7 @@ async function mergeScores() {
     {
       bodyFont,
       bodyBoldFont,
-      introTitleFont,
-      hebrewFont
+      introTitleFont
     },
     tocLinks,
     introPageCount + groupPagesEstimate - 1,

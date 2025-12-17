@@ -55,7 +55,7 @@ function renderGroupContents(
   pageOffset = 0,
   prefacePageIndex = null
 ) {
-  const { bodyFont, bodyBoldFont, introTitleFont, hebrewFont } = fonts;
+  const { bodyFont, bodyBoldFont, introTitleFont } = fonts;
   const {
     margin,
     introHeaderSize,
