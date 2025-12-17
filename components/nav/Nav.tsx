@@ -16,7 +16,12 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
           />
 
           <li className={styles.burger}>
-            <button type='button' onClick={onClickMenu} aria-label={showMobileMenu ? 'Close menu' : 'Open menu'}>
+            <button
+              type='button'
+              onClick={onClickMenu}
+              aria-label='Open menu'
+              aria-expanded={showMobileMenu}
+            >
               <img src='/images/burger.svg' className='invert' width={42} alt='' />
             </button>
           </li>
@@ -31,8 +36,18 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
         </ul>
       </div>
       {showMobileMenu && (
-        <div className={styles.menu}>
-          <button type='button' className={styles.closeButton} onClick={onClickMenu} aria-label='Close menu'>
+        <div
+          className={styles.menu}
+          role='dialog'
+          aria-modal='true'
+          aria-label='Navigation menu'
+        >
+          <button
+            type='button'
+            className={styles.closeButton}
+            onClick={onClickMenu}
+            aria-label='Close menu'
+          >
             <img src='/images/close.svg' className='invert' width={36} alt='' />
           </button>
           <ul>
