@@ -124,7 +124,7 @@ const AllScoresViewer = ({
   }, [initialChapterId, numPages, piecePageMap])
 
   return (
-    <div className={`py-10 ${styles.annotationOverrides}`}>
+    <div className={`py-2 ${styles.annotationOverrides}`}>
       <Document
         file={file}
         externalLinkTarget='_blank'
