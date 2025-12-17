@@ -7,6 +7,7 @@ import SwiperWithControls from '../swiperWithControls/SwiperWithControls'
 import { useResizeObserver } from 'usehooks-ts'
 import { useRouter } from 'next/router'
 import styles from './pdf-annotations.module.css'
+import DownloadPdf from '../download-pdf/DownloadPdf'
 
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
@@ -165,6 +166,7 @@ const AllScoresViewer = ({
           }}
         />
       </Document>
+      <DownloadPdf href={file} />
     </div >
   )
 }
