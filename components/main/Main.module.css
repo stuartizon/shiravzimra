@@ -3,9 +3,13 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  @apply flex flex-col min-h-screen;
+  @apply flex flex-col;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .scrollLocked {
-  @apply h-screen overflow-hidden;
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
 }
