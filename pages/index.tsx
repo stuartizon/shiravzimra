@@ -28,7 +28,12 @@ const AllScoresPage = () => {
   return (
     <>
       <Head>
-        <title>Shira v'Zimra</title>
+        <title>Shira v&apos;Zimra</title>
+        <meta
+          name='description'
+          content='A book of Jewish music for the synagogue and the home, arranged for male voice choir by Stuart Izon'
+        />
+        <meta name='author' content='Stuart Izon' />
       </Head>
       <AllScoresViewer
         file='/dist/all-scores.pdf'
