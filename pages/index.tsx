@@ -36,7 +36,7 @@ const AllScoresPage = () => {
         <meta name='author' content='Stuart Izon' />
       </Head>
       <AllScoresViewer
-        file='/dist/all-scores.pdf'
+        file='/dist/shiravzimra.pdf'
         initialPage={initialPage}
         initialChapterId={initialChapterId}
       />

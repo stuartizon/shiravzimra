@@ -55,7 +55,7 @@ async function mergeScores() {
   const scoresDir = path.join(__dirname, '..', 'public', 'scores');
   const introFile = path.join(__dirname, '..', 'public', 'introduction.pdf');
   const distDir = path.join(__dirname, '..', 'public', 'dist');
-  const outputFile = path.join(distDir, 'all-scores.pdf');
+  const outputFile = path.join(distDir, 'shiravzimra.pdf');
   const fontsDir = path.join(__dirname, '..', 'fonts');
   const youtubeIcon = loadYoutubeIconPaths();
 
