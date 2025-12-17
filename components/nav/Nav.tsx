@@ -6,7 +6,7 @@ import { Group } from '../../data/types';
 
 const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
   return (
-    <nav className='w-screen top-0 font-semibold h-16 relative'>
+    <nav className='w-full top-0 font-semibold h-16 relative'>
       <div className='container mx-auto h-full'>
         <ul className='list-none flex flex-row h-full'>
           <NavItem
@@ -27,33 +27,35 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
       <div className={`${styles.burger} ${showMobileMenu ? styles.enabled : styles.disabled}`} onClick={onClickMenu}>
         <img src='/images/burger.svg' className='invert' width={42} />
       </div>
-      <div className={`${styles.menu} ${showMobileMenu ? 'visible' : 'invisible'}`}>
-        <ul>
-          <li className='mt-3'>
-            <Link className='text-white' href='/preface' onClick={onClickMenu}>
-              Preface
-            </Link>
-          </li>
-          {allGroups.map(group => (
-            <Fragment key={group.id}>
-              <li className='mt-3'>
-                <Link className='text-white' href={`/${group.sections[0].id}`} onClick={onClickMenu}>
-                  {group.name}
-                </Link>
-              </li>
-              <ul className='ml-4'>
-                {group.sections.map(section => (
-                  <li key={section.id}>
-                    <Link className='text-white' href={`/${section.id}`} onClick={onClickMenu}>
-                      {section.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Fragment>
-          ))}
-        </ul>
-      </div>
+      {showMobileMenu && (
+        <div className={styles.menu}>
+          <ul>
+            <li className='mt-3'>
+              <Link className='text-white' href='/preface' onClick={onClickMenu}>
+                Preface
+              </Link>
+            </li>
+            {allGroups.map(group => (
+              <Fragment key={group.id}>
+                <li className='mt-3'>
+                  <Link className='text-white' href={`/${group.sections[0].id}`} onClick={onClickMenu}>
+                    {group.name}
+                  </Link>
+                </li>
+                <ul className='ml-4'>
+                  {group.sections.map(section => (
+                    <li key={section.id}>
+                      <Link className='text-white' href={`/${section.id}`} onClick={onClickMenu}>
+                        {section.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </Fragment>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   )
 }

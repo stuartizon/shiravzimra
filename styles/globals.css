@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply w-screen font-sans;
+    @apply w-full overflow-x-hidden font-sans;
     -webkit-tap-highlight-color: transparent;
   }
 }

@@ -7,7 +7,7 @@
 }
 
 .menu {
-  @apply bg-zinc-500 absolute w-screen z-10 p-8 pt-4;
+  @apply bg-zinc-500 absolute w-full left-0 z-10 p-8 pt-4;
 }
 
 .desktopMenuLink {
@@ -15,7 +15,7 @@
 }
 
 .desktopMenuDropdown {
-  @apply invisible opacity-0 absolute z-10 transition duration-100 whitespace-nowrap;
+  @apply hidden absolute z-10 whitespace-nowrap;
 }
 
 .desktopMenuLink:last-child .desktopMenuDropdown {
@@ -28,5 +28,5 @@
 }
 
 .desktopMenuLink:hover .desktopMenuDropdown {
-  @apply visible opacity-100;
+  @apply block;
 }
