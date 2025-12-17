@@ -6,12 +6,50 @@ require('ts-node').register({
 
 const fs = require('fs');
 const path = require('path');
-const { PDFDocument, PDFName, PDFArray, rgb, StandardFonts } = require('pdf-lib');
+const { PDFDocument, PDFName, PDFArray, PDFString, rgb, StandardFonts } = require('pdf-lib');
 const { allSections, allGroups } = require('../data');
 const { loadFonts } = require('./fonts');
 const { computeSectionPagination, renderSectionContents } = require('./sectionToc');
 const { renderGroupContents, computeGroupPagination } = require('./groupToc');
 const { toRoman } = require('./utils');
+
+function loadYoutubeIconPaths() {
+  const svgPath = path.join(__dirname, 'assets', 'youtube.svg');
+  const svg = fs.readFileSync(svgPath, 'utf8');
+  const match = svg.match(/<path\s+d="([^"]+)"/i);
+  if (!match) {
+    throw new Error(`Unable to find <path d=\"...\"> in ${svgPath}`);
+  }
+
+  return {
+    // Full YouTube logo mark shape (background + play triangle).
+    full: match[1],
+    // Triangle subpath extracted from our SVG (used to draw the play icon in white).
+    play: 'M19,32v-14l12.19922,7z'
+  };
+}
+
+function addExternalLinkAnnotation(pdf, page, rect, url) {
+  const context = pdf.context;
+  const linkAnnot = context.obj({
+    Type: 'Annot',
+    Subtype: 'Link',
+    Rect: rect,
+    Border: [0, 0, 0],
+    A: {
+      Type: 'Action',
+      S: 'URI',
+      URI: PDFString.of(url)
+    }
+  });
+
+  let annots = page.node.lookup(PDFName.of('Annots'));
+  if (!annots) {
+    annots = PDFArray.withContext(context);
+    page.node.set(PDFName.of('Annots'), annots);
+  }
+  annots.push(linkAnnot);
+}
 
 async function mergeScores() {
   const scoresDir = path.join(__dirname, '..', 'public', 'scores');
@@ -19,6 +57,7 @@ async function mergeScores() {
   const distDir = path.join(__dirname, '..', 'public', 'dist');
   const outputFile = path.join(distDir, 'all-scores.pdf');
   const fontsDir = path.join(__dirname, '..', 'fonts');
+  const youtubeIcon = loadYoutubeIconPaths();
 
   if (!fs.existsSync(scoresDir)) {
     throw new Error(`Scores directory not found at ${scoresDir}`);
@@ -114,9 +153,46 @@ async function mergeScores() {
 
   console.log('📚 Merging piece PDFs...');
 
-  for (const { pdfDoc, pageIndices } of loadedPieces) {
+  for (const { piece, pdfDoc, pageIndices } of loadedPieces) {
     const copiedPages = await mergedPdf.copyPages(pdfDoc, pageIndices);
-    copiedPages.forEach((page) => mergedPdf.addPage(page));
+    copiedPages.forEach((page, index) => {
+      const mergedPage = mergedPdf.addPage(page);
+
+      if (index !== 0) return;
+
+      const { height } = mergedPage.getSize();
+      const margin = 24;
+      const size = 27;
+      const scale = size / 50;
+      const x = margin;
+      const yLowerLeft = height - margin - size;
+      const ySvg = yLowerLeft + size;
+
+      const hasYoutube = typeof piece.youtubeUrl === 'string' && piece.youtubeUrl.length > 0;
+      if (!hasYoutube) return;
+
+      const backgroundColor = rgb(0.28, 0.28, 0.28);
+
+      mergedPage.drawSvgPath(youtubeIcon.full, {
+        x,
+        y: ySvg,
+        scale,
+        color: backgroundColor
+      });
+      mergedPage.drawSvgPath(youtubeIcon.play, {
+        x,
+        y: ySvg,
+        scale,
+        color: rgb(1, 1, 1)
+      });
+
+      addExternalLinkAnnotation(
+        mergedPdf,
+        mergedPage,
+        [x, yLowerLeft, x + size, yLowerLeft + size],
+        piece.youtubeUrl
+      );
+    });
   }
 
   console.log('🔢 Adding page numbers...');
