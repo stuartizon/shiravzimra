@@ -4,13 +4,12 @@ import downloadIcon from './download.svg'
 
 const DownloadPdf = ({ href }: { href: string }) => {
   return (
-    <div className='flex items-center justify-center gap-4 mt-6'>
+    <div className='hidden md:flex items-center justify-center gap-4 mt-6'>
       <Image
         src={bookArt}
         alt='Book and quill illustration'
         width={190}
         height={135}
-        className='hidden md:block'
       />
       <a
         href={href}
