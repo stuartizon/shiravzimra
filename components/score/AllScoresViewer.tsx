@@ -208,24 +208,27 @@ const PageWithLoader = ({ pageNumber, width }: { pageNumber: number; width: numb
   const [rendered, setRendered] = useState(false)
   const hasWidth = width > 0
 
-  const placeholder = (
-    <div
-      className='bg-white page m-auto flex flex-col justify-center text-center'
-    >
-      Loading...
-    </div>
-  )
-
   return (
-    <div className='relative'>
-      {(!rendered || !hasWidth) && placeholder}
+    <div className='relative page m-auto bg-white overflow-hidden'>
+      {!hasWidth && (
+        <div className='absolute inset-0 flex flex-col justify-center text-center'>
+          Loading...
+        </div>
+      )}
       {hasWidth && (
-        <Page
-          pageNumber={pageNumber}
-          width={width}
-          loading={placeholder}
-          onRenderSuccess={() => setRendered(true)}
-        />
+        <>
+          <Page
+            pageNumber={pageNumber}
+            width={width}
+            loading={null}
+            onRenderSuccess={() => setRendered(true)}
+          />
+          {!rendered && (
+            <div className='absolute inset-0 flex flex-col justify-center text-center'>
+              Loading...
+            </div>
+          )}
+        </>
       )}
     </div>
   )
