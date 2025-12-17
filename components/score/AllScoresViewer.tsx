@@ -130,7 +130,7 @@ const AllScoresViewer = ({
         externalLinkTarget='_blank'
         externalLinkRel='noopener noreferrer'
         loading={
-          <div className='bg-white w-page m-auto flex flex-col justify-center text-center shadow-xl shadow-black' style={{ minHeight: 1018 }}>
+          <div className='bg-white page m-auto flex flex-col justify-center text-center shadow-xl shadow-black'>
             Loading...
           </div>
         }
@@ -210,8 +210,7 @@ const PageWithLoader = ({ pageNumber, width }: { pageNumber: number; width: numb
 
   const placeholder = (
     <div
-      className='bg-white w-page m-auto flex flex-col justify-center text-center'
-      style={{ minHeight: 1018 }}
+      className='bg-white page m-auto flex flex-col justify-center text-center'
     >
       Loading...
     </div>
