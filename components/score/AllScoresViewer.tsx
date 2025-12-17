@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import { SwiperSlide } from 'swiper/react'
 import { Swiper as SwiperClass } from 'swiper/types'
-import { Virtual } from 'swiper/modules'
+import { Keyboard, Virtual } from 'swiper/modules'
 import SwiperWithControls from '../swiperWithControls/SwiperWithControls'
 import { useResizeObserver } from 'usehooks-ts'
 import { useRouter } from 'next/router'
@@ -186,8 +186,9 @@ const Pages = ({
   return (
     <SwiperWithControls
       ref={containerRef}
-      modules={[Virtual]}
+      modules={[Virtual, Keyboard]}
       virtual={{ enabled: true, addSlidesBefore: 2, addSlidesAfter: 2 }}
+      keyboard={{ enabled: true, onlyInViewport: true }}
       slidesPerView={1}
       onSwiper={onSwiper}
       onSlideChange={onSlideChange}
