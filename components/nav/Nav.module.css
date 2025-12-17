@@ -1,9 +1,5 @@
 .burger {
-  @apply my-auto flex justify-center items-center md:hidden cursor-pointer;
-}
-
-.burger button {
-  @apply w-16 h-16 flex justify-center items-center;
+  @apply absolute right-0 top-0 w-16 h-16 flex justify-center items-center md:hidden cursor-pointer;
 }
 
 .menu {

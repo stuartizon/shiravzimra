@@ -15,17 +15,6 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
             className='flex-grow text-3xl text-center md:text-left font-serif'
           />
 
-          <li className={styles.burger}>
-            <button
-              type='button'
-              onClick={onClickMenu}
-              aria-label='Open menu'
-              aria-expanded={showMobileMenu}
-            >
-              <img src='/images/burger.svg' className='invert' width={42} alt='' />
-            </button>
-          </li>
-
           <li className={styles.desktopMenuLink}>
             <Link href="/preface" className='text-white align-sub'>Preface</Link>
           </li>
@@ -35,6 +24,15 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
           ))}
         </ul>
       </div>
+      <button
+        type='button'
+        className={styles.burger}
+        onClick={onClickMenu}
+        aria-label='Open menu'
+        aria-expanded={showMobileMenu}
+      >
+        <img src='/images/burger.svg' className='invert' width={42} alt='' />
+      </button>
       {showMobileMenu && (
         <div
           className={styles.menu}
