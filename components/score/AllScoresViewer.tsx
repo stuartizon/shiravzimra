@@ -127,6 +127,8 @@ const AllScoresViewer = ({
     <div className={`py-10 ${styles.annotationOverrides}`}>
       <Document
         file={file}
+        externalLinkTarget='_blank'
+        externalLinkRel='noopener noreferrer'
         loading={
           <div className='bg-white w-page m-auto flex flex-col justify-center text-center shadow-xl shadow-black' style={{ minHeight: 1018 }}>
             Loading...

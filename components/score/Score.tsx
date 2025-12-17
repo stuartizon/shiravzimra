@@ -45,6 +45,8 @@ const Score = ({ id, file, name, spotifyUrl, youtubeUrl, appleUrl, amazonUrl }: 
       <div className={styles.annotationOverrides}>
       <Document
         file={{ url: file }}
+        externalLinkTarget='_blank'
+        externalLinkRel='noopener noreferrer'
         loading={
           <div
             className='bg-white w-page m-auto flex flex-col justify-center text-center shadow-xl shadow-black'
