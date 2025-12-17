@@ -161,7 +161,7 @@ const AllScoresViewer = ({
             const currentPath = router.asPath.split('?')[0]
             if (currentPath !== targetPath) {
               suppressChapterApplyRef.current = true
-              router.push(targetPath, undefined, { shallow: true })
+              router.push(targetPath, undefined, { shallow: true, scroll: false })
             }
           }}
         />
