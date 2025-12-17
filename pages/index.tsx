@@ -28,7 +28,7 @@ const AllScoresPage = () => {
   return (
     <>
       <Head>
-        <title>All Scores</title>
+        <title>Shira v'Zimra</title>
       </Head>
       <AllScoresViewer
         file='/dist/all-scores.pdf'
