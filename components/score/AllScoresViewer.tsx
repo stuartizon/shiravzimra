@@ -194,21 +194,38 @@ const Pages = ({
     >
       {pages.map((pageNumber) => (
         <SwiperSlide key={`page_${pageNumber}`} virtualIndex={pageNumber - 1}>
-          <Page
-            pageNumber={pageNumber}
-            width={width}
-            loading={
-              <div
-                className='bg-white w-page m-auto flex flex-col justify-center text-center shadow-xl shadow-black'
-                style={{ minHeight: 1018 }}
-              >
-                Loading...
-              </div>
-            }
-          />
+          <PageWithLoader pageNumber={pageNumber} width={width} />
         </SwiperSlide>
       ))}
     </SwiperWithControls>
+  )
+}
+
+const PageWithLoader = ({ pageNumber, width }: { pageNumber: number; width: number }) => {
+  const [rendered, setRendered] = useState(false)
+  const hasWidth = width > 0
+
+  const placeholder = (
+    <div
+      className='bg-white w-page m-auto flex flex-col justify-center text-center'
+      style={{ minHeight: 1018 }}
+    >
+      Loading...
+    </div>
+  )
+
+  return (
+    <div className='relative'>
+      {(!rendered || !hasWidth) && placeholder}
+      {hasWidth && (
+        <Page
+          pageNumber={pageNumber}
+          width={width}
+          loading={placeholder}
+          onRenderSuccess={() => setRendered(true)}
+        />
+      )}
+    </div>
   )
 }
 
