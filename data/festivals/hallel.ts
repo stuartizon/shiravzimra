@@ -60,7 +60,8 @@ export const hallel: Section = {
     {
       id: '109f',
       name: "Hodu Ladonai (for Pesach)",
-      author: 'Julius Mombach'
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/4QAnNqawTzQ'
     },
     {
       id: '111a',
