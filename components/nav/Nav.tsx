@@ -50,20 +50,20 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
           >
             <img src='/images/close.svg' className='invert' width={36} alt='' />
           </button>
-          <ul>
-            <li className='mt-3'>
+          <ul className='text-center text-3xl font-semibold flex flex-col h-full'>
+            <li className='mt-4'>
               <Link className='text-white' href='/' onClick={onClickMenu}>
                 Home
               </Link>
             </li>
-            <li className='mt-3'>
+            <li className='mt-8'>
               <Link className='text-white' href='/preface' onClick={onClickMenu}>
                 Preface
               </Link>
             </li>
             {allGroups.map(group => (
               <Fragment key={group.id}>
-                <li className='mt-3'>
+                <li className='mt-8'>
                   <Link className='text-white' href={`/${group.sections[0].id}`} onClick={onClickMenu}>
                     {group.name}
                   </Link>
