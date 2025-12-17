@@ -15,6 +15,12 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
             className='flex-grow text-3xl text-center md:text-left font-serif'
           />
 
+          <li className={styles.burger}>
+            <button type='button' onClick={onClickMenu} aria-label={showMobileMenu ? 'Close menu' : 'Open menu'}>
+              <img src='/images/burger.svg' className='invert' width={42} alt='' />
+            </button>
+          </li>
+
           <li className={styles.desktopMenuLink}>
             <Link href="/preface" className='text-white align-sub'>Preface</Link>
           </li>
@@ -24,12 +30,17 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
           ))}
         </ul>
       </div>
-      <div className={`${styles.burger} ${showMobileMenu ? styles.enabled : styles.disabled}`} onClick={onClickMenu}>
-        <img src='/images/burger.svg' className='invert' width={42} />
-      </div>
       {showMobileMenu && (
         <div className={styles.menu}>
+          <button type='button' className={styles.closeButton} onClick={onClickMenu} aria-label='Close menu'>
+            <img src='/images/close.svg' className='invert' width={36} alt='' />
+          </button>
           <ul>
+            <li className='mt-3'>
+              <Link className='text-white' href='/' onClick={onClickMenu}>
+                Home
+              </Link>
+            </li>
             <li className='mt-3'>
               <Link className='text-white' href='/preface' onClick={onClickMenu}>
                 Preface
@@ -42,15 +53,6 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
                     {group.name}
                   </Link>
                 </li>
-                <ul className='ml-4'>
-                  {group.sections.map(section => (
-                    <li key={section.id}>
-                      <Link className='text-white' href={`/${section.id}`} onClick={onClickMenu}>
-                        {section.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
               </Fragment>
             ))}
           </ul>

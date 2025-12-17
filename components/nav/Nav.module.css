@@ -1,13 +1,17 @@
 .burger {
-  @apply absolute right-0 top-0 w-16 h-16 flex justify-center md:hidden cursor-pointer;
+  @apply my-auto flex justify-center items-center md:hidden cursor-pointer;
 }
 
-.enabled {
-  @apply bg-zinc-500;
+.burger button {
+  @apply w-16 h-16 flex justify-center items-center;
 }
 
 .menu {
-  @apply bg-zinc-500 absolute w-full left-0 z-10 p-8 pt-4;
+  @apply bg-zinc-500 fixed inset-0 z-20 p-8 pt-20 overflow-y-auto md:hidden;
+}
+
+.closeButton {
+  @apply absolute top-0 right-0 w-16 h-16 flex justify-center items-center;
 }
 
 .desktopMenuLink {
