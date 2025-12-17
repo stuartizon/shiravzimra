@@ -5,3 +5,7 @@
   background-size: cover;
   @apply flex flex-col min-h-screen;
 }
+
+.scrollLocked {
+  @apply h-screen overflow-hidden;
+}

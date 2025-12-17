@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const [mobileMenu, setMobileMenu] = useState(false)
 
   return (
-    <Main>
+    <Main scrollLocked={mobileMenu}>
       <Head>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
       </Head>
