@@ -20,6 +20,12 @@ export const chanukah: Section = {
         Like Adir Hu and Akdamut, the Maoz Tzur tune is used as a seasonal leitmotif in many communities for Mi Chamocha in Ma'ariv, Hodu and Ana in Hallel, Shir Hama'alot, Adon Olam and Yechadshehu for Rosh Chodesh (Kislev and Tevet).`
     },
     {
+      id: '402b',
+      name: "Maoz Tzur",
+      author: 'Trad./Benedetto Marcello',
+      youtubeUrl: 'https://youtu.be/rD-IMrOmx0g'
+    },
+    {
       id: '403b',
       name: "Mizmor Shir Chanukah Habayit",
       author: 'Zeidel Rovner',
