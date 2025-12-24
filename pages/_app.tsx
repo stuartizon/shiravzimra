@@ -14,7 +14,19 @@ const App = ({ Component, pageProps }: AppProps) => {
     <Main scrollLocked={mobileMenu}>
       <Head>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+        <meta property='og:title' content="Shira v'Zimra" />
+        <meta
+          property='og:description'
+          content='A book of Jewish music for the synagogue and the home, arranged for male voice choir by Stuart Izon'
+        />
+        <meta property='og:type' content='website' />
         <meta property='og:image' content='https://www.shiravzimra.com/opengraph.png' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content="Shira v'Zimra" />
+        <meta
+          name='twitter:description'
+          content='A book of Jewish music for the synagogue and the home, arranged for male voice choir by Stuart Izon'
+        />
         <meta name='twitter:image' content='https://www.shiravzimra.com/opengraph.png' />
       </Head>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-9TFRCWQ7E8" async={true} />
