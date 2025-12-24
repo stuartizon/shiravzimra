@@ -14,6 +14,8 @@ const App = ({ Component, pageProps }: AppProps) => {
     <Main scrollLocked={mobileMenu}>
       <Head>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+        <meta property='og:image' content='https://www.shiravzimra.com/opengraph.png' />
+        <meta name='twitter:image' content='https://www.shiravzimra.com/opengraph.png' />
       </Head>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-9TFRCWQ7E8" async={true} />
       <Script id="google-analytics">
