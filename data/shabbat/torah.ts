@@ -79,6 +79,12 @@ export const shabbatTorah: Section = {
         To cover as many bases as possible and inevitably satisfy no-one, this interpretation utilises A, X, A, B. I like using A for the Chazzan's recitation of Echad as this is what Sulzer himself wrote (but not if it will lead to A, A, A, B as I mentioned earlier). In no way am I advocating this as the only authorised and correct version – to each his own!`
     },
     {
+      id: '54c',
+      name: "Sh'ma Yisrael",
+      author: 'Louis Lewandowski',
+      youtubeUrl: 'https://youtu.be/K8ZX15UZdpU'
+    },
+    {
       id: '54d',
       name: "Sh'ma Yisrael",
       author: 'Julius Mombach',
