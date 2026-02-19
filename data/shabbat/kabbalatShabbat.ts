@@ -114,6 +114,12 @@ export const kabbalatShabbat: Section = {
       description: `Here is Naumbourg's very classical composition for L'cha Dodi during the Three Weeks, which utilises Eli Tzion for two of the verses. He picks out many of the phrases in L'cha Dodi with some beautiful word painting, alternating from minor to major, and includes what I can only describe as a rolling wave effect for two of the refrains and the Boi Kalah of the final verse. Like other composers, Naumbourg concludes the piece in the major, perhaps as a nod to the idea that we don't mourn on Shabbat, as we welcome the Sabbath Queen. This melody is still used today by the Alsace community (and perhaps some other French congregations) during Ben Hametzarim.`
     },
     {
+      id: '11b',
+      name: "Mizmor Shir",
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/q5k79tAlRsg'
+    },
+    {
       id: '12d',
       name: "Adonai Malach",
       author: 'Samuel Alman',
