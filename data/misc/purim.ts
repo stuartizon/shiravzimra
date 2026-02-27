@@ -7,6 +7,12 @@ export const purim: Section = {
   hebrewName: 'פורים',
   pieces: [
     {
+      id: '407a',
+      name: "Shoshanat Yaakov",
+      author: 'Azriel Mandelbaum',
+      youtubeUrl: 'https://youtu.be/g0IJRoxsSZM'
+    },
+    {
       id: '407c',
       name: "Shoshanat Yaakov",
       author: 'Harry Coopersmith',
