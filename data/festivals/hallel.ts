@@ -21,6 +21,13 @@ export const hallel: Section = {
       description: `More overtly than any other melody for B'tzeit Yisrael, Millet's setting paints the perplexing dancelike motion of the "mountains skipping like rams; the hills like lambs". The opening of this tune is often combined with other melodies, but here is the entire composition. Joseph Millet was one of the most prominent conductors and composers in early 20th century Vienna, and B'tzeit Yisrael is his most well known work.`
     },
     {
+      id: '103g',
+      name: "B'tzeit Yisrael",
+      author: 'Sue Straus-Mariner',
+      youtubeUrl: 'https://youtu.be/LQua25uw0Hw',
+      description: `This pleasing, lyrical melody with antiphonal dialogue between chazzan and choir was composed by Sue Straus-Mariner, former Rebbetzin of Belsize Square Synagogue.`
+    },
+    {
       id: '107c',
       name: "Ma Ashiv (for Pesach)",
       author: 'Julius Mombach',
