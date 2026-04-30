@@ -78,6 +78,12 @@ export const shabbatMaariv: Section = {
       author: 'Zavel Zilberts',
       youtubeUrl: 'https://youtu.be/hoYjX49-ryU',
       description: `This short melody by acclaimed conductor and composer, Zavel Zilberts, is mostly used by reform and conservative congregations in the US, and was printed in several synagogue music anthologies (including Zamru Lo and Mizmor L'david).`
+    },
+    {
+      id: '30b',
+      name: "Yigdal",
+      author: 'Jacob Rappaport',
+      youtubeUrl: 'https://youtu.be/rcsV3XUVa2A',
     }
   ]
 }
