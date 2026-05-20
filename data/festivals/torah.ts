@@ -17,6 +17,12 @@ export const festivalTorah: Section = {
       description: `Lewandowski originally wrote these two regal and dramatic melodies for parts of Ata Horeita which we say on Simchat Torah evening. With the frenetic energy that Simchat Torah now evokes in many of our synagogues, Lewandowski's beautiful stately service seems rather anachronistic. This lesser known melody is therefore now more often used when taking out the Torah during the morning service on Festivals, or on other special occasions.`
     },
     {
+      id: '133b',
+      name: "Shlosh Esrei Midot",
+      author: 'Abraham Moshe Bernstein',
+      youtubeUrl: 'https://youtu.be/M7BJdlHWiaQ',
+    },
+    {
       id: '134a',
       name: "Va'ani T'filati",
       author: 'Samuel Naumbourg',
