@@ -59,6 +59,23 @@ public/
 - No default exports from utility or data files — named exports only
 - All routes are generated via `getStaticPaths` in `[chapter].tsx`; do not add new page files
 
+## Non-functional requirements
+
+These apply to every ticket unless explicitly overridden.
+
+**Accessibility**
+- All interactive elements must be keyboard navigable — no mouse-only interactions
+- Use semantic HTML elements (`<button>`, `<nav>`, `<main>`, etc.) rather than `<div>` with click handlers
+- All images and icons must have appropriate `alt` text (descriptive for meaningful images, empty string for decorative ones)
+- ARIA attributes (`role`, `aria-label`, `aria-expanded`, etc.) must be used wherever semantic HTML alone is insufficient
+- Dialogs and overlays must trap focus while open and return focus to the trigger element when closed
+- Colour contrast must meet WCAG AA as a minimum — 4.5:1 for normal text, 3:1 for large text and UI components
+
+**Responsive design**
+- All UI must work correctly on mobile (320px+) and desktop (1280px+)
+- Use Tailwind responsive prefixes (`sm:`, `md:`, `lg:`) rather than fixed pixel widths
+- Test layout at both ends of the screen size range before marking a task complete
+
 ## Testing
 
 Follow red-green-refactor TDD:
@@ -67,6 +84,57 @@ Follow red-green-refactor TDD:
 3. Work is only complete when all tests pass.
 
 Never mark a task done or move it to In Review until the test suite is green.
+
+## Definition of done
+
+A task is only complete when all of the following are true:
+- All acceptance criteria on the monday.com ticket are met
+- Tests are written and passing (`yarn test`)
+- No lint errors (`yarn lint`)
+- No new `console.log` statements left in the code
+- Non-functional requirements above are satisfied for any UI changes
+
+## When to ask vs. proceed
+
+Proceed without asking when:
+- The change is clearly scoped to the current ticket
+- There is an obvious single correct approach
+
+Stop and present options when:
+- A change would touch more than one system or component
+- There are multiple reasonable approaches with meaningful tradeoffs
+- The ticket's acceptance criteria are ambiguous
+
+Always ask before:
+- Adding a new npm dependency
+- Making any change to the build or deployment pipeline
+- Changing or deleting anything not directly related to the current ticket
+
+## Hard stops
+
+Never do any of the following without explicit instruction:
+- Commit directly to `master`
+- Delete or overwrite files outside the current working branch
+- Modify `.env` files or any secrets
+- Skip `yarn lint` or `yarn test` before raising a PR
+- Add a `// TODO` comment — if something is out of scope, raise it in conversation instead
+
+## Dependency management
+
+Before adding any new npm package:
+1. Check whether the functionality already exists in the project or its current dependencies
+2. Ask for approval — state what the package does and why it is needed
+
+## Response style
+
+- Be concise — one sentence per update while working, two sentences at the end of a task
+- Do not summarise what you just did at the end of a response
+- Do not add unsolicited refactoring or improvements beyond the scope of the current ticket
+- If you spot something out of scope that should be fixed, mention it briefly and suggest adding a monday ticket rather than fixing it unilaterally
+
+## TODOs
+
+Never leave `// TODO` comments in code. If you notice something that needs addressing but is out of scope for the current ticket, raise it in conversation so a monday ticket can be created.
 
 ## Ticket workflow
 
