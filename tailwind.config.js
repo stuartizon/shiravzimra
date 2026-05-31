@@ -6,8 +6,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Noto Sans', 'sans-serif'],
-      serif: ['Tiro Devanagari Hindi', 'serif'],
+      sans: ['var(--font-noto-sans)', 'sans-serif'],
+      serif: ['var(--font-tiro-devanagari)', 'serif'],
     },
     extend: {
       spacing: {
