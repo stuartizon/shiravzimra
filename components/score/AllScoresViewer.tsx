@@ -106,11 +106,6 @@ const AllScoresViewer = ({
 
   useEffect(() => {
     if (!initialChapterId || !piecePageMap || !numPages) return
-    const exists = piecePageMap.some((p) => p.id === initialChapterId)
-    if (!exists) {
-      router.replace('/404')
-      return
-    }
     if (suppressChapterApplyRef.current) {
       suppressChapterApplyRef.current = false
       return
