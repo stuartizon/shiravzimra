@@ -18,6 +18,7 @@ Follow red-green-refactor TDD:
 Never mark a task done or move it to In Review until the test suite is green.
 
 When asked to create a PR:
-1. Push the branch and open the PR against `master`.
+1. Run `yarn lint` and `yarn test` locally and fix any failures before pushing.
+2. Push the branch and open the PR against `master`.
 2. Update the monday.com item's **PR Link** column (column ID: `link_mm3w3fym`) with the PR URL and a short label, e.g. `PR #3 alt-text-icons`.
 3. Move the item's Status to **In Review**.
