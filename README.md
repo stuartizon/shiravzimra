@@ -1,34 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shira V'Zimra
 
-## Getting Started
+A book of Jewish liturgical music for the synagogue and the home, arranged for male voice choir by Stuart Izon. The site presents a compiled PDF of sheet music, navigable by piece or section, with links to recordings on YouTube, Spotify, Apple Music, and Amazon Music.
 
-First, run the development server:
+**Live site:** [shiravzimra.com](https://www.shiravzimra.com)
+
+## Tech stack
+
+- [Next.js 14](https://nextjs.org/) (TypeScript)
+- [Tailwind CSS](https://tailwindcss.com/) + CSS Modules
+- [react-pdf](https://github.com/wojtekmaj/react-pdf) for PDF rendering
+- [Swiper](https://swiperjs.com/) for swipe navigation
+- Deployed on [Vercel](https://vercel.com/)
+
+## Getting started
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Available commands
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+yarn dev               # start dev server
+yarn build             # production build (runs next-sitemap and PDF merge)
+yarn test              # run Jest test suite
+yarn test:watch        # run Jest in watch mode
+yarn lint              # run ESLint
+yarn build:scores-pdf  # regenerate the compiled PDF only
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Project structure
 
-## Learn More
+```
+data/               # piece and section definitions
+  types.ts          # Piece, Section, Group TypeScript interfaces
+  index.ts          # exports allGroups, allSections, allPieces, allPiecesMap
+  shabbat/          # one directory per liturgical group
+  festivals/
+  roshHashana/
+  yomKippur/
+  misc/
+  songs/
+pages/
+  index.tsx         # main PDF viewer
+  [chapter].tsx     # handles all piece and section routes
+  404.tsx
+components/         # one directory per component
+scripts/            # Node scripts for building the compiled PDF
+  merge-scores.js   # merges individual PDFs and generates the table of contents
+public/
+  dist/             # compiled shiravzimra.pdf (generated at build time)
+  scores/           # individual piece PDFs, named by piece ID
+```
 
-To learn more about Next.js, take a look at the following resources:
+## How pieces are organised
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pieces are grouped into **Groups** (e.g. Shabbat, Rosh Hashana) → **Sections** (e.g. Kabbalat Shabbat, Shacharit) → **Pieces** (individual arrangements). Each piece has:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| Field | Required | Description |
+|-------|----------|-------------|
+| `id` | ✅ | Unique slug, used as the URL and PDF filename |
+| `name` | ✅ | Name of the prayer or song |
+| `author` | ✅ | Composer or arranger |
+| `description` | — | Background notes on the piece |
+| `youtubeUrl` | — | Link to a YouTube recording |
+| `spotifyUrl` | — | Link to a Spotify recording |
+| `appleUrl` | — | Link to an Apple Music recording |
+| `amazonUrl` | — | Link to an Amazon Music recording |
 
-## Deploy on Vercel
+## Adding a new piece
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Add the PDF** — place the score at `public/scores/<id>.pdf`
+2. **Add the data entry** — add a `Piece` object to the relevant section file in `data/`, using the same `id`
+3. **Rebuild the compiled PDF** — run `yarn build:scores-pdf`
+4. The piece is now live at `/<id>`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Running tests
+
+```bash
+yarn test
+```
+
+Tests use [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/). CI runs tests and linting automatically on every pull request via GitHub Actions.
