@@ -6,25 +6,12 @@ import Footer from '../components/footer/Footer'
 import Head from 'next/head'
 import Script from 'next/script'
 import { useState } from 'react'
-import { Noto_Sans, Tiro_Devanagari_Hindi } from 'next/font/google'
-
-const notoSans = Noto_Sans({
-  weight: ['500', '600'],
-  subsets: ['latin'],
-  variable: '--font-noto-sans',
-})
-
-const tiroDevanagariHindi = Tiro_Devanagari_Hindi({
-  weight: '400',
-  subsets: ['latin', 'devanagari'],
-  variable: '--font-tiro-devanagari',
-})
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [mobileMenu, setMobileMenu] = useState(false)
 
   return (
-    <Main scrollLocked={mobileMenu} fontVariables={`${notoSans.variable} ${tiroDevanagariHindi.variable}`}>
+    <Main scrollLocked={mobileMenu}>
       <Head>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
         <meta property='og:title' content="Shira v'Zimra" />
