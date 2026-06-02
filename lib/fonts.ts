@@ -1,4 +1,4 @@
-import { Noto_Sans, Tiro_Devanagari_Hindi } from 'next/font/google'
+import { Noto_Sans, EB_Garamond } from 'next/font/google'
 
 export const notoSans = Noto_Sans({
   weight: ['500', '600'],
@@ -6,8 +6,8 @@ export const notoSans = Noto_Sans({
   variable: '--font-noto-sans',
 })
 
-export const tiroDevanagariHindi = Tiro_Devanagari_Hindi({
-  weight: '400',
-  subsets: ['latin', 'devanagari'],
-  variable: '--font-tiro-devanagari',
+export const ebGaramond = EB_Garamond({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-eb-garamond',
 })
