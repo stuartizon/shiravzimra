@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <Main scrollLocked={mobileMenu} fontVariables={`${notoSans.variable} ${edwin.variable}`}>
       <Head>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
-        <meta property='og:title' content="Shira v'Zimra" />
+        <meta property='og:title' content="Shira v’Zimra" />
         <meta
           property='og:description'
           content='A book of Jewish music for the synagogue and the home, arranged for male voice choir by Stuart Izon'
@@ -26,7 +26,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property='og:image:width' content='1024' />
         <meta property='og:image:height' content='1024' />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content="Shira v'Zimra" />
+        <meta name='twitter:title' content="Shira v’Zimra" />
         <meta
           name='twitter:description'
           content='A book of Jewish music for the synagogue and the home, arranged for male voice choir by Stuart Izon'

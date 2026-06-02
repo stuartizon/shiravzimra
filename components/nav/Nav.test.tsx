@@ -10,6 +10,6 @@ jest.mock('../../data', () => ({ allGroups: [] }))
 describe('Nav', () => {
   it("renders the site title", () => {
     render(<Nav showMobileMenu={false} onClickMenu={() => {}} />)
-    expect(screen.getByText("Shira v'Zimra")).toBeInTheDocument()
+    expect(screen.getByText("Shira v’Zimra")).toBeInTheDocument()
   })
 })

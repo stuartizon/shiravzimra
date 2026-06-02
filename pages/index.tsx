@@ -28,7 +28,7 @@ const AllScoresPage = () => {
   return (
     <>
       <Head>
-        <title>Shira v&apos;Zimra</title>
+        <title>Shira v&rsquo;Zimra</title>
         <meta
           name='description'
           content='A book of Jewish music for the synagogue and the home, arranged for male voice choir by Stuart Izon'
