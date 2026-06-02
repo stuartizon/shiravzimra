@@ -6,13 +6,13 @@ import Footer from '../components/footer/Footer'
 import Head from 'next/head'
 import Script from 'next/script'
 import { useState } from 'react'
-import { notoSans, ebGaramond } from '../lib/fonts'
+import { notoSans, edwin } from '../lib/fonts'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [mobileMenu, setMobileMenu] = useState(false)
 
   return (
-    <Main scrollLocked={mobileMenu} fontVariables={`${notoSans.variable} ${ebGaramond.variable}`}>
+    <Main scrollLocked={mobileMenu} fontVariables={`${notoSans.variable} ${edwin.variable}`}>
       <Head>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
         <meta property='og:title' content="Shira v'Zimra" />
