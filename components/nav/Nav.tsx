@@ -1,10 +1,19 @@
-import { CSSProperties, FC, Fragment } from 'react'
+import { CSSProperties, FC, Fragment, useEffect } from 'react'
 import Link from 'next/link'
 import { allGroups } from '../../data'
 import styles from './Nav.module.css';
 import { Group } from '../../data/types';
 
 const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
+  useEffect(() => {
+    if (!showMobileMenu) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClickMenu()
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [showMobileMenu, onClickMenu])
+
   return (
     <nav className='w-full top-0 font-semibold h-16 relative'>
       <div className='container mx-auto h-full'>
