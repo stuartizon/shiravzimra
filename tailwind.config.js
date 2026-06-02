@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['var(--font-noto-sans)', 'sans-serif'],
-      serif: ['var(--font-tiro-devanagari)', 'serif'],
+      serif: ['var(--font-edwin)', 'serif'],
     },
     extend: {
       spacing: {

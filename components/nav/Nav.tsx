@@ -10,7 +10,7 @@ const Nav: FC<NavProps> = ({ showMobileMenu, onClickMenu }) => {
       <div className='container mx-auto h-full'>
         <ul className='list-none flex flex-row h-full'>
           <NavItem
-            name="Shira v'Zimra"
+            name="Shira v’Zimra"
             href='/'
             className='flex-grow text-3xl text-center md:text-left font-serif'
           />
@@ -94,7 +94,7 @@ const DesktopMenuLink: FC<Group> = ({ name, sections }) => (
 
 const NavItem: FC<NavItemProps> = ({ name, href, className, style }) => (
   <li className={`mx-2 my-auto flex-shrink-0 ${className}`}>
-    <Link href={href} className='text-white transition duration-100 align-sub' style={style}>
+    <Link href={href} className='text-white font-normal transition duration-100 align-sub' style={style}>
       {name}
     </Link>
   </li>
