@@ -45,6 +45,12 @@ export const birkatHamazon: Section = {
       author: 'Peshy Stulberger',
       youtubeUrl: 'https://youtu.be/gaTj_1ijK08',
       description: `Set to words from the end of Birkat Hamazon, this melody is much beloved in the acapella world. Originally recorded by Abie Rotenberg, but composed by Rebbetzin Peshy Stulberger.`
+    },
+    {
+      id: '511b',
+      name: "Yiru Et Adonai",
+      author: "Ya'akov Prager",
+      youtubeUrl: 'https://youtu.be/LyuOL6MgW1c'
     }
   ]
 }
