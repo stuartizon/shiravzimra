@@ -48,7 +48,7 @@ export const birkatHamazon: Section = {
     },
     {
       id: '511b',
-      name: "Yiru Et Adonai",
+      name: "Y'ru Et Adonai",
       author: "Ya'akov Prager",
       youtubeUrl: 'https://youtu.be/LyuOL6MgW1c'
     }
