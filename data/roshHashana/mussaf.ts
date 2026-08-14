@@ -95,6 +95,12 @@ export const rhMussaf: Section = {
       description: `Although many of us are more familiar with this as an El Adon melody, this tune was actually composed by the second Modzitzer Rebbe, Shaul Yedidya Elazar Taub, for the prayer Areshet S'fateinu in the aftermath of the First World War. Later when several communities started singing it to El Adon, the melody was subtly adjusted to better fit those words.`
     },
     {
+      id: '263c',
+      name: "Areshet S'fateinu",
+      author: 'Max Halpern',
+      youtubeUrl: 'https://youtu.be/x4uVHT4ALak'
+    },
+    {
       id: '264a',
       name: "V'al Y'dei Avadecha",
       author: 'Louis Lewandowski',
