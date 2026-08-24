@@ -7,6 +7,12 @@ export const rhMussaf: Section = {
   hebrewName: 'מוסף',
   pieces: [
     {
+      id: '237a',
+      name: "Zochreinu",
+      author: 'Abraham Singer',
+      youtubeUrl: 'https://youtu.be/CAypq6xA7Sc'
+    },
+    {
       id: '237c',
       name: "Zochreinu",
       author: 'Haim Wasserzug',
