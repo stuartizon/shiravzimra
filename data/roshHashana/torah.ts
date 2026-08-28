@@ -12,6 +12,12 @@ export const rhTorah: Section = {
       author: 'Trad.',
       youtubeUrl: 'https://youtu.be/vRL8gb9gP0s',
       description: `There is a long standing tradition to use different melodies for the Torah service on Shabbat, Festivals and on the High Holy Days. This traditional Ein Kamocha melody for Rosh Hashana and Yom Kippur, notated in the Blue Book, is decidedly older than Sulzer's and Dunajewsky's compositions (typically used on Shabbat/Yom Tov). Infrequency of its use, and a general lack of familiarity with the melody has led to it being abandoned by a number of congregations.`
+    },
+    {
+      id: '231a',
+      name: "Ladonai Ha'aretz",
+      author: 'Julius Mombach',
+      youtubeUrl: 'https://youtu.be/STJ29aVbaQ8',
     }
   ]
 }
