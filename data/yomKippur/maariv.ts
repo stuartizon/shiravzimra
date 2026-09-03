@@ -32,6 +32,12 @@ export const ykMaariv: Section = {
         This beautiful melody of unknown authorship, (beginning partway into the paragraph of El Melech Yosheiv) forms one of the great emotional highlights of the holiday period, particularly with its many repetitions during Kol Nidrei and N’ila, and in many communities, it has become a leitmotif for the High Holidays.`
     },
     {
+      id: '312b',
+      name: 'El Melech Yosheiv',
+      author: 'Wolf Shestapol',
+      youtubeUrl: 'https://youtu.be/BK3IczRiq-E'
+    },
+    {
       id: '314a',
       name: "Omnam Kein",
       author: 'Trad.',
