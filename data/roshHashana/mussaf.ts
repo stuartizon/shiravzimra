@@ -47,6 +47,12 @@ export const rhMussaf: Section = {
         The meaning of the phrase "kivnei-maron" is elusive; many machzorim say "like sheep" but the Talmud (Rosh Hashana 18a) gives three possible translations, one of which is "like soldiers from the house of David", who could be surveyed with a single glance. The rabbis seem to be discussing the nature of the individual's relationship to the community, vis-a-vis repentance. Later scholarly analysis has shown it to be derived from a Greek word "kinumeron", a legion. This appears to be the approach Shestapol has taken, particularly with the famous K'vakarat which has the feel of a march (notwithstanding the recording by Sirota which is far slower). The symbolism is less pastoral and more akin to a military inspection, for we are like soldiers entrusted with a vital mission.`
     },
     {
+      id: '241h',
+      name: "Un'tane Tokef",
+      author: 'Abraham Moshe Bernstein',
+      youtubeUrl: 'https://youtu.be/qsmwQaaWIbo',
+    },
+    {
       id: '246a',
       name: "Ein Kitzva",
       author: 'Koifman Yodel Eidelson',
