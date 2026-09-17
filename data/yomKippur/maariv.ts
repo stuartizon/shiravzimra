@@ -44,6 +44,12 @@ export const ykMaariv: Section = {
       youtubeUrl: 'https://youtu.be/99IV-QS7vtA',
     },
     {
+      id: '315a',
+      name: "Ki Hinei Kachomer",
+      author: 'Trad.',
+      youtubeUrl: 'https://youtu.be/SMbMSZdLNtU',
+    },
+    {
       id: '317b',
       name: "Vahaviotim",
       author: 'Yitzchok Alster',
